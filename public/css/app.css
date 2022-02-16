@@ -468,9 +468,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   white-space: nowrap;
   border-width: 0;
 }
-.static {
-  position: static;
-}
 .fixed {
   position: fixed;
 }
@@ -481,72 +478,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   position: -webkit-sticky;
   position: sticky;
 }
-.inset-x-0 {
-  left: 0px;
-  right: 0px;
-}
-.top-20 {
-  top: 5rem;
-}
 .bottom-0 {
   bottom: 0px;
-}
-.top-\[100vh\] {
-  top: 100vh;
-}
-.top-10 {
-  top: 2.5rem;
-}
-.m-8 {
-  margin: 2rem;
 }
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
 }
-.my-6 {
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-.my-8 {
-  margin-top: 2rem;
-  margin-bottom: 2rem;
-}
-.my-16 {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
-}
-.my-14 {
-  margin-top: 3.5rem;
-  margin-bottom: 3.5rem;
-}
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
 }
-.my-12 {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-}
-.-my-10 {
-  margin-top: -2.5rem;
-  margin-bottom: -2.5rem;
-}
-.-my-20 {
-  margin-top: -5rem;
-  margin-bottom: -5rem;
-}
-.mt-8 {
-  margin-top: 2rem;
+.my-6 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 .mb-6 {
   margin-bottom: 1.5rem;
 }
 .mt-1 {
   margin-top: 0.25rem;
-}
-.mt-2 {
-  margin-top: 0.5rem;
 }
 .mb-4 {
   margin-bottom: 1rem;
@@ -559,18 +510,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mt-4 {
   margin-top: 1rem;
-}
-.mt-14 {
-  margin-top: 3.5rem;
-}
-.mt-\[500px\] {
-  margin-top: 500px;
-}
-.mt-6 {
-  margin-top: 1.5rem;
-}
-.mt-20 {
-  margin-top: 5rem;
 }
 .block {
   display: block;
@@ -592,30 +531,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .h-6 {
   height: 1.5rem;
-}
-.h-32 {
-  height: 8rem;
-}
-.h-screen {
-  height: 100vh;
-}
-.h-full {
-  height: 100%;
-}
-.h-auto {
-  height: auto;
-}
-.h-48 {
-  height: 12rem;
-}
-.h-80 {
-  height: 20rem;
-}
-.h-\[100\] {
-  height: 100;
-}
-.h-\[32rem\] {
-  height: 32rem;
 }
 .w-full {
   width: 100%;
@@ -690,11 +605,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .p-6 {
   padding: 1.5rem;
 }
-.p-4 {
-  padding: 1rem;
-}
 .p-2 {
   padding: 0.5rem;
+}
+.p-4 {
+  padding: 1rem;
 }
 .px-5 {
   padding-left: 1.25rem;
@@ -712,21 +627,23 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+.pt-4 {
+  padding-top: 1rem;
+}
 .pr-4 {
   padding-right: 1rem;
 }
 .pl-3 {
   padding-left: 0.75rem;
 }
+.pb-6 {
+  padding-bottom: 1.5rem;
+}
+.pb-8 {
+  padding-bottom: 2rem;
+}
 .text-center {
   text-align: center;
-}
-.text-right {
-  text-align: right;
-}
-.text-xs {
-  font-size: 0.75rem;
-  line-height: 1rem;
 }
 .text-xl {
   font-size: 1.25rem;
@@ -778,11 +695,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .backdrop-blur-sm {
   --tw-backdrop-blur: blur(4px);
-  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
-}
-.backdrop-blur {
-  --tw-backdrop-blur: blur(8px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
@@ -967,26 +879,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:mt-0 {
     margin-top: 0px;
-  }
-
-  .md\:mt-8 {
-    margin-top: 2rem;
-  }
-
-  .md\:mt-9 {
-    margin-top: 2.25rem;
-  }
-
-  .md\:mt-16 {
-    margin-top: 4rem;
-  }
-
-  .md\:mt-\[5px\] {
-    margin-top: 5px;
-  }
-
-  .md\:mt-\[522px\] {
-    margin-top: 522px;
   }
 
   .md\:flex {

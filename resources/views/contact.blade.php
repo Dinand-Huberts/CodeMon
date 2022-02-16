@@ -16,8 +16,8 @@
   <?php
   include('../resources/views/header.blade.php'); 
   ?>
-<div style="background-image: url('/img/contact-bg.png'); background-size: contain; height: 70vh;">
-<div class="w-full md:w-96 md:max-w-full mx-auto my-10 fixed">
+<div class="fixed w-full" style="background-image: url('/img/contact-bg.png'); background-size: contain; height: 70%;">
+<div class="w-full md:w-96 md:max-w-full mx-auto my-10 sticky">
   <div class="p-6 border border-gray-300 sm:rounded-md backdrop-blur-sm">
     <form method="POST" action="/">
       <label class="block mb-6">
@@ -29,6 +29,7 @@
             block
             w-full
             mt-1
+            p-2
             border-gray-300
             rounded-md
             shadow-sm
@@ -37,7 +38,7 @@
             focus:ring-indigo-200
             focus:ring-opacity-50
           "
-          placeholder="Joe Bloggs"
+          placeholder="Joe"
         />
       </label>
       <label class="block mb-6">
@@ -49,6 +50,7 @@
             block
             w-full
             mt-1
+            p-2
             border-gray-300
             rounded-md
             shadow-sm
@@ -57,18 +59,21 @@
             focus:ring-indigo-200
             focus:ring-opacity-50
           "
-          placeholder="joe.bloggs@example.com"
+          placeholder="joe@example.com"
           required
         />
       </label>
       <label class="block mb-6">
         <span class="text-gray-700">Message</span>
-        <textarea
-          name="message"
+        <input
+          name="email"
+          type="email"
           class="
             block
             w-full
             mt-1
+            p-2
+            pb-8
             border-gray-300
             rounded-md
             shadow-sm
@@ -76,10 +81,10 @@
             focus:ring
             focus:ring-indigo-200
             focus:ring-opacity-50
-          " 	
-          rows="3"
-          placeholder="Tell us what you're thinking about..."
-        ></textarea>
+          "
+          placeholder="Tell us what you're thinking about!"
+          required
+        />
       </label>
       <div class="mb-6">
         <button
