@@ -46,7 +46,7 @@
         <input
           name="email"
           type="email"
-          class="
+          class=" 
             block
             w-full
             mt-1

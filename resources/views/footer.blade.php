@@ -1,6 +1,6 @@
 <footer class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-amber-500 absolute bottom-0 w-full">
     <div class="sm:flex sm:items-center sm:justify-between">
-        <a href="https://flowbite.com" target="_blank" class="flex items-center mb-4 sm:mb-0">
+        <a href="/" target="_blank" class="flex items-center mb-4 sm:mb-0">
             <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" class="mr-4 h-8" alt="Logo" />
             <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">CodeMon</span>
         </a>
