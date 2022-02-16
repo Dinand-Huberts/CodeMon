@@ -66,8 +66,8 @@
       <label class="block mb-6">
         <span class="text-gray-700">Message</span>
         <input
-          name="email"
-          type="email"
+          name="message"
+          type="message"
           class="
             block
             w-full
