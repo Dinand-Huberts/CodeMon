@@ -15,7 +15,7 @@
 include('../resources/views/header.blade.php');
 ?>
 
-<div class="flex items-center justify-center min-h-screen bg-gray-100">
+<div class="flex relative w-full items-center justify-center min-h-screen bg-gray-100">
     <div class="px-8 py-6 mx-4 mt-4 text-left bg-white shadow-lg md:w-1/3 lg:w-1/3 sm:w-1/3">
         <div class="flex justify-center">
             <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-20 text-blue-600" fill="none" viewBox="0 0 24 24"
