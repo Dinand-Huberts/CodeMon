@@ -67,7 +67,7 @@
         <span class="text-gray-700">Message</span>
         <input
           name="email"
-          type="email"
+          type="email"1
           class="
             block
             w-full
