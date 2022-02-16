@@ -12,11 +12,13 @@
 </head>
 
 <body>
-
+<div class="min-h-screen relative">
+  
   <?php
   include('../resources/views/header.blade.php'); 
   ?>
-<div class="fixed w-full" style="background-image: url('/img/contact-bg.png'); background-size: contain; height: 70%;">
+
+<div class="absolute w-full" style="background-image: url('/img/contact-bg.png'); background-size: contain; height: 70%;">
 <div class="w-full md:w-96 md:max-w-full mx-auto my-10 sticky">
   <div class="p-6 border border-gray-300 sm:rounded-md backdrop-blur-sm">
     <form method="POST" action="/">
@@ -113,5 +115,6 @@
   <?php
   include('../resources/views/footer.blade.php');
   ?>
-
+</div>
+</body>
 </html>
