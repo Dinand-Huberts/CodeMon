@@ -18,10 +18,12 @@
   include('../resources/views/header.blade.php'); 
   ?>
 
-<div class="absolute w-full" style="background-image: url('/img/contact-bg.png'); background-size: contain; height: 70%;">
-<div class="w-full md:w-96 md:max-w-full mx-auto my-10 sticky">
+<div class="relative w-full" style="background-image: url('/img/contact-bg.png'); background-size: contain; min-height: 73.2vh;">
+<div class="block w-full md:w-96 md:max-w-full mx-auto my-[7%] absolute left-0 right-0">
   <div class="p-6 border border-gray-300 sm:rounded-md backdrop-blur-sm">
     <form method="POST" action="/">
+    <h3 class="text-2xl font-bold text-center">Contact</h3>
+
       <label class="block mb-6">
         <span class="text-gray-700">Your name</span>
         <input
