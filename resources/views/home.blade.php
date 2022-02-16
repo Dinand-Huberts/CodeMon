@@ -15,7 +15,7 @@
 include('../resources/views/header.blade.php');
 ?>
 
-h
+<div class="w-max" style="background-color:red;">Test</div>
 
 <?php
 include('../resources/views/footer.blade.php');
