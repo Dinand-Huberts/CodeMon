@@ -14,7 +14,7 @@
 </head>
 <body>
 <div class="min-h-screen min-w-screen relative">
-<div class="relative w-full h-[46rem]" style="background-image: url('/img/register-bg.png'); background-size: 100%;">
+<div class="relative w-full h-[46rem]" style="background-image: url('./img/register-bg.png'); background-size: 100%;">
 
 <?php
 include('../resources/views/header.blade.php');
@@ -66,6 +66,7 @@ include('../resources/views/header.blade.php');
 <?php
 include('../resources/views/footer.blade.php');
 ?>
+
 </div>
 </body>
 </html>
