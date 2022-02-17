@@ -20,65 +20,18 @@
             <h3 class="text-2xl font-bold text-center">Contact</h3>
             <label class="block mb-6">
               <span class="text-gray-700">Your name</span>
-              <input type="text" name="name" class="
-            block 
-            w-full
-            mt-1
-            p-2
-            border-gray-300
-            rounded-md
-            shadow-sm
-            focus:border-indigo-300
-            focus:ring
-            focus:ring-indigo-200
-            focus:ring-opacity-50
-          " placeholder="Joe" />
+              <input type="text" name="name" class=" block  w-full mt-1 p-2 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="Joe" />
             </label>
             <label class="block mb-6">
               <span class="text-gray-700">Email address</span>
-              <input name="email" type="email" class=" 
-            block
-            w-full
-            mt-1
-            p-2
-            border-gray-300
-            rounded-md
-            shadow-sm
-            focus:border-indigo-300
-            focus:ring
-            focus:ring-indigo-200
-            focus:ring-opacity-50
-          " placeholder="joe@example.com" required />
+              <input name="email" type="email" class="  block w-full mt-1 p-2 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="joe@example.com" required />
             </label>
             <label class="block mb-6">
               <span class="text-gray-700">Message</span>
-              <input name="message" type="message" class="
-            block
-            w-full
-            mt-1
-            p-2
-            pb-8
-            border-gray-300
-            rounded-md
-            shadow-sm
-            focus:border-indigo-300
-            focus:ring
-            focus:ring-indigo-200
-            focus:ring-opacity-50
-          " placeholder="Tell us what you're thinking about!" required />
+              <input name="message" type="message" class=" block w-full mt-1 p-2 pb-8 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="Tell us what you're thinking about!" required />
             </label>
             <div class="mb-6">
-              <button type="submit" class="
-            h-10
-            px-5
-            text-indigo-100
-            bg-indigo-700
-            rounded-lg
-            transition-colors
-            duration-150
-            focus:shadow-outline
-            hover:bg-indigo-800
-          ">
+              <button type="submit" class=" h-10 px-5 text-indigo-100 bg-indigo-700 rounded-lg transition-colors duration-150 focus:shadow-outline hover:bg-indigo-800">
                 Contact Us
               </button>
             </div>
