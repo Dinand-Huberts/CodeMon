@@ -8,14 +8,14 @@ include('../resources/views/includes.php');
 </head>
 
 <body>
-<div class="min-h-screen relative">
+<div class="flex flex-col h-screen justify-between">
   
   <?php
   include('../resources/views/header.blade.php'); 
   ?>
 
-<div class="relative w-full h-[29.5rem]" style="background-image: url('./img/contact-bg.png'); background-size: fit; background-repeat: no-repeat; background-position: center;">
-<div class="block w-full md:w-96 md:max-w-full mx-auto my-[1%] absolute left-0 right-0">
+<div class="relative w-full h-[50rem] -mt-10 z-[-1]" style="background-image: url('./img/contact-bg.png'); background-size: fit; background-repeat: no-repeat; background-position: center;">
+<div class="block w-full md:w-96 md:max-w-full mx-auto my-[7%] absolute left-0 right-0">
   <div class="p-6 border border-gray-300 sm:rounded-md backdrop-blur-sm" style="background-color: rgba(125,125,125,0.1);">
     <form method="POST" action="/">
     <h3 class="text-2xl font-bold text-center">Contact</h3>

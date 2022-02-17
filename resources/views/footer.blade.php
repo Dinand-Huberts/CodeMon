@@ -1,4 +1,5 @@
-<footer class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-amber-500 w-full bottom-0 relative">
+<footer class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-amber-500 w-full bottom-0">
+<!-- <footer class="h-10 bg-blue-500"> -->
     <div class="sm:flex sm:items-center sm:justify-between">
         <a href="./" target="_blank" class="flex items-center mb-4 sm:mb-0">
             <img src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg" class="mr-4 h-8" alt="Logo" />
