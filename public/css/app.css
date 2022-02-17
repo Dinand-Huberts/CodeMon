@@ -468,11 +468,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   white-space: nowrap;
   border-width: 0;
 }
+.fixed {
+  position: fixed;
+}
 .absolute {
   position: absolute;
 }
 .relative {
   position: relative;
+}
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
 }
 .left-0 {
   left: 0px;
@@ -513,20 +520,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-4 {
   margin-top: 1rem;
 }
-.mt-8 {
-  margin-top: 2rem;
+.mt-12 {
+  margin-top: 3rem;
+}
+.mb-12 {
+  margin-bottom: 3rem;
 }
 .mt-2 {
   margin-top: 0.5rem;
 }
 .mt-6 {
   margin-top: 1.5rem;
-}
-.mt-12 {
-  margin-top: 3rem;
-}
-.mb-12 {
-  margin-bottom: 3rem;
 }
 .block {
   display: block;
@@ -552,11 +556,17 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-6 {
   height: 1.5rem;
 }
+.h-20 {
+  height: 5rem;
+}
 .h-\[50rem\] {
   height: 50rem;
 }
-.h-20 {
-  height: 5rem;
+.h-\[39\.5rem\] {
+  height: 39.5rem;
+}
+.h-\[49\.5rem\] {
+  height: 49.5rem;
 }
 .min-h-screen {
   min-height: 100vh;
