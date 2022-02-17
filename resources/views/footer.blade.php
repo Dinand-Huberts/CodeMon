@@ -15,7 +15,7 @@
                 <a href="#" class="mr-4 text-sm text-pink-500 md:dark:hover:text-zinc-200 hover:underline md:mr-6 dark:text-white">Licensing</a>
             </li>
             <li>
-                <a href="#" class="mr-4 text-sm text-pink-500 md:dark:hover:text-zinc-200 hover:underline md:mr-6 dark:text-white">Contact</a>
+                <a href="#" class="mr-4 text-sm text-pink-500 md:dark   :hover:text-zinc-200 hover:underline md:mr-6 dark:text-white">Contact</a>
             </li>
         </ul>
     </div>
