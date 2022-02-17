@@ -522,6 +522,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-6 {
   margin-top: 1.5rem;
 }
+.mt-8 {
+  margin-top: 2rem;
+}
 .block {
   display: block;
 }
@@ -548,6 +551,27 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .h-20 {
   height: 5rem;
+}
+.h-1\/3 {
+  height: 33.333333%;
+}
+.h-\[60rem\] {
+  height: 60rem;
+}
+.h-\[58rem\] {
+  height: 58rem;
+}
+.h-\[54rem\] {
+  height: 54rem;
+}
+.h-\[52rem\] {
+  height: 52rem;
+}
+.h-\[50rem\] {
+  height: 50rem;
+}
+.h-\[46rem\] {
+  height: 46rem;
 }
 .min-h-screen {
   min-height: 100vh;
