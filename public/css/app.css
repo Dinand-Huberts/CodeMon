@@ -871,7 +871,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .focus\:ring-blue-600:focus {
-  --tw-ring-opacity: 1;
+  --tw-ring-opacity: 1; 
   --tw-ring-color: rgb(37 99 235 / var(--tw-ring-opacity));
 }
 
