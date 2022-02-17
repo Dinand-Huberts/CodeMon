@@ -7,7 +7,7 @@ include('../resources/views/includes.php');
 </head>
 <body>
 <div class="min-h-screen min-w-screen relative">
-<div class="relative w-full h-[50rem]" style="background-image: url('./img/register-bg.png'); background-size: 100%;">
+<div class="relative w-full h-[50rem]" style="background-image: url('./img/register-bg.png'); background-size: fit; background-repeat: no-repeat; background-position: center;">
 
 <?php
 include('../resources/views/header.blade.php');
