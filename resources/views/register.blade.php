@@ -8,13 +8,13 @@
 </head>
 
 <body>
-    <div class="min-h-screen min-w-screen relative">
-        <div class="relative w-full h-[80.5vh]" style="background-image: url('./img/register-bg.png'); background-size: fit; background-repeat: no-repeat; background-position: center;">
+<div class="flex flex-col h-screen justify-between">
+<div class="relative w-full h-[90vh] z-[1]" style="background-image: url('./img/register-bg.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
 
             <?php
             include('../resources/views/header.blade.php');
             ?>
-            <div class="absolute px-8 py-6 mx-auto mt-4 left-0 right-0 text-left shadow-lg md:w-1/3 lg:w-1/3 sm:w-1/3 backdrop-blur-sm border sm:rounded-md border-gray-300" style="background-color: rgba(125,125,125,0.2);">
+            <div class="absolute px-8 py-6 mx-auto mt-4 left-0 right-0 text-left shadow-lg md:w-1/2 lg:w-1/2 sm:w-1/2 backdrop-blur-sm border sm:rounded-md border-gray-300" style="background-color: rgba(125,125,125,0.2);">
                 <div class="flex justify-center">
                     <img class="w-20 h-20" src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg"></img>
                 </div>
