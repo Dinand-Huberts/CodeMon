@@ -483,14 +483,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bottom-0 {
   bottom: 0px;
 }
-.z-\[-1\] {
-  z-index: -1;
+.z-\[1\] {
+  z-index: 1;
 }
 .z-\[10\] {
   z-index: 10;
-}
-.z-\[1\] {
-  z-index: 1;
 }
 .mx-auto {
   margin-left: auto;
@@ -546,8 +543,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-screen {
   height: 100vh;
 }
-.h-\[50rem\] {
-  height: 50rem;
+.h-\[90vh\] {
+  height: 90vh;
 }
 .h-10 {
   height: 2.5rem;
@@ -561,23 +558,8 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-20 {
   height: 5rem;
 }
-.h-\[79\.6vh\] {
-  height: 79.6vh;
-}
-.h-\[65rem\] {
-  height: 65rem;
-}
-.h-\[55rem\] {
-  height: 55rem;
-}
-.h-\[80vh\] {
-  height: 80vh;
-}
-.h-\[90vh\] {
-  height: 90vh;
-}
-.w-screen {
-  width: 100vw;
+.h-\[400vh\] {
+  height: 400vh;
 }
 .w-full {
   width: 100%;
@@ -590,26 +572,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .cursor-pointer {
   cursor: pointer;
-}
-.snap-x {
-  -ms-scroll-snap-type: x var(--tw-scroll-snap-strictness);
-      scroll-snap-type: x var(--tw-scroll-snap-strictness);
-}
-.snap-y {
-  -ms-scroll-snap-type: y var(--tw-scroll-snap-strictness);
-      scroll-snap-type: y var(--tw-scroll-snap-strictness);
-}
-.snap-mandatory {
-  --tw-scroll-snap-strictness: mandatory;
-}
-.snap-proximity {
-  --tw-scroll-snap-strictness: proximity;
-}
-.snap-center {
-  scroll-snap-align: center;
-}
-.snap-normal {
-  scroll-snap-stop: normal;
 }
 .flex-col {
   flex-direction: column;
@@ -686,21 +648,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(29 78 216 / var(--tw-bg-opacity));
 }
-.bg-blue-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(219 234 254 / var(--tw-bg-opacity));
-}
 .bg-blue-600 {
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
-}
-.bg-blue-300 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(147 197 253 / var(--tw-bg-opacity));
-}
-.bg-red-100 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
 }
 .p-6 {
   padding: 1.5rem;
@@ -842,11 +792,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
-.transition-\[0\.2\] {
-  transition-property: 0.2;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
-}
 .duration-150 {
   transition-duration: 150ms;
 }
@@ -855,95 +800,201 @@ Ensure the default browser behavior of the `hidden` attribute.
     font-family: 'Josefin Sans', sans-serif;
 }
 
-.hover\:bg-indigo-800:hover {
+/* Parallax */
+    /* Parallax base styles
+  --------------------------------------------- */
+
+  .parallax {
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 300px;
+  }
+
+  .parallax__group {
+    position: relative;
+    height: 500px; /* fallback for older browsers */
+    height: 100vh;
+    transform-style: preserve-3d;
+  }
+
+  .parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .parallax__layer--fore {
+    transform: translateZ(90px) scale(.7);
+    z-index: 1;
+  }
+
+  .parallax__layer--base {
+    transform: translateZ(0);
+    z-index: 4;
+  }
+
+  .parallax__layer--back {
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+  }
+
+  .parallax__layer--deep {
+    transform: translateZ(-600px) scale(3);
+    z-index: 2;
+  }
+
+
+  /* Debugger styles - used to show the effect
+  --------------------------------------------- */
+
+  .debug {
+    position: fixed;
+    top: 0;
+    left: .5em;
+    z-index: 999;
+    background: rgba(0,0,0,.85);
+    color: #fff;
+    padding: .5em;
+    border-radius: 0 0 5px 5px;
+  }
+  .debug-on .parallax__group {
+    transform: translate3d(700px, 0, -800px) rotateY(30deg);
+ }
+  .debug-on .parallax__layer {
+    box-shadow: 0 0 0 2px #000;
+    opacity: 0.9;
+  }
+  .parallax__group {
+    transition: transform 0.5s;
+  }
+
+
+  /* demo styles
+  --------------------------------------------- */
+
+  body, html {
+    overflow: hidden;
+  }
+
+  body {
+    font: 100% / 1.5 Arial;
+  }
+
+  * {
+    margin:0;
+    padding:0;
+  }
+
+  .parallax {
+    font-size: 200%;
+  }
+
+   /* centre the content in the parallax layers */
+  .title {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* style the group
+  --------------------------------------------- */
+  #group {
+    z-index: 1;
+  }
+  #group .parallax__layer--back {
+    background: rgb(245,235,100);
+  }
+
+
+  /* misc
+  --------------------------------------------- */
+  .demo__info {
+    position: absolute;
+    z-index:100;
+    bottom: 1vh;
+    top: auto;
+    font-size:80%;
+    text-align:center;
+    width: 100%;
+  }
+  .hover\:bg-indigo-800:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(55 48 163 / var(--tw-bg-opacity));
 }
-
-.hover\:bg-blue-800:hover {
+  .hover\:bg-blue-800:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(30 64 175 / var(--tw-bg-opacity));
 }
-
-.hover\:bg-gray-100:hover {
+  .hover\:bg-gray-100:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
 }
-
-.hover\:bg-gray-50:hover {
+  .hover\:bg-gray-50:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
-
-.hover\:bg-blue-900:hover {
+  .hover\:bg-blue-900:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(30 58 138 / var(--tw-bg-opacity));
 }
-
-.hover\:underline:hover {
+  .hover\:underline:hover {
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
 }
-
-.focus\:border-indigo-300:focus {
+  .focus\:border-indigo-300:focus {
   --tw-border-opacity: 1;
   border-color: rgb(165 180 252 / var(--tw-border-opacity));
 }
-
-.focus\:outline-none:focus {
+  .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
-
-.focus\:ring:focus {
+  .focus\:ring:focus {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(3px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
-
-.focus\:ring-4:focus {
+  .focus\:ring-4:focus {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
-
-.focus\:ring-2:focus {
+  .focus\:ring-2:focus {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
-
-.focus\:ring-1:focus {
+  .focus\:ring-1:focus {
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
   --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
-
-.focus\:ring-indigo-200:focus {
+  .focus\:ring-indigo-200:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(199 210 254 / var(--tw-ring-opacity));
 }
-
-.focus\:ring-blue-300:focus {
+  .focus\:ring-blue-300:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(147 197 253 / var(--tw-ring-opacity));
 }
-
-.focus\:ring-gray-200:focus {
+  .focus\:ring-gray-200:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(229 231 235 / var(--tw-ring-opacity));
 }
-
-.focus\:ring-blue-600:focus {
+  .focus\:ring-blue-600:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(37 99 235 / var(--tw-ring-opacity));
 }
-
-.focus\:ring-opacity-50:focus {
+  .focus\:ring-opacity-50:focus {
   --tw-ring-opacity: 0.5;
 }
-
-@media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme: dark) {
 
   .dark\:border-pink-700 {
     --tw-border-opacity: 1;
@@ -1000,8 +1051,7 @@ Ensure the default browser behavior of the `hidden` attribute.
     --tw-ring-color: rgb(75 85 99 / var(--tw-ring-opacity));
   }
 }
-
-@media (min-width: 640px) {
+  @media (min-width: 640px) {
 
   .sm\:mx-auto {
     margin-left: auto;
@@ -1041,8 +1091,7 @@ Ensure the default browser behavior of the `hidden` attribute.
     text-align: center;
   }
 }
-
-@media (min-width: 768px) {
+  @media (min-width: 768px) {
 
   .md\:order-2 {
     order: 2;
@@ -1149,8 +1198,7 @@ Ensure the default browser behavior of the `hidden` attribute.
     }
   }
 }
-
-@media (min-width: 1024px) {
+  @media (min-width: 1024px) {
 
   .lg\:my-8 {
     margin-top: 2rem;
