@@ -1,4 +1,4 @@
-<footer class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-amber-500 w-screen bottom-0">
+<footer class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-amber-500 w-full bottom-0">
 <!-- <footer class="h-10 bg-blue-500"> -->
     <div class="sm:flex sm:items-center sm:justify-between">
         <a href="./" target="_blank" class="flex items-center mb-4 sm:mb-0">
