@@ -555,11 +555,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-6 {
   height: 1.5rem;
 }
-.h-20 {
-  height: 5rem;
-}
 .h-\[400vh\] {
   height: 400vh;
+}
+.h-20 {
+  height: 5rem;
 }
 .w-full {
   width: 100%;
@@ -851,19 +851,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   /* Debugger styles - used to show the effect
   --------------------------------------------- */
 
-  .debug {
-    position: fixed;
-    top: 0;
-    left: .5em;
-    z-index: 999;
-    background: rgba(0,0,0,.85);
-    color: #fff;
-    padding: .5em;
-    border-radius: 0 0 5px 5px;
-  }
-  .debug-on .parallax__group {
-    transform: translate3d(700px, 0, -800px) rotateY(30deg);
- }
   .debug-on .parallax__layer {
     box-shadow: 0 0 0 2px #000;
     opacity: 0.9;
@@ -876,18 +863,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   /* demo styles
   --------------------------------------------- */
 
-  body, html {
-    overflow: hidden;
-  }
 
-  body {
-    font: 100% / 1.5 Arial;
-  }
 
-  * {
-    margin:0;
-    padding:0;
-  }
 
   .parallax {
     font-size: 200%;

@@ -1,4 +1,4 @@
-<footer class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-amber-500 w-full bottom-0">
+<footer class="p-4 bg-white rounded-lg shadow md:px-6 md:py-8 dark:bg-amber-500 bg-amber-500 w-full bottom-0">
 <!-- <footer class="h-10 bg-blue-500"> -->
     <div class="sm:flex sm:items-center sm:justify-between">
         <a href="./" target="_blank" class="flex items-center mb-4 sm:mb-0">
@@ -7,16 +7,16 @@
         </a>
         <ul class="flex flex-wrap items-center mb-6 sm:mb-0 bottom-0">
             <li>
-                <a href="#" class="mr-4 text-sm text-pink-500 md:dark:hover:text-zinc-200 hover:underline md:mr-6 dark:text-white">About</a>
+                <a href="#" class="mr-4 text-sm md:dark:hover:text-zinc-200 md:hover:text-zinc-200 hover:underline md:mr-6 dark:text-white text-white">About</a>
             </li>
             <li>
-                <a href="#" class="mr-4 text-sm text-pink-500 md:dark:hover:text-zinc-200 hover:underline md:mr-6 dark:text-white">Privacy Policy</a>
+                <a href="#" class="mr-4 text-sm md:dark:hover:text-zinc-200 md:hover:text-zinc-200 hover:underline md:mr-6 dark:text-white text-white">Privacy Policy</a>
             </li>
             <li>    
-                <a href="#" class="mr-4 text-sm text-pink-500 md:dark:hover:text-zinc-200 hover:underline md:mr-6 dark:text-white">Licensing</a>
+                <a href="#" class="mr-4 text-sm md:dark:hover:text-zinc-200 md:hover:text-zinc-200 hover:underline md:mr-6 dark:text-white text-white">Licensing</a>
             </li>
             <li>
-                <a href="#" class="mr-4 text-sm text-pink-500 md:dark   :hover:text-zinc-200 hover:underline md:mr-6 dark:text-white">Contact</a>
+                <a href="#" class="mr-4 text-sm md:dark:hover:text-zinc-200 md:hover:text-zinc-200 hover:underline md:mr-6 dark:text-white text-white">Contact</a>
             </li>
         </ul>
     </div>
