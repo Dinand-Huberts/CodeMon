@@ -16,15 +16,10 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/register', function () {
-    return view('register');
-});
 Route::get('/contact', function () {
     return view('contact');
-});
-Route::get('/login', function () {
-    return view('login');
 });
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+require __DIR__.'/auth.php';

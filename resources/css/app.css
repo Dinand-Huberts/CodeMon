@@ -1,9 +1,10 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
 
 *{
     font-family: 'Josefin Sans', sans-serif;
+    -webkit-tap-highlight-color: transparent;
 }
 
 /* Parallax */
@@ -11,7 +12,6 @@
   --------------------------------------------- */
 
   .parallax {
-    height: 500px; /* fallback for older browsers */
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
@@ -21,7 +21,6 @@
 
   .parallax__group {
     position: relative;
-    height: 500px; /* fallback for older browsers */
     height: 100vh;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
@@ -60,17 +59,7 @@
   }
 
 
-  /* Debugger styles - used to show the effect
-  --------------------------------------------- */
 
-  .debug-on .parallax__layer {
-    box-shadow: 0 0 0 2px #000;
-    opacity: 0.9;
-  }
-  .parallax__group {
-    -webkit-transition: -webkit-transform 0.5s;
-    transition: transform 0.5s;
-  }
 
 
   /* demo styles
@@ -103,14 +92,3 @@
   }
 
 
-  /* misc
-  --------------------------------------------- */
-  .demo__info {
-    position: absolute;
-    z-index:100;
-    bottom: 1vh;
-    top: auto;
-    font-size:80%;
-    text-align:center;
-    width: 100%;
-  }
