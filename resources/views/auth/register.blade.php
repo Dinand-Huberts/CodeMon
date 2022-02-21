@@ -1,18 +1,9 @@
-<!doctype html>
-<html>
+@include('includes')
 
-<head>
-    <?php
-    include('../resources/views/includes.php');
-    ?>
-</head>
 
-<body>
     <div class="flex flex-col  justify-between">
 
-        <?php
-        include('../resources/views/header.blade.php');
-        ?>
+    @include('header')
 
         <div class="relative w-full h-[90vh] z-[1]" style="background-image: url('./img/register-bg.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
 
@@ -75,9 +66,5 @@
 
 
     </div>
-    <?php
-    include('../resources/views/footer.blade.php');
-    ?>
-</body>
-
-</html>
+    @include('footer')
+   

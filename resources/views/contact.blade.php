@@ -1,9 +1,5 @@
-<!doctype html>
-<html>
-
-<head>
 @include('includes')
-</head>
+
 
 <body>
   <div class="flex flex-col justify-between">
@@ -39,9 +35,7 @@
     </div>
 
   </div>
-  <?php
-  include('../resources/views/footer.blade.php');
-  ?>
+      @include('footer')
+
 </body>
 
-</html>
