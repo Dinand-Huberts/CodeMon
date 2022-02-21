@@ -1,20 +1,8 @@
-<!doctype html>
-<html>
-
-<head>
-  <?php
-  include('../resources/views/includes.php');
-  ?>
-</head>
-
+  @include('includes')
 <body>
   <div class="parallax">
-    <?php
-    include('../resources/views/header.blade.php');
-    ?>
 
-
-
+    @include('header')
 
     <div id="group" class="parallax__group absolute">
       <div class="parallax__layer parallax__layer--fore">
@@ -75,9 +63,9 @@
 
 
 
-    <?php
-    include('../resources/views/footer.blade.php');
-    ?>
+
+    @include('footer')
+
   </div>
 </body>
 

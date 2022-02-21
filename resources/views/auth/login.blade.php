@@ -2,17 +2,14 @@
 <html>
 
 <head>
-    <?php
-    include('../resources/views/includes.php');
-    ?>
+    @include('includes')
 </head>
 
 <body>
     <div class="flex flex-col  justify-between">
+    
+    @include('header')
 
-        <?php
-        include('../resources/views/header.blade.php');
-        ?>
 
         <div class="relative w-full h-[90vh] -mt-10 z-[1]" style="background-image: url('./img/contact-bg2.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
             <div class="block w-full md:w-96 md:max-w-full mx-auto my-[7%] absolute left-0 right-0 mb-auto">
@@ -69,9 +66,8 @@
 
 
     </div>
-    <?php
-    include('../resources/views/footer.blade.php');
-    ?>
+    @include('footer')
+    
 </body>
 
 </html>
