@@ -742,6 +742,9 @@ select {
 .mr-3 {
   margin-right: 0.75rem;
 }
+.mb-auto {
+  margin-bottom: auto;
+}
 .block {
   display: block;
 }
@@ -790,9 +793,6 @@ select {
 .h-\[400vh\] {
   height: 400vh;
 }
-.h-\[60\%\] {
-  height: 60%;
-}
 .min-h-screen {
   min-height: 100vh;
 }
@@ -825,12 +825,6 @@ select {
 }
 .w-screen {
   width: 100vw;
-}
-.w-\[60\%\] {
-  width: 60%;
-}
-.w-\[70\%\] {
-  width: 70%;
 }
 .max-w-7xl {
   max-width: 80rem;
