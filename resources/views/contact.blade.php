@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <div class="flex flex-col h-screen justify-between">
+  <div class="flex flex-col justify-between">
 
     <?php
     include('../resources/views/header.blade.php');
@@ -41,10 +41,11 @@
         </div>
       </div>
     </div>
-    <?php
-    include('../resources/views/footer.blade.php');
-    ?>
+
   </div>
+  <?php
+  include('../resources/views/footer.blade.php');
+  ?>
 </body>
 
 </html>
