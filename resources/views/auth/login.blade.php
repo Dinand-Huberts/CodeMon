@@ -1,56 +1,80 @@
-<x-guest-layout>
-    <x-auth-card>
-        <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
-        </x-slot>
+<!doctype html>
+<html>
 
-        <!-- Session Status -->
-        <x-auth-session-status class="mb-4" :status="session('status')" />
+<head>
+    <?php
+    include('../resources/views/includes.php');
+    ?>
+</head>
 
-        <!-- Validation Errors -->
-        <x-auth-validation-errors class="mb-4" :errors="$errors" />
+<body>
+    <div class="flex flex-col h-screen justify-between">
 
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
+        <?php
+        include('../resources/views/header.blade.php');
+        ?>
 
-            <!-- Email Address -->
-            <div>
-                <x-label for="email" :value="__('Email')" />
+        <div class="relative w-full h-[90vh] -mt-10 z-[1]" style="background-image: url('./img/contact-bg2.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+            <div class="block w-full md:w-96 md:max-w-full mx-auto my-[7%] absolute left-0 right-0">
+                <div class="p-6 border border-gray-300 sm:rounded-md backdrop-blur-sm" style="background-color: rgba(125,125,125,0.1);">
+                    <div class="flex justify-center">
+                        <img class="w-20 h-20" src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg"></img>
+                    </div>
 
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            </div>
+            <!-- Session Status -->
+            <x-auth-session-status class="mb-4" :status="session('status')" />
 
-            <!-- Password -->
-            <div class="mt-4">
-                <x-label for="password" :value="__('Password')" />
+            <!-- Validation Errors -->
+            <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
-                <x-input id="password" class="block mt-1 w-full"
+                    <form method="POST" action="{{ route('login') }}">
+                        @csrf
+
+                        <h3 class="text-2xl font-bold text-center">Login</h3>
+
+                        <!-- Email -->
+                        <x-label class="block" for="email" :value="__('Email')" />
+
+                            <x-input type="text" id="email" name="email" :value="old('email')" class="block w-full mt-1 p-2 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" placeholder="Email" required autofocus />
+                        <br>
+
+                        <!-- Password -->
+                        <x-label class="block" for="password" :value="__('Password')" />
+
+                            <input id="password" class="block w-full mt-1 p-2 border-gray-300 rounded-md shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50"
+                                name="password" 
                                 type="password"
-                                name="password"
+                                placeholder="Password" 
                                 required autocomplete="current-password" />
-            </div>
+                        </label>
 
-            <!-- Remember Me -->
-            <div class="block mt-4">
-                <label for="remember_me" class="inline-flex items-center">
-                    <input id="remember_me" type="checkbox" class="rounded border-gray-300 text-indigo-600 shadow-sm focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50" name="remember">
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
+                        <!-- <div class="flex items-center justify-end mt-4">
+                            @if (Route::has('password.request'))
+                            <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                                {{ __('Forgot your password?') }}
+                            </a>
+                            @endif
+                        </div> -->
 
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
 
-                <x-button class="ml-3">
-                    {{ __('Log in') }}
-                </x-button>
+                        <button class="w-full px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">Login</button>
+                        
+                        <div class="mt-6 text-grey-dark">
+                            Don't have an account?
+                            <a class="text-blue-600 hover:underline" href="{{ route('login') }}">
+                                Register
+                            </a>
+                        </div>
+                    </form>
+                </div>
             </div>
-        </form>
-    </x-auth-card>
-</x-guest-layout>
+        </div>
+
+        <?php
+        include('../resources/views/footer.blade.php');
+        ?>
+
+    </div>
+</body>
+
+</html>
