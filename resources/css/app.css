@@ -65,21 +65,19 @@
   /* demo styles
   --------------------------------------------- */
 
-
-
-
   .parallax {
-    font-size: 200%;
+    font-size: 130%;
   }
 
    /* centre the content in the parallax layers */
-  .title {
-    text-align: center;
+  .home_content {
+    text-align: left;
     position: absolute;
     left: 50%;
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
+    align-items: center;
   }
 
   /* style the group
@@ -91,4 +89,7 @@
     background: rgb(245,235,100);
   }
 
-
+.image_home {
+  display: flex;
+  align-items: center;
+}
