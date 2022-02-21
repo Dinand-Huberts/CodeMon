@@ -727,6 +727,10 @@ select {
 .mr-3 {
   margin-right: 0.75rem;
 }
+<<<<<<< HEAD
+.mb-auto {
+  margin-bottom: auto;
+=======
 .mr-2 {
   margin-right: 0.5rem;
 }
@@ -744,6 +748,7 @@ select {
 }
 .-mt-px {
   margin-top: -1px;
+>>>>>>> 3bb2f1858a8904ae2133b92a95202c55a24d2470
 }
 .block {
   display: block;
@@ -790,8 +795,16 @@ select {
 .h-6 {
   height: 1.5rem;
 }
+<<<<<<< HEAD
+.h-\[50\%\] {
+  height: 50%;
+}
+.h-\[400vh\] {
+  height: 400vh;
+=======
 .h-8 {
   height: 2rem;
+>>>>>>> 3bb2f1858a8904ae2133b92a95202c55a24d2470
 }
 .min-h-screen {
   min-height: 100vh;
@@ -823,8 +836,16 @@ select {
 .w-48 {
   width: 12rem;
 }
+<<<<<<< HEAD
+.w-\[50\%\] {
+  width: 50%;
+}
+.w-screen {
+  width: 100vw;
+=======
 .w-8 {
   width: 2rem;
+>>>>>>> 3bb2f1858a8904ae2133b92a95202c55a24d2470
 }
 .max-w-7xl {
   max-width: 80rem;
