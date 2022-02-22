@@ -8,38 +8,54 @@
 
 <div class="relative w-full h-[90vh] -mt-10 z-[1]" style="background-image: url('./img/contact-bg2.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
   
-<div class="mb-4 mt-20 border-b border-gray-200 dark:border-gray-700">
+<div class="mb-4 mt-10  dark:border-gray-700">
     <ul class="flex flex-wrap -mb-px" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
-        <li class="mr-2" role="presentation">
-            <button class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300" id="profile-tab" data-tabs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+        <li class="mr-5 ml-10 mt-5 mb-5"  role="presentation">
+            <button class="transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none m-5 hover:underline hover:text-[#F59E0B]" id="profile-tab" data-tabs-target="#profiel" type="button" role="tab" aria-controls="profiel" aria-selected="false">Profiel</button>
         </li>
-        <li class="mr-2" role="presentation">
-            <button class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300 active" id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="true">Dashboard</button>
+        <li class="mr-5 mt-5" role="presentation">
+            <button class="transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none m-5 hover:underline hover:text-[#F59E0B]" id="dashboard-tab" data-tabs-target="#kaarten" type="button" role="tab" aria-controls="kaarten" aria-selected="true">Kaarten</button>
         </li>
-        <li class="mr-2" role="presentation">
-            <button class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300" id="settings-tab" data-tabs-target="#settings" type="button" role="tab" aria-controls="settings" aria-selected="false">Settings</button>
+        <li class="mr-5 mt-5" role="presentation">
+            <button class="transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none m-5 hover:underline hover:text-[#F59E0B]" id="settings-tab" data-tabs-target="#keys" type="button" role="tab" aria-controls="keys" aria-selected="false">Keys</button>
         </li>
-        <li role="presentation">
-            <button class="inline-block py-4 px-4 text-sm font-medium text-center text-gray-500 rounded-t-lg border-b-2 border-transparent hover:text-gray-600 hover:border-gray-300 dark:text-gray-400 dark:hover:text-gray-300" id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts" aria-selected="false">Contacts</button>
+        <li class="mt-5" role="presentation">
+            <button class="transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none m-5 hover:underline hover:text-[#F59E0B]" id="contacts-tab" data-tabs-target="#quiz" type="button" role="tab" aria-controls="quiz" aria-selected="false">Quiz</button>
         </li>
     </ul>
 </div>
 
 <div id="myTabContent">
-    <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-        <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Profile tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+    <div class="" id="profiel" role="tabpanel" aria-labelledby="profile-tab">
+        <div class="home_content backdrop-blur-sm rounded-2xl flex max-h-[75vh]" style="background-color: rgba(125, 125, 125, 0.2)">
+            <div id="text_home" class="m-10">
+                <p>PROFIEL</p>
+            </div>
+        </div>    
     </div>
    
-    <div class="p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
-        <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Dashboard tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+    <div class="" id="kaarten" role="tabpanel" aria-labelledby="dashboard-tab">
+        <div class="home_content backdrop-blur-sm rounded-2xl flex max-h-[75vh]" style="background-color: rgba(125, 125, 125, 0.2)">
+            <div id="text_home" class="m-10">
+                <p>KAARTEN</p>
+            </div>
+        </div>      
     </div>
    
-    <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="settings" role="tabpanel" aria-labelledby="settings-tab">
-        <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Settings tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+    <div class="" id="keys" role="tabpanel" aria-labelledby="settings-tab">
+        <div class="home_content backdrop-blur-sm rounded-2xl flex max-h-[75vh]" style="background-color: rgba(125, 125, 125, 0.2)">
+            <div id="text_home" class="m-10">
+                <p>KEYS</p>
+            </div>
+        </div>  
     </div>
-   
-    <div class="hidden p-4 bg-gray-50 rounded-lg dark:bg-gray-800" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
-        <p class="text-sm text-gray-500 dark:text-gray-400">This is some placeholder content the <strong class="font-medium text-gray-800 dark:text-white">Contacts tab's associated content</strong>. Clicking another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control the content visibility and styling.</p>
+    
+    <div class="" id="quiz" role="tabpanel" aria-labelledby="settings-tab">
+        <div class="home_content backdrop-blur-sm rounded-2xl flex max-h-[75vh]" style="background-color: rgba(125, 125, 125, 0.2)">
+            <div id="text_home" class="m-10">
+                <p>QUIZ</p>
+            </div>
+        </div>  
     </div>
 </div>
 
