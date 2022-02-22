@@ -22,4 +22,7 @@ Route::get('/contact', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+Route::get('/quiz', function () {
+    return view('quiz');
+});
 require __DIR__ . '/auth.php';
