@@ -793,6 +793,9 @@ select {
 .h-8 {
   height: 2rem;
 }
+.max-h-\[75vh\] {
+  max-height: 75vh;
+}
 .min-h-screen {
   min-height: 100vh;
 }

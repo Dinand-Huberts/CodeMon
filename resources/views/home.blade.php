@@ -2,16 +2,16 @@
 <html>
 
 <head>
-  <?php
-  include('../resources/views/includes.php');
-  ?>
+
+  @include('includes')
+
 </head>
 
 <body>
+
   <div class="parallax">
-    <?php
-    include('../resources/views/header.blade.php');
-    ?>
+
+    @include('header')
 
 
 
@@ -74,10 +74,8 @@
     <!-- Page content -->
 
 
+    @include('footer')
 
-    <?php
-    include('../resources/views/footer.blade.php');
-    ?>
   </div>
 </body>
 
