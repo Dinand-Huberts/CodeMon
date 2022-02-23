@@ -10,16 +10,7 @@
 <body>
 
   <div class="parallax">
-<<<<<<< HEAD
     @include('header')
-=======
-
-    @include('header')
-
-
-
-
->>>>>>> 46420e2a344b43e4e45017ccc64558622fea1f3c
     <div id="group" class="parallax__group absolute">
       <div class="parallax__layer parallax__layer--fore">
         <div class="home_content backdrop-blur-sm rounded-2xl flex max-h-[75vh]" style="background-color: rgba(125, 125, 125, 0.2)">
