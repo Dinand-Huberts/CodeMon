@@ -8,17 +8,24 @@
         <title>{{ config('app.name', 'Laravel') }}</title>
 
         <!-- Fonts -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
 
         <!-- Styles -->
         <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/sass.css') }}">
 
+        
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="https://unpkg.com/flowbite@1.3.3/dist/flowbite.js"></script>
+
     </head>
+
     <body class="font-sans antialiased">
         <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
+            @include('header')
 
             <!-- Page Heading -->
             <header class="bg-white shadow">
@@ -26,7 +33,7 @@
                     {{ $header }}
                 </div>
             </header>
-
+ 
             <!-- Page Content -->
             <main>
                 {{ $slot }}
