@@ -26,4 +26,4 @@ Route::get('/quiz', function () {
     return view('quiz');
 });
 Route::get('quiz', [\App\Http\Controllers\QuizViewController::class, 'index'])->middleware('auth');
-require __DIR__ . '/auth.php';
+require __DIR__ . '/auth.php';  

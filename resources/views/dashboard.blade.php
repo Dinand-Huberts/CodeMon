@@ -41,7 +41,7 @@
     <div class="hidden" id="kaarten" role="tabpanel" aria-labelledby="kaarten-tab">
         <div class="home_content backdrop-blur-sm rounded-2xl flex max-h-[75vh]" style="background-color: rgba(125, 125, 125, 0.2)">
             <div id="text_home" class="m-10">
-                <p>KAARTEN</p>
+                <x-card></x-card> 
             </div>
         </div>      
     </div>

@@ -15,7 +15,6 @@ class QuizViewController extends Controller
      */
     public function index()
     {
-        $random = rand(1, 4);
         return view('quiz',['quizzes'=>quizzes::All()]);
     }
 
@@ -49,13 +48,13 @@ class QuizViewController extends Controller
     public function show()
     {
         //
-
     }
 
     /**
      * Show the form for editing the specified resource.
      *
      * @param  int  $id
+     * 
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
