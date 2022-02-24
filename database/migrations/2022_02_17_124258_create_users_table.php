@@ -19,6 +19,7 @@ class CreateUsersTable extends Migration
             $table->longText('password');
             $table->string('name', 32);
             $table->boolean('admin')->default(0);
+            $table->timestamp('quiz_cooldown');
             $table->timestamp('created_at');
             $table->timestamp('updated_at');
         });
