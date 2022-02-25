@@ -2,10 +2,9 @@
 
 namespace App\View\Components;
 
-use Facade\FlareClient\View;
 use Illuminate\View\Component;
 
-class card extends Component
+class quiz extends Component
 {
     /**
      * Create a new component instance.
@@ -24,8 +23,6 @@ class card extends Component
      */
     public function render()
     {
-        $docent_int = rand(1,10);
-        $rarity_int = rand(1,10000);
-        return view('/layouts/card', ['rarity_int'=>$rarity_int], ['docent_int'=>$docent_int]);
+        return view('components.quiz');
     }
 }
