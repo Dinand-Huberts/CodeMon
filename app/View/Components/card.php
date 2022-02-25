@@ -24,7 +24,11 @@ class card extends Component
      */
     public function render()
     {
-        $rand = rand(1,10000);
+        //Difficulty tier of box taken. For debug purposes, it's set to a fixed value.
+        $diff = 0;
+        //Max random number (less makes rare cards more common)
+        $maxnum = 10000 - $diff * 750;
+        $rand = rand(1,$maxnum);
         return view('/layouts/card', ['rand'=>$rand]);
     }
 }
