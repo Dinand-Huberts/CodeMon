@@ -21,6 +21,6 @@
         </ul>
     </div>
     <hr class="my-6 border-pink-200 sm:mx-auto dark:border-pink-700 lg:my-8" />
-    <span class="block text-sm hover:text-zinc-200 text-black sm:text-center dark:text-black md:dark:hover:text-zinc-200">© 2022 <a href="./" target="_blank" class="hover:underline">LandstedeMon™</a>. All Rights Reserved.
+    <span class="block text-sm hover:text-zinc-200 text-black sm:text-center dark:text-black md:dark:hover:text-zinc-200">© 2022 <a href="./" target="_blank" class="hover:underline">CodéMon™</a>. All Rights Reserved.
     </span> 
 </footer>   

@@ -2,10 +2,12 @@
 
 namespace App\View\Components;
 
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use Facade\FlareClient\View;
 use Illuminate\View\Component;
 
-class card extends Component
+class box extends Component
 {
     /**
      * Create a new component instance.
@@ -24,8 +26,10 @@ class card extends Component
      */
     public function render()
     {
-        $docent_int = rand(1,8);
-        $rarity_int = rand(1,10000);
-        return view('/components/card', ['rarity_int'=>$rarity_int], ['docent_int'=>$docent_int]);
+        
+        $user_id = Auth::id();
+        $boxes = DB::table('boxes')->where('user_id', '=', $user_id)->get();
+        return view('/components/box', ['boxes'=>$boxes], ['user_id'=>$user_id]);
+        
     }
 }
