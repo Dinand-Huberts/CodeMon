@@ -1,4 +1,5 @@
 @php
+$teachers = DB::table('teachers')->get();
 switch ($rarity_int) {
     case $rarity_int >= 0 && $rarity_int <= 50:
         $rarity_name = 'legendary';
@@ -21,44 +22,16 @@ switch ($rarity_int) {
         $rarity_data_int = 5;
         break;
 }
-switch ($docent_int) {
-    case 1:
-        $docent_img = './img/card-images/1.png';
-        $docent_name = 'Thomas';
-        break;
-    case 2:
-        $docent_img = './img/card-images/2.png';
-        $docent_name = 'Jos';
-        break;
-    case 3:
-        $docent_img = 'https://mijnstudie.net/avatar/12';
-        $docent_name = 'Wijnand';
-        break;
-    case 4:
-        $docent_img = 'https://mijnstudie.net/avatar/7';
-        $docent_name = 'Gerben';
-        break;
-    case 5:
-        $docent_img = 'https://mijnstudie.net/avatar/8';
-        $docent_name = 'Sinnika';
-        break;
-    case 6:
-        $docent_img = 'https://mijnstudie.net/avatar/9';
-        $docent_name = 'Ton';
-        break;
-    case 7:
-        $docent_img = 'https://mijnstudie.net/avatar/3';
-        $docent_name = 'Pim';
-        break;
-    case 8:
-        $docent_img = 'https://mijnstudie.net/avatar/8';
-        $docent_name = 'Sinnika';
-        break;
+foreach ($teachers as $teacher) {
+    switch($docent_int){
+        case $teacher->id:
+            $docent_name = $teacher->name;
+            $docent_img = "./img/card-images/" . $teacher->id . ".png";
+            break;
+    }
 }
-
+// hier een foreach voor wannneer we alle foto's hebben. 
 @endphp
-
-
 
 <h3>Congratulations! You found a {{ $rarity_name . ' ' . $docent_name }}</h3>
 <div class="cards_container">
@@ -66,7 +39,7 @@ switch ($docent_int) {
         {{-- card--normal kan zijn: --water, --electric, --fire, -psychic, --dark, --grass, --ice, --fairy --}}
         <figure class="card card--normal">
             <div class="card__image-container">
-                <img src="{{ $docent_img }}" alt="{{ $docent_name }}" class="card__image">
+                <img src="{{ $docent_img }}" alt="{{ $docent_name }}" class="card__image" style="height: 200px; margin:auto">
             </div>
             <figcaption class="card__caption">
                 <h1 class="card__name">{{ $docent_name }}</h1>

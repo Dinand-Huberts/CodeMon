@@ -2,6 +2,8 @@
 
 namespace App\View\Components;
 
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 use Facade\FlareClient\View;
 use Illuminate\View\Component;
 

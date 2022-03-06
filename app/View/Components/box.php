@@ -26,10 +26,8 @@ class box extends Component
      */
     public function render()
     {
-        
         $user_id = Auth::id();
         $boxes = DB::table('boxes')->where('user_id', '=', $user_id)->get();
-        return view('/components/box', ['boxes'=>$boxes], ['user_id'=>$user_id]);
-        
+        return view('/components/box', ['boxes' => $boxes], ['user_id' => $user_id]);
     }
 }

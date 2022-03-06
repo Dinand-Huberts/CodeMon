@@ -1,16 +1,4 @@
-
-  img {
-    max-height: 150px;
-    height: 150px;
-    margin: auto;
-    display: inline-block;
-  }
-  h1, h2, h3, h4, h5 {
-    margin: 0;
-    font-weight: 400;
-  }
-  
-  .cards_container {
+.cards_container {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,4 +163,175 @@
     
   }
   
-  
+  $msgbox-area-width-l: 480px;
+
+$msgbox-area-y-pos: 15px;
+$msgbox-area-x-s: 20px;
+$msgbox-area-x-m: 80px;
+$msgbox-area-x-l: 15px;
+
+$msgbox-box-color: #ffffff;
+$msgbox-box-background-color: rgba(#000000, 0.7);
+$msgbox-box-padding: 1.5rem;
+$msgbox-box-margin: 1rem;
+$msgbox-box-border-radius: 12px;
+$msgbox-box-box-shadow: 0 10px 15px rgba(#000000, 0.65);
+$msgbox-box-backdrop-filter: blur(4px);
+$msgbox-box-transition-time: 256ms;
+
+$msgbox-close-color: #ffffff;
+$msgbox-close-margin: 10px;
+$msgbox-close-transition-time: 64ms;
+
+$msgbox-close-hover-color: #efefef;
+$msgbox-close-hover-text-shadow: 0 0 4px #ffffff;
+
+.msgbox-area {
+  font-size: inherit;
+  max-height: 100%;
+  position: fixed;
+  bottom: $msgbox-area-y-pos;
+  left: $msgbox-area-x-s;
+  right: $msgbox-area-x-s;
+}
+
+.msgbox-box {
+  font-size: inherit;
+  color: $msgbox-box-color;
+  background-color: $msgbox-box-background-color;
+  margin: 0 0 $msgbox-box-margin;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: $msgbox-box-border-radius;
+  box-shadow: $msgbox-box-box-shadow;
+  backdrop-filter: $msgbox-box-backdrop-filter;
+  transition: opacity $msgbox-box-transition-time ease-in;
+  &.msgbox-box-hide {
+    opacity: 0;
+  }
+  &:last-child {
+    margin: 0;
+  }
+}
+
+.msgbox-content {
+  font-size: inherit;
+  padding: $msgbox-box-padding;
+  padding-bottom: $msgbox-box-padding / 2;
+  flex-shrink: 1;
+}
+
+.msgbox-command {
+  padding: $msgbox-box-padding;
+  padding-top: $msgbox-box-padding / 2;
+  display: flex;
+}
+
+.msgbox-close {
+  color: $msgbox-close-color;
+  font-size: inherit;
+  text-decoration: none;
+  margin: 0 $msgbox-close-margin;
+  flex-grow: 0;
+  flex-shrink: 0;
+  position: relative;
+  transition:
+    color $msgbox-close-transition-time ease-out,
+    text-shadow $msgbox-close-transition-time ease-out;
+  &:hover {
+    color: $msgbox-close-hover-color;
+    text-shadow: $msgbox-close-hover-text-shadow;
+  }
+  &:first-child {
+    margin-left: auto;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .msgbox-area {
+    left: $msgbox-area-x-m;
+    right: $msgbox-area-x-m;
+  }
+}
+
+@media (min-width: 768px) {
+  .msgbox-area {
+    width: $msgbox-area-width-l;
+    height: 0;
+    top: $msgbox-area-y-pos;
+    left: auto;
+    right: $msgbox-area-x-l;
+  }
+}
+
+/*****************************/
+/* MESSAGE BOX RELATED CLASS */
+/*           (END)           */
+/*****************************/
+
+$button-color: #387cdc;
+
+.msgbox-area {
+  font-size: 16px;
+}
+
+.msgbox-message-container {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 2rem;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  box-shadow: 0 0.3rem 0.5rem rgba(#000000, 0.5);
+  h1, h3 {
+    font-weight: normal;
+    padding: 0.5rem 1rem;
+    margin: 0;
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+  p {
+    padding: 0.5rem 1rem;
+    margin: 0;
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+
+.msgbox-message-button {
+  font-size: 18px;
+  font-family: inherit;
+  color: white;
+  background-color: $button-color;
+  width: 250px;
+  border: solid 2px darken($button-color, 10%);
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 0.4rem darken($button-color, 10%);
+  transition:
+    background-color 64ms ease-out,
+    box-shadow 64ms ease-out,
+    transform 64ms ease-out;
+  &:hover,
+  &:focus,
+  &:active {
+    background-color: lighten($button-color, 5%);
+  }
+  &:active {
+    background-color: darken($button-color, 5%);
+    box-shadow: 0 0 darken($button-color, 10%);
+    transform: translateY(0.4rem);
+  }
+}

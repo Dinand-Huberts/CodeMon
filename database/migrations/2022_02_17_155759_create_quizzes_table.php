@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\DB;
 
 class CreateQuizzesTable extends Migration
 {
@@ -15,14 +16,19 @@ class CreateQuizzesTable extends Migration
     {
         Schema::create('quizzes', function (Blueprint $table) {
             $table->id('id', 12);
-            $table->unsignedBigInteger('category_id');
-            $table->foreign('category_id')->references('id')->on('categories');
             $table->longText('quiz_question');
             $table->longText('quiz_answer');
-            $table->addColumn('integer', 'quiz_difficulty', ['length' => 2]);
-            $table->addColumn('integer', 'quiz_category', ['length' => 5]);
-            $table->addColumn('integer', 'quiz_type', ['length' => 2]);
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('categories');
+            $table->unsignedBigInteger('quiz_difficulty');
+            $table->foreign('quiz_difficulty')->references('id')->on('box_difficulties');
+            $table->unsignedBigInteger('quiz_type');
+            $table->foreign('quiz_type')->references('id')->on('quiz_type');
         });
+        $data = [
+            ['id'=>NULL, 'quiz_question'=> "testvraag [blank] testvraag" , 'quiz_answer'=> "test" , 'category_id'=> "1" , 'quiz_difficulty'=> "1" , 'quiz_type'=> "1"],
+        ];
+        DB::table('quizzes')->insert($data);
     }
 
     /**

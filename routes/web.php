@@ -22,8 +22,4 @@ Route::get('/contact', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
-Route::get('/quiz', function () {
-    return view('quiz');
-});
-Route::get('quiz', [\App\Http\Controllers\QuizViewController::class, 'index'])->middleware('auth');
 require __DIR__ . '/auth.php';  
