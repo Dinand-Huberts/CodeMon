@@ -34,13 +34,16 @@ class quiz extends Component
         $cooldown_query = DB::table('users')->where('id', '=', $user_id)->get();
         $cooldown_string = $cooldown_query[0]->quiz_cooldown;
         $cooldown = strtotime($cooldown_string);
-        $time = strtotime(time());
+        $time = time();
         $interval = $time - $cooldown;
-        if ($interval >= 14400) {
+        if ($interval >= 14400) { 
             $quiz_cooldown_check = true;
         } else {
             $quiz_cooldown_check = false;
         }
+
+        echo $interval;
+
 
         //set max amount of quizzes available
         $max_id_query = DB::table('quizzes')->where('id', \DB::raw("(select max(`id`) from quizzes)"))->get();
@@ -49,6 +52,7 @@ class quiz extends Component
 
         $quiz_id = rand(1, $max_id);
 
+
          //retrieve the questions and answer
         $quiz_query = DB::table('quizzes')->where('id', '=', $quiz_id)->get();
         $quiz_question = $quiz_query[0]->quiz_question;
@@ -56,7 +60,7 @@ class quiz extends Component
         $quiz_category = $quiz_query[0]->category_id;
         $quiz_difficulty = $quiz_query[0]->quiz_difficulty;
         $quiz_type = $quiz_query[0]->quiz_type;
-
+ 
         //set variables in the view
         $data = 
         ['quiz_answer' => $quiz_answer,
