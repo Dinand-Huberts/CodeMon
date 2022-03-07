@@ -1,38 +1,3 @@
-@php
-$teachers = DB::table('teachers')->get();
-switch ($rarity_int) {
-    case $rarity_int >= 0 && $rarity_int <= 50:
-        $rarity_name = 'legendary';
-        $rarity_data_int = 1;
-        break;
-    case $rarity_int >= 50 && $rarity_int <= 250:
-        $rarity_name = 'epic';
-        $rarity_data_int = 2;
-        break;
-    case $rarity_int >= 250 && $rarity_int <= 750:
-        $rarity_name = 'rare';
-        $rarity_data_int = 3;
-        break;
-    case $rarity_int >= 750 && $rarity_int <= 2500:
-        $rarity_name = 'uncommon';
-        $rarity_data_int = 4;
-        break;
-    case $rarity_int >= 2500 && $rarity_int <= 10000:
-        $rarity_name = 'common';
-        $rarity_data_int = 5;
-        break;
-}
-foreach ($teachers as $teacher) {
-    switch($docent_int){
-        case $teacher->id:
-            $docent_name = $teacher->name;
-            $docent_img = "./img/card-images/" . $teacher->id . ".png";
-            break;
-    }
-}
-// hier een foreach voor wannneer we alle foto's hebben. 
-@endphp
-
 <h3>Congratulations! You found a {{ $rarity_name . ' ' . $docent_name }}</h3>
 <div class="cards_container">
     <div id="cards">

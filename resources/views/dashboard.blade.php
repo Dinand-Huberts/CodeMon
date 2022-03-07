@@ -5,7 +5,6 @@
     @include('header')
     <div class="relative w-full h-[90vh] -mt-10 z-[1]"
         style="background-image: url('./img/contact-bg2.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-
         <div class="mb-4 mt-10  dark:border-gray-700">
             <ul class="flex flex-wrap -mb-px" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
                 <li class="mr-5 ml-10 mt-5 mb-5" role="presentation">
@@ -62,9 +61,7 @@
             <div class="hidden" id="quiz" role="tabpanel" aria-labelledby="quiz-tab">
                 <div class="home_content backdrop-blur-sm rounded-2xl flex max-h-[75vh] min-w-[45vw] flex items-center justify-around overflow-hidden"
                     style="background-color: rgba(125, 125, 125, 0.2)">
-                    <div id="text_home" class="m-10">
-                        <x-quiz></x-quiz>
-                    </div>
+                    <x-quizselector></x-quizselector>
                 </div>
             </div>
         </div>
