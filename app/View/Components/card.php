@@ -27,7 +27,7 @@ class card extends Component
     public function render()
     {
         $docent_int = rand(1,8);
-        $rarity_int = rand(1,10000);
+        $rarity_int = rand(0,10000);
         return view('/components/card', ['rarity_int'=>$rarity_int], ['docent_int'=>$docent_int]);
     }
 }

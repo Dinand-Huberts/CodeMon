@@ -1,4 +1,5 @@
 @if($quiz_cooldown == true)
+
 {{$quiz_question}}
 <form id="quiz" action="/dashboard" method="POST">
 <input name="user_answer"></br>
