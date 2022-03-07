@@ -42,8 +42,6 @@ class quiz extends Component
             $quiz_cooldown_check = false;
         }
 
-        echo $interval;
-
 
         //set max amount of quizzes available
         $max_id_query = DB::table('quizzes')->where('id', \DB::raw("(select max(`id`) from quizzes)"))->get();

@@ -7,6 +7,10 @@ window.Alpine = Alpine;
 window.$ = window.jQuery = $;
 Alpine.start();
 
+// window.box_open = function(){
+//     $(this).addClass( "is-active" );
+// }
+
 
 
 // var hidden_box_alert = false;

@@ -320,10 +320,9 @@ $div_id = 1;
 
 <script>
 
-window.box_open = function(){
-    $(this).addClass( "is-active" );
-}
-
+document.addEventListener('click', function handleClick(event) {
+    event.target.classList.add('is-active');
+});
 
 </script>
 
