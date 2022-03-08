@@ -77,55 +77,34 @@
   margin-top: 1em;
   flex: 1 0;
 }
-.card--normal {
-  background: linear-gradient(110deg, #FDBB2D 0%, #3A1C71 100%);
-  box-shadow: 0px 5px 20px -10px #3A1C71;
+.card--common {
+  background: linear-gradient(125deg, #BCC 0%, #FFF 33%, #BCC 50%);
+  box-shadow: 0px 5px 20px -10px #000;
 }
-.card--normal .card__type {
-  background-color: #C08A53;
+.card--common .card__type {
+  background-color: #AAB;
 }
-.card--water {
-  background: linear-gradient(120deg, #1CB5E0 0%, #000851 100%);
-  box-shadow: 0px 5px 20px -10px #000851;
+.card--uncommon {
+  background: linear-gradient(125deg, #ACF 0%, #48F 10%, #ACF 20%, #48F 30%, #ACF 40%, #48F 50%, #ACF 60%, #48F 70%, #ACF 80%, #48F 90%, #ACF 100%);
+  box-shadow: 0px 5px 20px -10px #000;
 }
-.card--water .card__type {
-  background-color: #1CB5E0;
+.card--uncommon .card__type {
+  background-color: #48F;
 }
-.card--electric {
-  background: linear-gradient(90deg, #ffde00 34%, #e8ff99 83%);
+.card--rare {
+  background: linear-gradient(215deg, #FFF 0%, #FD3 10%, #FA0 20%, #FA0 95%, #C90 100%);
+  box-shadow: 0px 5px 20px -10px #000;
 }
-.card--electric .card__type {
-  background-color: #000;
+.card--rare .card__type {
+  background-color: #FA0;
 }
-.card--fire {
-  background: linear-gradient(0deg, #c71800 10%, #fcc245 100%);
+.card--epic {
+  background: linear-gradient(215deg, #FAF 0%, #FFF 8%, #A4F 20%, #C2F 32%, #FA0 92%, #FF0 100%);
+  box-shadow: 0px 5px 20px -10px #000;
 }
-.card--fire .card__type {
-  background-color: #c71800;
-}
-.card--psychic {
-  background: linear-gradient(140deg, #ffa7f9 0%, #ff2cc3 39%, #ffe3a7 100%);
-}
-.card--psychic .card__type {
-  background: #ff2cc3;
-}
-.card--dark {
-  background: linear-gradient(20deg, #191919 0%, #100b32 33%, #5c0249 100%);
-}
-.card--dark .card__type {
-  background: #5c0249;
-}
-.card--grass {
-  background: linear-gradient(140deg, #c4da3d 0%, #6e7f0e 69%, #275009 100%);
-}
-.card--grass .card__type {
-  background: #6e7f0e;
-}
-.card--ice {
-  background: linear-gradient(230deg, #caeaf6 0%, #a0eaf1 46%, #6fb8eb 100%);
-}
-.card--ice .card__type {
-  background: #6fb8eb;
+.card--epic .card__type {
+  background-image: linear-gradient(0deg, #C0F, #FA0);
+  border: 2px solid white;
 }
 .card-- {
   background: linear-gradient(45deg, #ffe6f0 0%, #ffc5e0 34%, #ffa6b9 71%, #ff8a95 100%);
