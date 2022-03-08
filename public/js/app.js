@@ -5546,10 +5546,13 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 window.$ = window.jQuery = (jquery__WEBPACK_IMPORTED_MODULE_1___default());
-alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start(); // window.box_open = function(){
-//     $(this).addClass( "is-active" );
-// }
-// var hidden_box_alert = false;
+alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start(); // function to start the animation
+
+jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_1___default()('.box-body').click(function () {
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).addClass("is-active");
+  });
+}); // var hidden_box_alert = false;
 // var box_alert = document.getElementById("box_alert");
 // window.showalert = function() {
 //     box_alert.classList.remove("hidden");
