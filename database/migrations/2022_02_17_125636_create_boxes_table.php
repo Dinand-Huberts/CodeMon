@@ -20,13 +20,13 @@ class CreateBoxesTable extends Migration
             $table->foreign('user_id')->references('id')->on('users');
             $table->unsignedBigInteger('box_difficulty');
             $table->foreign('box_difficulty')->references('id')->on('box_difficulties');
-            $table->boolean('box_activated');
+            $table->boolean('box_activated')->default('0');
         });
         $data = [
             ['id'=>NULL, 'user_id'=>'1', 'box_difficulty'=>'1', 'box_activated'=> "1"],
             ['id'=>NULL, 'user_id'=>'1', 'box_difficulty'=>'3', 'box_activated'=> "0"],
             ['id'=>NULL, 'user_id'=>'1', 'box_difficulty'=>'2', 'box_activated'=> "0"],
-            ['id'=>NULL, 'user_id'=>'1', 'box_difficulty'=>'5', 'box_activated'=> "0"],
+            ['id'=>NULL, 'user_id'=>'1', 'box_difficulty'=>'5', 'box_activated'=> "0"]
         ];
         DB::table('boxes')->insert($data);
     }

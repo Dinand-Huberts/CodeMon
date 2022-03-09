@@ -27,6 +27,8 @@ class quiz extends Component
      */
     public function render()
     {
+        session_start();
+
         //get and set user_id
         $user_id = Auth::id();
 
@@ -36,7 +38,7 @@ class quiz extends Component
         $cooldown = strtotime($cooldown_string);
         $time = time();
         $interval = $time - $cooldown;
-        if ($interval >= 14400) { 
+        if ($interval >= 14400) {
             $quiz_cooldown_check = true;
         } else {
             $quiz_cooldown_check = false;
@@ -44,33 +46,57 @@ class quiz extends Component
 
 
         //set max amount of quizzes available
-        $max_id_query = DB::table('quizzes')->where('id', \DB::raw("(select max(`id`) from quizzes)"))->get();
-        $max_id = $max_id_query[0]->id;
 
+        //retrieve the questions and answer for the difficulty chosen.
+        switch ($_GET['difficulty']) {
+            case 'easy':
+                $difficulty = 1;
+                break;
+
+            case 'normal':
+                $difficulty = 2;
+                break;
+
+            case 'hard':
+                $difficulty = 3;
+                break;
+
+            case 'extreme':
+                $difficulty = 4;
+                break;
+
+            case 'nightmare':
+                $difficulty = 5;
+                break;
+        }   
+        // Fetches everything with the assigned difficulty from the quizzes table
+        $quizzes = DB::table('quizzes')->where('quiz_difficulty', '=', $difficulty)->get();
+
+        // Further idiotproofing
+        $quizzes_count = count($quizzes);
+        $quizzes_int = rand(0, ($quizzes_count - 1));
+
+        if (isset($quizzes[$quizzes_int])) {
+            $quiz_id = $quizzes[$quizzes_int]->id;
+            $quiz_question = $quizzes[$quizzes_int]->quiz_question;
+            $quiz_answer = $quizzes[$quizzes_int]->quiz_answer;
+            $quiz_type = $quizzes[$quizzes_int]->quiz_type;
+        }
         
-        $quiz_id = rand(1, $max_id);
 
+        //Assign quiz_id to session
+        $_SESSION['quiz_id'] = $quiz_id;
 
-         //retrieve the questions and answer
-        $quiz_query = DB::table('quizzes')->where('id', '=', $quiz_id)->get();
-        $quiz_question = $quiz_query[0]->quiz_question;
-        $quiz_answer = $quiz_query[0]->quiz_answer;
-        $quiz_category = $quiz_query[0]->category_id;
-        $quiz_difficulty = $quiz_query[0]->quiz_difficulty;
-        $quiz_type = $quiz_query[0]->quiz_type;
- 
-        //set variables in the view
-        $data = 
-        ['quiz_answer' => $quiz_answer,
-        'quiz_question' => $quiz_question,
-        'quiz_category' => $quiz_category,
-        'quiz_difficulty' => $quiz_difficulty,
-        'quiz_type' => $quiz_type,
-        'quiz_id' => $quiz_id,
-        'quiz_cooldown' => $quiz_cooldown_check
-    ];
-
+        //Set variables in the view
+        $data =
+            [   
+                'quiz_id' => $quiz_id,  
+                'quizzes_int' => $quizzes_count,
+                'quiz_question' => $quiz_question,
+                'quiz_answer' => $quiz_answer,
+                'quiz_type' => $quiz_type,
+                'quiz_cooldown' => $quiz_cooldown_check
+            ];
         return view('/components/quiz', $data);
     }
 }
-

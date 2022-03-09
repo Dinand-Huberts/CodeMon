@@ -42,13 +42,21 @@ class Quizselector extends Component
             $quiz_cooldown_check = false;
         }
 
-
+        $difference = 14400  - $interval;
+        $hours = round(($difference / 60 / 60));
+        $minutes = ($difference / 60) % 60;
+        $seconds = $difference % 60;
 
 
         //set variables in the view
         $data =
             [
-                'quiz_cooldown' => $quiz_cooldown_check
+                'quiz_cooldown' => $quiz_cooldown_check,
+                'hours' => $hours,
+                'minutes' => $minutes,
+                'seconds' => $seconds,
+                'cooldown' => $cooldown,
+                'interval' => $interval,
             ];
 
         return view('/components/Quizselector', $data);
