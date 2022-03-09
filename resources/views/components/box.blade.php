@@ -1,6 +1,25 @@
 <div class="home_content backdrop-blur-sm rounded-2xl flex center"
     style="background-color: rgba(125, 125, 125, 0.2); width: 80%; height: auto;">
 
+    @foreach ($boxes as $box) {
+        echo $box;
+    }
+    
+    @endforeach
+
+
+</div>
+
+
+
+
+
+
+
+{{-- DB::table('boxes')->insert([
+    'box_activated' => 1
+]); --}}
+
 
 {{-- 
     @foreach ($boxes as $box)
@@ -15,17 +34,3 @@
             </div>
         </div>
     @endforeach --}}
-</div>
-
-@foreach ($boxes as $box) {
-    
-}
-
-
-
-
-
-
-{{-- DB::table('boxes')->insert([
-    'box_activated' => 1
-]); --}}
