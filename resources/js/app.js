@@ -7,9 +7,13 @@ window.Alpine = Alpine;
 window.$ = window.jQuery = $;
 Alpine.start();
 
-// window.box_open = function(){
-//     $(this).addClass( "is-active" );
-// }
+// function to start the animation
+$(function() {
+    $('.box-body').click(function() {
+        $(this).addClass("is-active");
+    });
+});
+
 
 
 

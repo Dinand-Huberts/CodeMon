@@ -30,7 +30,6 @@ class box extends Component
         $boxes = DB::table('boxes')
             ->where('user_id', '=', $user_id)->get()
             ->where('box_activated', '=', 0 );
-            
         return view('/components/box', ['boxes' => $boxes, 'user_id' => $user_id]);
 
     }
