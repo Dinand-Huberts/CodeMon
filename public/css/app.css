@@ -828,6 +828,12 @@ select {
 .h-4 {
   height: 1rem;
 }
+.h-\[35\%\] {
+  height: 35%;
+}
+.h-\[120vh\] {
+  height: 120vh;
+}
 .max-h-\[75vh\] {
   max-height: 75vh;
 }
@@ -869,6 +875,9 @@ select {
 }
 .w-4 {
   width: 1rem;
+}
+.w-\[35\%\] {
+  width: 35%;
 }
 .min-w-\[45vw\] {
   min-width: 45vw;

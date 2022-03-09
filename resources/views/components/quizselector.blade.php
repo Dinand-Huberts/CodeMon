@@ -13,13 +13,11 @@
     </form>
 @else
 
-<div id="quiz_cooldown_message">
-    You already made a quiz! You can make one again after <br>
-    <p id="days"></p>
-    <p id="hours"></p>
-    <p id="mins"></p>
-    <p id="secs"></p>
-    <h2 id="end"></h2>
+<div class="text-xl" id="quiz_cooldown_message">
+    You already made a quiz! You can make one again after: <br>
 </div>
+<p class="" id="timeleft"></p>
+
+
 
 @endif
