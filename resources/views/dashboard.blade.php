@@ -1,5 +1,56 @@
 @include('includes')
+@if ($_GET)
+    <?php
+    session_start();
+    if (isset($_SESSION['quiz_id'])) {
+        //get and set user_id
+        $user_id = Auth::id();
 
+        //Get quiz info with corresponding id
+        $quiz = DB::table('quizzes')
+            ->where('id', '=', $_SESSION['quiz_id'])
+            ->get();
+        $quiz_answer = $quiz[0]->quiz_answer;
+        $quiz_difficulty = $quiz[0]->quiz_difficulty;
+        $user_answer_boolean = $_GET['user_answer'] == $quiz_answer;
+        if ($user_answer_boolean) {
+            $users_data = ['quiz_cooldown'=>date('Y-m-d, H:i:s', time())];
+            $boxes_data = ['user_id'=>$user_id, 'box_difficulty'=>$quiz_difficulty];
+            DB::table('boxes')->insert($boxes_data);
+            DB::table('users')->where('id', '=', $user_id)->update($users_data);
+            echo "<script>alert('Goed antwoord!')</script>";
+        } else {
+            echo "<script>alert('Fout antwoord!')</script>";
+        }
+    
+        //get and set user_id
+        $user_id = Auth::id();
+    
+        //cooldown check
+        $cooldown_query = DB::table('users')
+            ->where('id', '=', $user_id)
+            ->get();
+        $cooldown_string = $cooldown_query[0]->quiz_cooldown;
+        $cooldown = strtotime($cooldown_string);
+        $time = time();
+        $interval = $time - $cooldown;
+        if ($interval >= 14400) {
+            $quiz_cooldown_check = true;
+        } elseif ($interval < 14400) {
+            $quiz_cooldown_check = false;
+        }
+        unset($_SESSION['quiz_id']);
+    } else {
+        //reroute user to page with no parameters
+        $host = $_SERVER['HTTP_HOST'];
+        $uri = 'codemon.test/';
+        header('Location: /dashboard');
+        exit();
+    }
+    ?>
+@endif
+<body onload="quiz_countdown({{}})">
+    
 
 <div class="flex flex-col justify-between">
     @include('header')
@@ -48,24 +99,24 @@
             </div>
 
             <div class="hidden" id="kaarten" role="tabpanel" aria-labelledby="kaarten-tab">
-                    <div id="text_home" class="">
-                        <x-card></x-card>
-                    </div>
+                <div id="text_home" class="">
+                    <x-card></x-card>
                 </div>
             </div>
+        </div>
 
-            <div class="hidden" id="boxes" role="tabpanel" aria-labelledby="boxes-tab">
-                <x-box></x-box>
-            </div>
+        <div class="hidden" id="boxes" role="tabpanel" aria-labelledby="boxes-tab">
+            <x-box></x-box>
+        </div>
 
-            <div class="hidden" id="quiz" role="tabpanel" aria-labelledby="quiz-tab">
-                <div class="home_content backdrop-blur-sm rounded-2xl flex max-h-[75vh] min-w-[45vw] flex items-center justify-around overflow-hidden"
-                    style="background-color: rgba(125, 125, 125, 0.2)">
-                    <x-quizselector></x-quizselector>
-                </div>
+        <div class="hidden" id="quiz" role="tabpanel" aria-labelledby="quiz-tab">
+            <div class="home_content backdrop-blur-sm rounded-2xl flex max-h-[75vh] min-w-[45vw] flex items-center justify-around overflow-hidden"
+                style="background-color: rgba(125, 125, 125, 0.2)">
+                <x-quizselector></x-quizselector>
             </div>
         </div>
     </div>
 </div>
-
+</div>
+</body>
 @include('footer')
