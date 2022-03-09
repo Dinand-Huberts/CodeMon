@@ -6,16 +6,18 @@
     @foreach ($boxes as $box)
         <div class="container">
             <div class="m-10">
-                <div class="box">
-                    <div class="box-body">
-                        <img class="img" src="https://via.placeholder.com/150">
-                        <div class="box-lid">
-                            <div class="box-bowtie">
-                            </div>
-                        </div>
+                <div class="box-body">
+                    <img class="img" src="https://via.placeholder.com/150">
+                    <div class="box-lid">
+                        <div class="box-bowtie"></div>
                     </div>
                 </div>
             </div>
         </div>
+
     @endforeach
 </div>
+
+{{-- DB::table('boxes')->insert([
+    'box_activated' => 1
+]); --}}

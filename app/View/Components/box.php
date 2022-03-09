@@ -28,9 +28,11 @@ class box extends Component
     {
         $user_id = Auth::id();
         $boxes = DB::table('boxes')
-            ->where('user_id', '=', $user_id)->get()
-            ->where('box_activated', '=', 0 );
+            ->where('user_id', '=', $user_id)
+            ->where('box_activated', '=', 0 )
+            ->get();
         return view('/components/box', ['boxes' => $boxes, 'user_id' => $user_id]);
 
     }
+
 }
