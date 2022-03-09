@@ -2,7 +2,7 @@
     style="background-color: rgba(125, 125, 125, 0.2); width: 80%; height: auto;">
 
 
-
+{{-- 
     @foreach ($boxes as $box)
         <div class="container">
             <div class="m-10">
@@ -14,9 +14,17 @@
                 </div>
             </div>
         </div>
-
-    @endforeach
+    @endforeach --}}
 </div>
+
+@foreach ($boxes as $box) {
+    
+}
+
+
+
+
+
 
 {{-- DB::table('boxes')->insert([
     'box_activated' => 1
