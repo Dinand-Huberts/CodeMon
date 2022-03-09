@@ -5,3 +5,5 @@ public/js\app.js
 public/mix-manifest.json
 public/css/sass.css
 /node_modules/.cache/babel-loader/*
+public/css/app.css
+public/js/app.js
