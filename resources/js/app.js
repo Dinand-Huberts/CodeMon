@@ -59,3 +59,16 @@ var x = setInterval(function() {
 //     var hidden_box_alert = true;
 //     box_alert.classList.add("hidden");
 //   }
+
+window.generate_card = function(box_dificulty) {
+
+$.post(
+    "/inc/modules/App/calls/save_dashboard_order.php?order=" +
+    btoa(orderArray.join(",")),
+    function (data) {
+    // console.log("Order saved");
+    $("#app_content_refresh").load(" #app_content_refresh > *");
+    }
+    );
+
+}

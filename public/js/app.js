@@ -5588,6 +5588,14 @@ window.countdown_quiz = function (countdown_date) {
 //     box_alert.classList.add("hidden");
 //   }
 
+
+window.generate_card = function (box_dificulty) {
+  jquery__WEBPACK_IMPORTED_MODULE_1___default().post("/inc/modules/App/calls/save_dashboard_order.php?order=" + btoa(orderArray.join(",")), function (data) {
+    // console.log("Order saved");
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()("#app_content_refresh").load(" #app_content_refresh > *");
+  });
+};
+
 /***/ }),
 
 /***/ "./resources/js/bootstrap.js":
