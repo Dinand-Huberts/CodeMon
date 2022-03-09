@@ -7,13 +7,16 @@ window.Alpine = Alpine;
 window.$ = window.jQuery = $;
 Alpine.start();
 
-function box_open(){
-    $(this).addClass("is-active");
-}
+// function to start the animation
+$(function() {
+    $('.box-body').click(function() {
+        $(this).addClass("is-active");
+    });
+});
 
-    //Dit moet nog aangeroepen worden, en het verschil in datum moet goed verwerkt worden.
+ //Dit moet nog aangeroepen worden, en het verschil in datum moet goed verwerkt worden.
 
-window.countdown_quiz = function(countdown_date) {
+ window.countdown_quiz = function(countdown_date) {
     // Set the date we're counting down to
 var countDownDate = countdown_date;
 
@@ -43,6 +46,8 @@ var x = setInterval(function() {
   }
 }, 500);
 }
+
+
 // var hidden_box_alert = false;
 // var box_alert = document.getElementById("box_alert");
 // window.showalert = function() {

@@ -5546,12 +5546,13 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Alpine = alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"];
 window.$ = window.jQuery = (jquery__WEBPACK_IMPORTED_MODULE_1___default());
-alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start();
+alpinejs__WEBPACK_IMPORTED_MODULE_0__["default"].start(); // function to start the animation
 
-function box_open() {
-  jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).addClass("is-active");
-} //Dit moet nog aangeroepen worden, en het verschil in datum moet goed verwerkt worden.
-
+jquery__WEBPACK_IMPORTED_MODULE_1___default()(function () {
+  jquery__WEBPACK_IMPORTED_MODULE_1___default()('.box-body').click(function () {
+    jquery__WEBPACK_IMPORTED_MODULE_1___default()(this).addClass("is-active");
+  });
+}); //Dit moet nog aangeroepen worden, en het verschil in datum moet goed verwerkt worden.
 
 window.countdown_quiz = function (countdown_date) {
   // Set the date we're counting down to
