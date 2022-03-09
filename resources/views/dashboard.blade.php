@@ -42,7 +42,6 @@
                         <p>PROFIEL:</p> <br>
                         <p><b>Gebruiker -> </b> {{ Auth::user()->name }} </p>
                         <p><b>Email -> </b> {{ Auth::user()->email }} </p>
-                        <p><b>Pashword hash -> </b> {{ Auth::user()->password }} </p>
                     </div>
                 </div>
             </div>
