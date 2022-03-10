@@ -66,6 +66,6 @@ window.generate_card = function(box_id) {
       id: box_id,
     }).done(function (data) {
       var answer = JSON.parse(data);
-      alert(answer[1]);
+      alert(answer[0]);
     });
 }
