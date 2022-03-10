@@ -60,15 +60,12 @@ var x = setInterval(function() {
 //     box_alert.classList.add("hidden");
 //   }
 
-window.generate_card = function(box_dificulty) {
+window.generate_card = function(box_id) {
 
-$.post(
-    "/inc/modules/App/calls/save_dashboard_order.php?order=" +
-    btoa(orderArray.join(",")),
-    function (data) {
-    // console.log("Order saved");
-    $("#app_content_refresh").load(" #app_content_refresh > *");
-    }
-    );
-
+    $.post("public/calls/generate_card.php", {
+      id: box_id,
+    }).done(function (data) {
+      var answer = JSON.parse(data);
+      alert(answer[1]);
+    });
 }
