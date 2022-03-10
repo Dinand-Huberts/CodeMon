@@ -33,8 +33,8 @@ class card extends Component
         $teacher_count = count($teachers);
 
         $docent_int = rand(0, ($teacher_count- 1));
-        // $rarity_int = rand(1,10000);
-        $rarity_int = 100;
+        $rarity_int = rand(1,10000);
+
 
         //Depending on $rarity_int, chooses a card rarity when it's under a certain treshold.
         //$rarity_name = Actual name of card rarity. Used in determining the class/name.
@@ -82,11 +82,14 @@ class card extends Component
                 break;
             }
                     
+            //Check if a result is given
             if (isset($teachers[$docent_int])) {
+                //Fetch name and image
                 $docent_name = $teachers[$docent_int]->name;
                 $docent_img = "./img/card-images/" . $teachers[$docent_int]->id . ".png";
             }
-            // $docent_name = 
+            
+
 
         $data = [
             'rarity_name'=>$rarity_name,
