@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\GenerateCardController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,5 +26,7 @@ Route::get('/dashboard', function () {
 Route::get('/quiz', function () {
     return view('quiz');
 });
+
+Route::get('/generate_card', [GenerateCardController::class, 'generate_card']);
 
 require __DIR__ . '/auth.php';  

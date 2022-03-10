@@ -36,7 +36,7 @@ class DashboardController extends Controller
         } elseif ($interval < 14400) {
             $onload = 'countdown_quiz(' . $cooldown_until  . ')';
             $quiz_cooldown_check = false;
-        }1
+        }
 
         if ($_GET) {
             session_start();

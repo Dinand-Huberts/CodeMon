@@ -33,16 +33,16 @@
                 <li>
                     <a href="./" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-zinc-50 md:p-0 md:dark:hover:text-zinc-50 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">Home</a>
                 </li>
-                <li>
-                    <a href="./login" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-zinc-50 md:p-0 md:dark:hover:text-zinc-50 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">Login</a>
-                </li>
                 @if (Auth::check())
                 <li>
                     <a href="./dashboard" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-zinc-50 md:p-0 md:dark:hover:text-zinc-50 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">Dashboard</a>
                 </li>
+                @else
                 <li>
-                    <a onclick="" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-zinc-50 md:p-0 md:dark:hover:text-zinc-50 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">News</a>
+                    <a href="./login" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-zinc-50 md:p-0 md:dark:hover:text-zinc-50 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">Login</a>
                 </li>
+                
+
                 @endif
             </ul>
         </div>
