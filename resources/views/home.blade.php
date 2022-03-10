@@ -9,6 +9,7 @@
 
 <body>
 
+  
   <div class="parallax">
     @include('header')
     <div id="group" class="parallax__group absolute">
