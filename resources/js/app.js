@@ -67,7 +67,6 @@ window.generate_card = function (box_id) {
           noboxes();
           showcard(answer[0]);
         } else{
-        alert(data);
         showcard(answer[0]);
         updatecounters(answer[1], answer[3]);
         $('#generate_card_button').attr("onclick", "generate_card(" + answer[2] + ")");
