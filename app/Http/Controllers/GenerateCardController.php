@@ -196,7 +196,7 @@ class GenerateCardController extends Controller
             // $boxes_current_id = (isset($boxes_current)) ? $boxes_current->id : null;
             $boxes_current_difficulty = (isset($boxes_current)) ? $boxes_current->box_difficulty : null;
 
-            return View::make('components.box');
+            return BoxController::render();
             // return json_encode([$card_div, $box_count, $boxes_current_id, $boxes_current_difficulty]);
     }
 }
