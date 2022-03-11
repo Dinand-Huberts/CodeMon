@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="hidden" id="kaarten" role="tabpanel" aria-labelledby="kaarten-tab">
-                    <div id="text_home" class="">
+                    <div id="dashboard_card" class="">
                         <x-card></x-card>
                     </div>
                 </div>

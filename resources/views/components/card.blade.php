@@ -1,39 +1,42 @@
-<h3>Congratulations! You found a {{ $rarity_name . ' ' . $docent_name }}</h3>
-<div class="cards_container">
+{{-- @php
+    dd($card);   
+@endphp --}}
+
+@foreach ($card as $item)
+<div id="card_wrapper">
     <div id="cards">
-        {{-- card rarities kunnen het volgende zijn: card--common, card--uncommon, card--rare, card--epic, card--legendary --}}
-        <figure class="card card--{{$rarity_name}}">
+        <figure class="card card--{{$item->card_rarity}}">
             <div class="card__image-container">
-                <img src="{{ $docent_img }}" alt="{{ $docent_name }}" class="card__image" style="height: 200px; margin:auto">
+                <img src="' . $docent_img . '" alt="' . $docent_name . '" class="card__image" style="height: 200px; margin:auto; width: auto;">
             </div>
             <figcaption class="card__caption">
-                <h1 class="card__name">{{ $docent_name }}</h1>
-                <h3 class="card__type">{{ $rarity_name }}</h3>
+                <h1 class="card__name"> teacher </h1>
+                <h3 class="card__type">teacher</h3>
                 <table class="card__stats">
                     <tbody>
                         <tr>
                             <th>HP</th>
-                            <td>{{ rand($stat_min, $stat_max) }}</td>
+                            <td>{{$item->card_hp}}</td>
                         </tr>
                         <tr>
                             <th>Attack</th>
-                            <td>{{ rand($stat_min, $stat_max) }}</td>
+                            <td>{{$item->card_attack}}</td>
                         </tr>
                         <tr>
                             <th>Defense</th>
-                            <td>{{ rand($stat_min, $stat_max) }}</td>
+                            <td>{{$item->card_defense}}</td>
                         </tr>
                         <tr>
                             <th>Special Attack</th>
-                            <td>{{ rand($stat_min, $stat_max) }}</td>
+                            <td>{{$item->card_special_attack}}</td>
                         </tr>
                         <tr>
                             <th>Special Defense</th>
-                            <td>{{ rand($stat_min, $stat_max) }}</td>
+                            <td>{{$item->card_special_defense}}</td>
                         </tr>
                         <tr>
                             <th>Speed</th>
-                            <td>{{ rand($stat_min, $stat_max) }}</td>
+                            <td>{{$item->card_speed}}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -50,4 +53,5 @@
             </figcaption>
         </figure>
     </div>
-</div>
+    </div>
+@endforeach
