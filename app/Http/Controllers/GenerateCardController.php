@@ -205,7 +205,7 @@ $card_div = '<div class="cards_container">
         $boxes_current_difficulty = $boxes_current->box_difficulty;
         echo json_encode([$card_div, $box_count , $boxes_current_id, $boxes_current_difficulty]);
         } else {
-        echo json_encode([$card_div, $box_count , NULL, '0']);
+        echo json_encode([$card_div, '0' , NULL, '0']);
         }
     }
 }
