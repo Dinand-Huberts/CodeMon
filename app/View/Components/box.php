@@ -31,10 +31,9 @@ class box extends Component
             ->where('user_id', '=', $user_id)
             ->where('box_activated', '=', 0 )
             ->get();
-        
 
         $box_count = count($boxes);
-        $boxes_current = $boxes->first();
+        $boxes_current = (isset($boxes[0])) ? $boxes[0] : null;
 
         return view('/components/box', ['boxes' => $boxes, 'user_id' => $user_id, 'box_count' => $box_count, 'boxes_current' => $boxes_current]);
 
