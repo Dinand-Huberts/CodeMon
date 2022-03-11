@@ -14,8 +14,6 @@ $(function () {
     });
 });
 
-//Dit moet nog aangeroepen worden, en het verschil in datum moet goed verwerkt worden.
-
 window.countdown_quiz = function (countdown_date) {
     // Set the date we're counting down to
     var countDownDate = countdown_date;
@@ -68,7 +66,7 @@ $('#generate_card_button').on('click', function (e) {
         id: boxId,
     }).done(function (data) {
         
-        $('#boxes').html(data);
+        // $('#boxes').html(data);
         // var answer = JSON.parse(data);
         // if (answer[3] == 0){
         //     noboxes();
@@ -81,6 +79,7 @@ $('#generate_card_button').on('click', function (e) {
         //     console.log($('#generate_card_button').data("box-id"));
         // }
         // $('#generate_card_button').attr("disabled", false);
+        alert(data)
     });
 });
 

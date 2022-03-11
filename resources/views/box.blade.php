@@ -1,6 +1,7 @@
 <div class="home_content backdrop-blur-sm rounded-2xl flex center"
     style="background-color: rgba(125, 125, 125, 0.2); width: 80%; height: auto;">
 
+    
     @if (isset($boxes_current))
         
     
@@ -9,7 +10,7 @@
         <p id="box_count_top_text"> Aantal boxes: </p>
         <p id="box_count">{{$box_count}}</p><br>
         
-        <p id="box_difficulty_top text">current box difficulty: </p>  
+        <p id="box_difficulty_top text">Current box difficulty: </p>  
         <p id="box_difficulty">{{$boxes_current->box_difficulty}} </p>
         <br>
         
@@ -25,38 +26,38 @@
     <div id="card_container">
         <div class="cards_container">
             <div id="cards">
-                <figure class="card card--' . $rarity_name . '">
+                <figure class="card card--{{ $rarity_name }}">
                     <div class="card__image-container">
-                        <img src="./img/card-images/' . $teachers[$randomTeacher]->id . '.png" alt="' . $teachers[$randomTeacher]->name . '" class="card__image" style="height: 200px; margin:auto">
+                        <img src="./img/card-images/{{ $teachers[$randomTeacher]->id }}.png" alt="{{$teachers[$randomTeacher]->name}}" class="card__image" style="height: 200px; margin:auto">
                     </div>
                     <figcaption class="card__caption">
-                        <h1 class="card__name">' . $teachers[$randomTeacher]->name . ' </h1>
-                        <h3 class="card__type">' . $rarity_name . '</h3>
+                        <h1 class="card__name">{{ $teachers[$randomTeacher]->name }} </h1>
+                        <h3 class="card__type"> {{ $rarity_name }}</h3>
                         <table class="card__stats">
                             <tbody>
                                 <tr>
                                     <th>HP</th>
-                                    <td>' . $hp . '</td>
+                                    <td>{{$hp}}</td>
                                 </tr>
                                 <tr>
                                     <th>Attack</th>
-                                    <td>' . $attack . '</td>
+                                    <td>{{$attack}}</td>
                                 </tr>
                                 <tr>
                                     <th>Defense</th>
-                                    <td>' . $defense . '</td>
+                                    <td>{{$defense}}</td>
                                 </tr>
                                 <tr>
                                     <th>Special Attack</th>
-                                    <td>' . $special_attack . '</td>
+                                    <td>{{$special_attack}}</td>
                                 </tr>
                                 <tr>
                                     <th>Special Defense</th>
-                                    <td>' . $special_defense . '</td>
+                                    <td>{{$special_defense}}</td>
                                 </tr>
                                 <tr>
                                     <th>Speed</th>
-                                    <td>' . $speed . '</td>
+                                    <td>{{$speed}}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -81,21 +82,6 @@
     </div>
     @endif
 </div>
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 {{-- DB::table('boxes')->insert([
     'box_activated' => 1

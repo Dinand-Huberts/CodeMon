@@ -6,6 +6,7 @@ use App\Http\Controllers\BoxController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Facade\FlareClient\View;
+use Illuminate\Http\Client\Request;
 use Illuminate\View\Component;
 
 class box extends Component
@@ -25,7 +26,7 @@ class box extends Component
      *
      * @return \Illuminate\Contracts\View\View|\Closure|string
      */
-    public function render()
+    public function render(Request $request)
     {
         return BoxController::render();
     }
