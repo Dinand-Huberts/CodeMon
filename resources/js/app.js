@@ -58,21 +58,46 @@ window.countdown_quiz = function (countdown_date) {
 //     box_alert.classList.add("hidden");
 //   }
 
-window.generate_card = function (box_id) {
+$('#generate_card_button').on('click', function (e) {
+    $(e.currentTarget).attr('disabled', true);
+
+    const boxId = $(e.currentTarget).data('box-id');
+    console.log($('#generate_card_button').data("box-id"));
+
     $.get("/generate_card", {
-        id: box_id,
+        id: boxId,
     }).done(function (data) {
-        var answer = JSON.parse(data);
-        if (answer[3] == 0){
-          noboxes();
-          showcard(answer[0]);
-        } else{
-        showcard(answer[0]);
-        updatecounters(answer[1], answer[3]);
-        $('#generate_card_button').attr("onclick", "generate_card(" + answer[2] + ")");
-        }
+        
+        $('#boxes').html(data);
+        // var answer = JSON.parse(data);
+        // if (answer[3] == 0){
+        //     noboxes();
+        //     showcard(answer[0]);
+        // } else{
+        //     showcard(answer[0]);
+        //     updatecounters(answer[1], answer[3]);
+        //     $('#generate_card_button').data("box-id", answer[2]);
+        //     console.log(answer[2]);
+        //     console.log($('#generate_card_button').data("box-id"));
+        // }
+        // $('#generate_card_button').attr("disabled", false);
     });
-};
+});
+
+//     $.get("/generate_card", {
+//         id: box_id,
+//     }).done(function (data) {
+//         var answer = JSON.parse(data);
+//         if (answer[3] == 0){
+//           noboxes();
+//           showcard(answer[0]);
+//         } else{
+//         showcard(answer[0]);
+//         updatecounters(answer[1], answer[3]);
+//         $('#generate_card_button').attr("onclick", "generate_card(" + answer[2] + ")");
+//         }
+//     });
+// };
 
 window.showcard = function (data) {
   //first empty the div, then append the new generated card

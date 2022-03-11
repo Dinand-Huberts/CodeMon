@@ -13,7 +13,13 @@
         <p id="box_difficulty">{{$boxes_current->box_difficulty}} </p>
         <br>
         
-        <button id="generate_card_button" onclick="generate_card({{$boxes_current->id}})" class="text-black bg-red-600 hover:bg-red-600 focus:ring-amber-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-red-600 dark:hover:bg-red-600 dark:focus:ring-amber-500">Open current box!</button>
+        @if ($box_count == 0)
+        <div id="wrapper" class="m-10">
+            You don't have any boxes left!
+        </div>
+        @else
+            <button id="generate_card_button" data-box-id="{{ $boxes_current->id }}" class="text-black bg-red-600 hover:bg-red-600 focus:ring-amber-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-red-600 dark:hover:bg-red-600 dark:focus:ring-amber-500">Open current box!</button>
+        @endif
         {{-- <x-card></x-card> --}}
     </div>
     <div id="card_container">
