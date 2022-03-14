@@ -215,7 +215,7 @@ class BoxController extends Controller
             'defense' => $defense,
             'special_attack' => $special_attack,
             'special_defense' => $special_defense,
-            'speed' => $speed--
+            'speed' => $speed
         ]);
     }
 }
