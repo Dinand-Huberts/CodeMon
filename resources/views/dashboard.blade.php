@@ -57,7 +57,11 @@
             </div>
 
             <div class="hidden" id="boxes" role="tabpanel" aria-labelledby="boxes-tab">
+<<<<<<< HEAD
                {{view('box')}}
+=======
+               {{-- <x-box></x-box>  --}}
+>>>>>>> 69feff6784222ffd3b995fe87b2db6b63e4358e8
             </div>
 
             <div class="hidden" id="quiz" role="tabpanel" aria-labelledby="quiz-tab">

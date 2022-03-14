@@ -7,11 +7,11 @@
     <div id="cards">
         <figure class="card card--{{$item->card_rarity}}">
             <div class="card__image-container">
-                <img src="' . $docent_img . '" alt="' . $docent_name . '" class="card__image" style="height: 200px; margin:auto; width: auto;">
+                <img src="{{$item->img}}" alt="' . {{$item->name}} . '" class="card__image" style="height: 200px; margin:auto; width: auto;">
             </div>
             <figcaption class="card__caption">
-                <h1 class="card__name"> teacher </h1>
-                <h3 class="card__type">teacher</h3>
+                <h1 class="card__name"> {{$item->name}} </h1>
+                <h3 class="card__type">{{$item->rarity}}</h3>
                 <table class="card__stats">
                     <tbody>
                         <tr>
