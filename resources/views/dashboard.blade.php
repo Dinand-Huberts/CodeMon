@@ -57,7 +57,7 @@
             </div>
 
             <div class="hidden" id="boxes" role="tabpanel" aria-labelledby="boxes-tab">
-               {{-- <x-box></x-box>  --}}
+               {{-- <x-box></x-box> --}}
             </div>
 
             <div class="hidden" id="quiz" role="tabpanel" aria-labelledby="quiz-tab">

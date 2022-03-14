@@ -2,6 +2,9 @@
 
 namespace App\View\Components;
 
+use App\Models\card as ModelsCard;
+use App\Models\Card as AppModelsCard;
+use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Facade\FlareClient\View;
@@ -33,19 +36,20 @@ class card extends Component
 
         // Fetches everything from the teachers table
         $user_id = Auth::id();
-        $card = DB::table('card')
-            ->join('teachers', 'card.teacher_id', '=', 'teachers.id')
-            ->join('rarity', 'card.card_rarity', '=', 'rarity.id')
-            ->where('user_id', '=', $user_id)
-            ->select('teachers.name', 'teachers.img', 'rarity.rarity', 'card.*')
-            ->orderBy('rarity', 'asc')
-            ->get();
+        // $card = DB::table('card')
+        //     // ->join('teachers', 'card.teacher_id', '=', 'teachers.id')
+        //     // ->join('rarity', 'card.card_rarity', '=', 'rarity.id')
+        //     // ->where('user_id', '=', $user_id)
+        //     // ->select('teachers.name', 'teachers.img', 'rarity.rarity', 'card.*')
+        //     // ->orderBy('rarity', 'asc')
+        //     // ->get();
+
         
-        // dd($card);
+
+        $cards = User::find(Auth::id())->cards;
 
 
-
-        return view('/components/card', ['card'=>$card]);
+        return view('/components/card', ['card'=>$cards]);
 
     }
 }
