@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\GenerateCardController;
+use App\Http\Controllers\BoxController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,16 +17,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('home');
 });
+
 Route::get('/contact', function () {
     return view('contact');
 });
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
+
+Route::get('/box', [BoxController::class, 'index']);
+
 Route::get('/quiz', function () {
     return view('quiz');
 });
 
-Route::get('/generate_card', [GenerateCardController::class, 'generate_card_call']);
+Route::get('/generate_card', [BoxController::class, 'generate']);
 
 require __DIR__ . '/auth.php';  

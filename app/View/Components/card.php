@@ -106,7 +106,7 @@ class card extends Component
         // $teachers = DB::table('teachers')->get();
 
         $user_id = Auth::id();
-        $card = DB::table('card')
+        $card = DB::table('cards')
             ->where('user_id', '=', $user_id)->get();
 
 

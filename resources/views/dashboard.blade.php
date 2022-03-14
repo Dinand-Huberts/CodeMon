@@ -57,7 +57,7 @@
             </div>
 
             <div class="hidden" id="boxes" role="tabpanel" aria-labelledby="boxes-tab">
-               <x-box></x-box>
+               {{view('box')}}
             </div>
 
             <div class="hidden" id="quiz" role="tabpanel" aria-labelledby="quiz-tab">

@@ -56,7 +56,7 @@ window.countdown_quiz = function (countdown_date) {
 //     box_alert.classList.add("hidden");
 //   }
 
-$('#generate_card_button').on('click', function (e) {
+$(document).on("click", '#generate_card_button', function (e) {
     $(e.currentTarget).attr('disabled', true);
 
     const boxId = $(e.currentTarget).data('box-id');
@@ -64,23 +64,12 @@ $('#generate_card_button').on('click', function (e) {
 
     $.get("/generate_card", {
         id: boxId,
+        dataType: 'html'
     }).done(function (data) {
-        
-        // $('#boxes').html(data);
-        // var answer = JSON.parse(data);
-        // if (answer[3] == 0){
-        //     noboxes();
-        //     showcard(answer[0]);
-        // } else{
-        //     showcard(answer[0]);
-        //     updatecounters(answer[1], answer[3]);
-        //     $('#generate_card_button').data("box-id", answer[2]);
-        //     console.log(answer[2]);
-        //     console.log($('#generate_card_button').data("box-id"));
-        // }
-        // $('#generate_card_button').attr("disabled", false);
-        alert(data)
+        $('#box').html((jQuery(data).find('#box').html()));
     });
+
+    $(e.currentTarget).attr('disabled', false);
 });
 
 //     $.get("/generate_card", {
