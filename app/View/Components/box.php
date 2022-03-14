@@ -21,15 +21,20 @@ class box extends Component
         //
     }
 
+    public function render()
+    {
+        dd(get_defined_vars());
+    }
     /**
      * Get the view / contents that represent the component.
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      * @return \Illuminate\Contracts\View\View|\Closure|string
      */
-    public function render(Request $request)
+    public function render1(Request $request)
     {
-        return BoxController::generate_card(Request);
+        dd(get_defined_vars());
+        return BoxController::generate_card($request);
     }
 
 }

@@ -174,7 +174,7 @@ class GenerateCardController extends Controller
 </div>
 ';
 
-    DB::table('card')->insert([
+    DB::table('cards')->insert([
         'user_id' => $user_id,
         'card_rarity' => $rarity_data_int,
         'teacher_id' => $teachers[$randomTeacher]->id,

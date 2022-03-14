@@ -116,10 +116,10 @@
     }
 
     &--epic, &--2 {
-      background: linear-gradient(215deg, #FAF 0%, #FFF 8%, #A4F 20%, #C2F 32%, #FA0 92%, #FF0 100%);
+      background: linear-gradient(215deg, #FAF 0%, #FFF 8%, #A4F 20%, #C2F 32%, #FAF 92%, #FDF 100%);
       box-shadow: 0px 5px 20px -10px #000;
       .card__type {
-        background-image: linear-gradient(0deg, #C0F, #FA0);
+        background-image: linear-gradient(0deg, #C0F, #FAF);
         border: 2px solid white;
       }
     }

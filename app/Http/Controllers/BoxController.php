@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Box;
+use App\Models\Card;
 use App\Models\Teacher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -11,10 +12,7 @@ use Illuminate\Support\Facades\DB;
 
 class BoxController extends Controller
 {
-    public function render(){
-        //
-    }
-    public static function generate_card(Request $request)
+    public function index($layout = true)
     {
         $boxes = Box
             ::where('user_id', '=', Auth::id())
@@ -22,6 +20,20 @@ class BoxController extends Controller
             ->get();
 
         // chaneg to last card, not box
+        $card = Card::where('user_id', Auth::id())->orderBy('id', 'desc')->first();
+
+        return view('box', ['boxes' => $boxes, 'card' => $card, 'layout' => $layout]);
+    }
+
+    public function generate(Request $request)
+    {
+        
+        $boxes = Box
+            ::where('user_id', '=', Auth::id())
+            ->where('box_activated', '=', 0)
+            ->get();
+
+        // change to last card, not box
         $card = Box::where('user_id', Auth::id())->where('box_activated', 1)->first();
 
 
@@ -122,60 +134,8 @@ class BoxController extends Controller
         $special_attack = rand($stat_min, $stat_max);
         $special_defense = rand($stat_min, $stat_max);
         $speed = rand($stat_min, $stat_max);
-        $card_div = '<div class="cards_container">
-<div id="cards">
-<figure class="card card--' . $rarity_name . '">
-    <div class="card__image-container">
-        <img src="./img/card-images/' . $teachers[$randomTeacher]->id . '.png" alt="' . $teachers[$randomTeacher]->name . '" class="card__image" style="height: 200px; margin:auto">
-    </div>
-    <figcaption class="card__caption">
-        <h1 class="card__name">' . $teachers[$randomTeacher]->name . ' </h1>
-        <h3 class="card__type">' . $rarity_name . '</h3>
-        <table class="card__stats">
-            <tbody>
-                <tr>
-                    <th>HP</th>
-                    <td>' . $hp . '</td>
-                </tr>
-                <tr>
-                    <th>Attack</th>
-                    <td>' . $attack . '</td>
-                </tr>
-                <tr>
-                    <th>Defense</th>
-                    <td>' . $defense . '</td>
-                </tr>
-                <tr>
-                    <th>Special Attack</th>
-                    <td>' . $special_attack . '</td>
-                </tr>
-                <tr>
-                    <th>Special Defense</th>
-                    <td>' . $special_defense . '</td>
-                </tr>
-                <tr>
-                    <th>Speed</th>
-                    <td>' . $speed . '</td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="card__abilities">
-            <h4 class="card__ability">
-                <span class="card__label">Ability</span>
-                Run Away
-            </h4>
-            <h4 class="card__ability">
-                <span class="card__label">Hidden Ability</span>
-                Anticipation
-            </h4>
-        </div>
-    </figcaption>
-</figure>
-</div>
-</div>
-';
 
-        DB::table('card')->insert([
+        DB::table('cards')->insert([
             'user_id' => $user_id,
             'card_rarity' => $rarity_data_int,
             'teacher_id' => $teachers[$randomTeacher]->id,
@@ -190,32 +150,6 @@ class BoxController extends Controller
         $box->box_activated = 1;
         $box->save();
 
-        $nextbox = Box
-            ::where('user_id', '=', $user_id)
-            ->where('box_activated', '=', 0)
-            ->get();
-
-        $box_count = count($nextbox);
-        $boxes_current = $nextbox->first();
-
-        // $boxes_current_id = (isset($boxes_current)) ? $boxes_current->id : null;
-        $boxes_current_difficulty = (isset($boxes_current)) ? $boxes_current->box_difficulty : null;
-
-
-        return view('box', [
-            'boxes' => $boxes,
-            'user_id' => Auth::id(),
-            'box_count' => count($boxes),
-            'boxes_current' => $boxes_current,
-            'teachers' => $teachers,
-            'randomTeacher' => $randomTeacher,
-            'rarity_name' => $rarity_name,
-            'hp' => $hp,
-            'attack' => $attack,
-            'defense' => $defense,
-            'special_attack' => $special_attack,
-            'special_defense' => $special_defense,
-            'speed' => $speed
-        ]);
+        return $this->index(false);
     }
 }
