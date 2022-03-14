@@ -11,7 +11,10 @@ use Illuminate\Support\Facades\DB;
 
 class BoxController extends Controller
 {
-    public static function render(Request $request)
+    public function render(){
+        //
+    }
+    public static function generate_card(Request $request)
     {
         $boxes = Box
             ::where('user_id', '=', Auth::id())
@@ -212,7 +215,7 @@ class BoxController extends Controller
             'defense' => $defense,
             'special_attack' => $special_attack,
             'special_defense' => $special_defense,
-            'speed' => $speed
+            'speed' => $speed--
         ]);
     }
 }

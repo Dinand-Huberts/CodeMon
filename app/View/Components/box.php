@@ -6,7 +6,7 @@ use App\Http\Controllers\BoxController;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Facade\FlareClient\View;
-use Illuminate\Http\Client\Request;
+use Illuminate\Http\Request;
 use Illuminate\View\Component;
 
 class box extends Component
@@ -23,12 +23,13 @@ class box extends Component
 
     /**
      * Get the view / contents that represent the component.
-     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
      * @return \Illuminate\Contracts\View\View|\Closure|string
      */
     public function render(Request $request)
     {
-        return BoxController::render();
+        return BoxController::generate_card(Request);
     }
 
 }

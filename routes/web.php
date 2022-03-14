@@ -27,6 +27,6 @@ Route::get('/quiz', function () {
     return view('quiz');
 });
 
-Route::get('/generate_card', [GenerateCardController::class, 'generate_card']);
+Route::get('/generate_card', [GenerateCardController::class, 'generate_card_call']);
 
 require __DIR__ . '/auth.php';  
