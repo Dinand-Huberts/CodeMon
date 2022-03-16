@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCardTable extends Migration
+class CreateCardsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -15,6 +15,7 @@ class CreateCardTable extends Migration
     {
         Schema::create('cards', function (Blueprint $table) {
             $table->id('id', 16);
+            
             $table->unsignedBigInteger('user_id');
             $table->foreignId('user_id')->references('id')->on('users');
 
@@ -42,6 +43,6 @@ class CreateCardTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('card');
+        Schema::dropIfExists('cards');
     }
 }
