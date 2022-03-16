@@ -28,6 +28,8 @@
             @endif
 
         </div>
+        @if (!isset($card))
+            
         <div id="card_container">
             <div class="cards_container">
                 <div id="cards">
@@ -82,6 +84,7 @@
             </div>
         </div>
 </div>
+@endif
 
 {{-- DB::table('boxes')->insert([
     'box_activated' => 1
