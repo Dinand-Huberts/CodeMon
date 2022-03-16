@@ -20,9 +20,6 @@ class BoxController extends Controller
 
         // chaneg to last card, not box
         $card = Cards::where('user_id', Auth::id())->orderBy('id', 'desc')->first();
-        if (!isset($card)){
-            $card = 123;
-        }
 
         return view('box', ['boxes' => $boxes, 'card' => $card, 'layout' => $layout]);
     }

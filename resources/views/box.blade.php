@@ -28,7 +28,7 @@
             @endif
 
         </div>
-        @if (!isset($card))
+        @if (isset($card))
             
         <div id="card_container">
             <div class="cards_container">
