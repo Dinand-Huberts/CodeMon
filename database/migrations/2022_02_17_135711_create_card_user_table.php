@@ -17,6 +17,10 @@ class CreateCardUserTable extends Migration
             $table->id('id', 16);
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
+
+            $table->unsignedBigInteger('card_id');
+            $table->foreign('card_id')->references('id')->on('cards');
+
             $table->addColumn('integer', 'rarity', ['length' => 1]);
             $table->addColumn('integer', 'amount', ['length' => 8]);
             $table->boolean('favorite');

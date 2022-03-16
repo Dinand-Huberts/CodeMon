@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Models\Box;
-use App\Models\Card;
+use App\Models\Cards;
 use App\Models\Teacher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -14,13 +14,12 @@ class BoxController extends Controller
 {
     public function index($layout = true)
     {
-        $boxes = Box
-            ::where('user_id', '=', Auth::id())
+        $boxes = Box::where('user_id', '=', Auth::id())
             ->where('box_activated', '=', 0)
             ->get();
 
         // chaneg to last card, not box
-        $card = Card::where('user_id', Auth::id())->orderBy('id', 'desc')->first();
+        $card = Cards::where('user_id', Auth::id())->orderBy('id', 'desc')->first();
 
         return view('box', ['boxes' => $boxes, 'card' => $card, 'layout' => $layout]);
     }
