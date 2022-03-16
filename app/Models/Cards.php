@@ -10,11 +10,11 @@ class Cards extends Model
     use HasFactory;
 
     public function teacher() {
-        return $this->hasOne(Teacher::class, 'id', 'teacher_id');
+        return $this->belongsTo(Teacher::class);
     } 
 
     public function rarity() {
-        return $this->hasOne(Rarity::class);
+        return $this->hasOne(Rarity::class, 'id', 'card_rarity');
     } 
 
     public function user() {

@@ -2,8 +2,8 @@
 
 namespace App\View\Components;
 
-use App\Models\card as ModelsCard;
-use App\Models\Card as AppModelsCard;
+use App\Models\Cards;
+use App\Models\Teacher;
 use App\Models\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -30,6 +30,10 @@ class card extends Component
     public function render()
     {
         $cards = User::find(Auth::id())->cards;
+
+        // $cards = Teacher::all();
+
+        // dd($cards->teacher);
         return view('/components/card', ['card' => $cards]);
     }
 }

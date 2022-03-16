@@ -1,13 +1,13 @@
 @foreach ($card as $item)
 <div id="card_wrapper">
     <div id="cards">
-        <figure class="card card--{{$item->card_rarity}}">
+        <figure class="card card--{{$item->rarity->rarities}}">
             <div class="card__image-container">
                 <img src="{{$item->teacher->img}}" alt="{{$item->teacher->name}}" class="card__image" style="height: 200px; margin:auto; width: auto;">
             </div>
             <figcaption class="card__caption">
                 <h1 class="card__name"> {{$item->teacher->name}} </h1>
-                <h3 class="card__type">{{$item->rarity}}</h3>
+                <h3 class="card__type">{{$item->rarity->rarities}}</h3>
                 <table class="card__stats">
                     <tbody>
                         <tr>
@@ -17,7 +17,7 @@
                         <tr>
                             <th>Attack</th>
                             <td>{{$item->card_attack}}</td>
-                        </tr>
+                        </tr>   
                         <tr>
                             <th>Defense</th>
                             <td>{{$item->card_defense}}</td>

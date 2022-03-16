@@ -51,7 +51,7 @@
 
                 <div class="hidden" id="kaarten" role="tabpanel" aria-labelledby="kaarten-tab">
                     <div id="dashboard_card" class="">
-                        <x-card></x-card>
+                        <x-card></x-card> 
                     </div>
                 </div>
             </div>
