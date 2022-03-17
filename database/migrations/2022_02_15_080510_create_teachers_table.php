@@ -29,9 +29,7 @@ class CreateTeachersTable extends Migration
             ['id'=>NULL, 'name'=> "Gerben", 'img'=> "./img/card-images/4.png"],
             ['id'=>NULL, 'name'=> "Sinnika", 'img'=> "./img/card-images/5.png"],
             ['id'=>NULL, 'name'=> "Ton", 'img'=> "./img/card-images/6.png"],
-            ['id'=>NULL, 'name'=> "Pim", 'img'=> "./img/card-images/7.png"],
-            ['id'=>NULL, 'name'=> "Sinnika", 'img'=> "./img/card-images/8.png"],
-
+            ['id'=>NULL, 'name'=> "Pim", 'img'=> "./img/card-images/7.png"]
           
         ];
         DB::table('teachers')->insert($data);
