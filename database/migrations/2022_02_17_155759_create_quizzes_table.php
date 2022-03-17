@@ -39,7 +39,7 @@ class CreateQuizzesTable extends Migration
             ['id'=>NULL, 'quiz_question'=> "Maak een SQL query die ALLEEN de 'name' van de 'users' tabel selecteert met een 'admin' waarde van 0, en een 'verified' waarde van 1, in deze volgorde. Gebruik hoofdletters bij de clauses en gebruik single quotes bij de variabelen. Sluit de query af!<br><br>[blank]" , 'quiz_answer'=> "SELECT name FROM users WHERE admin='0' AND verified='1';" , 'category_id'=> "1" , 'quiz_difficulty'=> "4" , 'quiz_type'=> "4"],
             ['id'=>NULL, 'quiz_question'=> "Vul de htmlspecialchars-functie aan. Zorg ervoor dat hij ook kijkt naar beide soorten quotes, en dat de codering in UTF-8 is uitgevoerd. Let op, single quotes!<br><br>htmlspecialchars(^dfoo, [blank]);" , 'quiz_answer'=> ", ENT_QUOTES, 'UTF-8'" , 'category_id'=> "1" , 'quiz_difficulty'=> "4" , 'quiz_type'=> "1"],
             //NIGHTMARE (NM)
-            ['id'=>NULL, 'quiz_question'=> "doet bruno mars is homo?<br><br>[blank]" , 'quiz_answer'=> "ja" , 'category_id'=> "1" , 'quiz_difficulty'=> "5" , 'quiz_type'=> "1"],
+            ['id'=>NULL, 'quiz_question'=> "Vraag<br><br>[blank]" , 'quiz_answer'=> "Antwoord" , 'category_id'=> "1" , 'quiz_difficulty'=> "5" , 'quiz_type'=> "1"],
             ['id'=>NULL, 'quiz_question'=> "Hoeveel kans op een Common kaart heb je met een loot box level van 7?<br><br>[blank]" , 'quiz_answer'=> "0" , 'category_id'=> "1" , 'quiz_difficulty'=> "5" , 'quiz_type'=> "6"],
         ];
         DB::table('quizzes')->insert($data);
