@@ -23,7 +23,6 @@ class box extends Component
 
     public function render()
     {
-        dd(get_defined_vars());
     }
     /**
      * Get the view / contents that represent the component.
@@ -33,7 +32,6 @@ class box extends Component
      */
     public function render1(Request $request)
     {
-        dd(get_defined_vars());
         return BoxController::generate_card($request);
     }
 
