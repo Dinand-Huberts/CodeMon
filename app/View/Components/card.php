@@ -31,9 +31,8 @@ class card extends Component
     {
         $cards = User::find(Auth::id())->cards;
 
-        // $cards = Teacher::all();
 
-        // dd($cards->teacher);
+
         return view('/components/card', ['card' => $cards]);
     }
 }

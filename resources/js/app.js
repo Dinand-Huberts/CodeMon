@@ -103,3 +103,10 @@ window.noboxes = function () {
   $("#wrapper").append('You don\'t have any boxes left!');
 };
 
+// const reloadButton = document.querySelector("#kaarten");
+// // Reload everything:
+// function reload() {
+//     reload = location.reload();
+// }
+// // Event listeners for reload
+// reloadButton.addEventListener("click", reload, false);

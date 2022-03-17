@@ -1,6 +1,6 @@
 @include('includes')
 
-<body onload="{{$onload}}">
+<body onload="{{ $onload }}">
 
 
     <div class="flex flex-col justify-between">
@@ -44,14 +44,13 @@
                             <p>PROFIEL:</p> <br>
                             <p><b>Gebruiker -> </b> {{ Auth::user()->name }} </p>
                             <p><b>Email -> </b> {{ Auth::user()->email }} </p>
-                            <p><b>Pashword hash -> </b> {{ Auth::user()->password }} </p>
                         </div>
                     </div>
                 </div>
 
                 <div class="hidden" id="kaarten" role="tabpanel" aria-labelledby="kaarten-tab">
                     <div id="dashboard_card" class="">
-                        <x-card></x-card> 
+                        <x-card></x-card>
                     </div>
                 </div>
             </div>
@@ -60,10 +59,7 @@
 
             </div>
 
-            <div class="hidden" id="quiz" role="tabpanel" aria-labelledby="quiz-tab">
-                <div class="home_content backdrop-blur-sm rounded-2xl flex max-h-[75vh] min-w-[45vw] flex items-center justify-around overflow-hidden"
-                    style="background-color: rgba(125, 125, 125, 0.2)">
-                    <x-quizselector></x-quizselector>
+            <div class="hidden" id="quiz" role="tabpanel">
                 </div>
             </div>
         </div>
@@ -71,3 +67,4 @@
     </div>
 </body>
 @include('footer')
+</html>

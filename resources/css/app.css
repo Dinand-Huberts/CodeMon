@@ -130,3 +130,16 @@
   margin-left: 2%;
   transform: scale(0.8);
 }
+
+
+@media only screen and (max-width: 600px) {
+  #image_home{
+    display: none;
+  }
+
+  #text-title, #text_home {
+    width: 100%;
+
+  }
+
+}
