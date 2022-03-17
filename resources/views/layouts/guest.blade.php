@@ -29,25 +29,25 @@
             style="background-image: url('./img/contact-bg2.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
             <div class="mb-4 mt-10  dark:border-gray-700">
                 <ul class="flex flex-wrap -mb-px" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
-                    <li class="mr-5 ml-10 mt-5 mb-5" role="presentation">
+                    <li class="mr-5 ml-10 mt-5 mb-5 tabs" role="presentation">
                         <button
                             class="transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none m-5 hover:underline hover:text-[#F59E0B] text-lg"
                             id="profiel-tab" data-tabs-target="#profiel" type="button" role="tab"
                             aria-controls="profiel" aria-selected="true">Profiel</button>
                     </li>
-                    <li class="mr-5 mt-5" role="presentation">
+                    <li class="mr-5 mt-5 tabs" role="presentation">
                         <button
                             class="transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none m-5 hover:underline hover:text-[#F59E0B] text-lg"
                             id="kaarten-tab" data-tabs-target="#kaarten" type="button" role="tab"
                             aria-controls="kaarten" aria-selected="false">Kaarten</button>
                     </li>
-                    <li class="mr-5 mt-5" role="presentation">
+                    <li class="mr-5 mt-5 tabs" role="presentation">
                         <button
                             class="transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none m-5 hover:underline hover:text-[#F59E0B] text-lg"
                             id="boxes-tab" data-tabs-target="#boxes" type="button" role="tab" aria-controls="boxes"
                             aria-selected="false">Boxes</button>
                     </li>
-                    <li class="mt-5" role="presentation">
+                    <li class="mt-5 tabs" role="presentation">
                         <button
                             class="transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none m-5 hover:underline hover:text-[#F59E0B] text-lg"
                             id="quiz-tab" data-tabs-target="#quiz" type="button" role="tab" aria-controls="quiz"
@@ -58,13 +58,12 @@
 
             <div id="myTabContent">
                 <div class="" id="profiel" role="tabpanel" aria-labelledby="profiel-tab">
-                    <div class="home_content backdrop-blur-sm rounded-2xl flex max-h-[75vh] min-w-[45vw] flex items-center justify-around overflow-hidden"
+                    <div class="home_content backdrop-blur-sm rounded-2xl flex max-h-[75vh] lg:w-[40vw] w-[90vw] flex items-center justify-around overflow-hidden"
                         style="background-color: rgba(125, 125, 125, 0.2)">
                         <div id="text_home" class="m-10">
-                            <p>PROFIEL:</p> <br>
+                            <p class="text-amber-600">PROFIEL:</p> <br>
                             <p><b>Gebruiker -> </b> {{ Auth::user()->name }} </p>
                             <p><b>Email -> </b> {{ Auth::user()->email }} </p>
-                            <p><b>Pashword hash -> </b> {{ Auth::user()->password }} </p>
                         </div>
                     </div>
                 </div>
