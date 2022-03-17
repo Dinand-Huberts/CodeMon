@@ -139,7 +139,10 @@
 
   #text-title, #text_home {
     width: 100%;
+  }
 
+  .tabs {
+    margin: 0;
   }
 
 }
