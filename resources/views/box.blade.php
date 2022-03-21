@@ -1,11 +1,9 @@
-
 <x-guest-layout>
+    <div id="box" class="backdrop-blur-sm rounded-2xl"
+        style="background-color: rgba(125, 125, 125, 0.2); width: 25%; height: auto; padding:25px">
 
-<div id="box" class="home_content backdrop-blur-sm rounded-2xl flex center"
-    style="background-color: rgba(125, 125, 125, 0.2); width: 80%; height: auto;">
 
-
-        <div id="wrapper" class="m-10">
+        <div id="wrapper" class="">
 
             @if (count($boxes))
                 <p id="box_count_top_text"> Aantal boxes: </p>
@@ -29,13 +27,13 @@
 
         </div>
         @if (isset($card))
-            
-        <div id="card_container">
-            <div class="cards_container">
-                <div id="cards">
-                    <figure class="card card--{{ $card->card_rarity }}">
+    <div id="card_container" style="transform: scale(0.8)">
+        <div class="cards_container">
+            <div id="cards">
+                <figure class="card card--{{ $card->card_rarity }}">
                     <div class="card__image-container">
-                        <img src="./img/card-images/{{ $card->teacher_id }}.png" alt="{{ $card->teacher->name }}" class="card__image" style="height: 200px; margin:auto">
+                        <img src="./img/card-images/{{ $card->teacher_id }}.png" alt="{{ $card->teacher->name }}"
+                            class="card__image" style="height: 200px; margin:auto">
                     </div>
                     <figcaption class="card__caption">
                         <h1 class="card__name">{{ $card->teacher->name }} </h1>
@@ -80,28 +78,11 @@
                         </div>
                     </figcaption>
                 </figure>
-                </div>
             </div>
         </div>
+    </div>
 </div>
-@endif
 
-{{-- DB::table('boxes')->insert([
-    'box_activated' => 1
-]); --}}
-
-
-{{-- @foreach ($boxes as $box)
-        <div class="container">
-            <div class="m-10">
-                <div class="box-body">
-                    <img class="img" src="https://via.placeholder.com/150">
-                    <div class="box-lid">
-                        <div class="box-bowtie"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    @endforeach --}}
+    @endif
 
 </x-guest-layout>

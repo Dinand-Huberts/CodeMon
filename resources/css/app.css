@@ -120,15 +120,20 @@
   flex-wrap: wrap;
   justify-content: space-evenly;
   flex-direction: row;
-  width: 90vw;
+  width: 95vw;
 }
 
 #card_wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 2%;
-  transform: scale(0.8);
+  margin: 2px;
+  transform: scale(0.7);
+}
+
+#wrapper-box {
+  display: flex;
+ justify-content: space-evenly;
 }
 
 
@@ -137,12 +142,21 @@
     display: none;
   }
 
-  #text-title, #text_home {
+  #text-title, #text_home{
     width: 100%;
   }
 
   .tabs {
     margin: 0;
+  }
+
+  #card_wrapper {
+    transform: scale(1);
+    margin: 0;
+  }
+
+  #dashboard_card {
+    width: 80vw;
   }
 
 }

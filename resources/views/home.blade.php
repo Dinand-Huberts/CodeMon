@@ -19,11 +19,10 @@
                     about web development. Maybe it's something for you. If you anwser the questions right you will win
                     a teacher Codemon card! There are 5 different rarities. Sign in or create an account to start a
                     quiz!<br>
-                    <form method="POST" action="{{ route('login') }}">
-                      @csrf
-                      <button type="submit"
-                          class="text-black bg-red-600 hover:bg-red-700 focus:ring-amber-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-red-600 mt-10">Login</button>
-                  </form>
+
+                    <button type="submit"
+                        class="text-black bg-red-600 hover:bg-red-700 focus:ring-amber-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-red-600 mt-10">
+                        <a href="/login"> Login</a></button>
                 </div>
             </div>
         </div>
