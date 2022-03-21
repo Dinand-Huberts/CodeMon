@@ -58,7 +58,7 @@
                                 </tr>
                                 <tr>
                                     <th>Special Defense</th>
-                                    <td>{{ $card->card_defense }}</td>
+                                    <td>{{ $card->card_special_defense }}</td>
                                 </tr>
                                 <tr>
                                     <th>Speed</th>
