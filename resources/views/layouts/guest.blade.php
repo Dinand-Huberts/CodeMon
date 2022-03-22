@@ -81,7 +81,7 @@
             </div>
 
             <div class="hidden h-screen" id="quiz" role="tabpanel" aria-labelledby="quiz-tab">
-                <div class="home_content backdrop-blur-sm rounded-2xl flex max-h-[75vh] min-w-[45vw] flex items-center justify-around overflow-hidden"
+                <div id="quiz_select" class="home_content backdrop-blur-sm rounded-2xl m-10 flex max-h-[75vh] min-w-[45vw] flex items-center justify-around overflow-hidden"
                     style="background-color: rgba(125, 125, 125, 0.2)">
                     <x-quizselector></x-quizselector>
                 </div>

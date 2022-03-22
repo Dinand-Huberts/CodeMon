@@ -169,8 +169,10 @@
     margin-left: 5vw;
   }
 
-  /* #cards {
-    margin-right: 15vw;
-  } */
+  #quiz_select {
+    left: 40%;
+    width: 90vw;
+    top: 35%;
+  }
 
 }
