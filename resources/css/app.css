@@ -175,4 +175,9 @@
     top: 35%;
   }
 
+  #register {
+    width: 80vw;
+    margin-top: 60px;
+  }
+
 }

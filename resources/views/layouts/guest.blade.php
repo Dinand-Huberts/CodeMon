@@ -26,8 +26,7 @@
 
     <div class="flex flex-col justify-between">
         @include('header')
-        <div class="relative -mt-10 z-[1]"
-            style="background-image: url('./img/contact-bg2.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+        <div style="background-image: url('./img/contact-bg2.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
             <div class="  dark:border-gray-700">
                 <ul class="flex flex-wrap" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
                     <li class="mr-5 ml-10 mt-5 tabs" role="presentation">
