@@ -138,6 +138,21 @@
  margin-left: 25vw;
 }
 
+@keyframes slideInLeft {
+  0% {
+    transform: translateY(-2%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+#kaarten {
+  animation: 0.5s ease-out 0s 1 slideInLeft;
+}
+
 
 @media only screen and (max-width: 600px) {
   #image_home{

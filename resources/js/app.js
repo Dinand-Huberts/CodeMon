@@ -67,6 +67,8 @@ $(document).on("click", '#generate_card_button', function (e) {
         dataType: 'html'
     }).done(function (data) {
         $('#box').html((jQuery(data).find('#box').html()));
+        $("#new_card").html((jQuery(data).find('#card_wrapper').html()));
+
     });
 
     $(e.currentTarget).attr('disabled', false);
@@ -91,6 +93,7 @@ window.showcard = function (data) {
   //first empty the div, then append the new generated card
     $("#card_container").empty();
     $("#card_container").append(data);
+
 };
 window.updatecounters = function (count, difficulty) {
   $("#box_count").empty();
@@ -102,6 +105,8 @@ window.noboxes = function () {
   $("#wrapper").empty();
   $("#wrapper").append('You don\'t have any boxes left!');
 };
+
+
 
 // const reloadButton = document.querySelector("#kaarten");
 // // Reload everything:

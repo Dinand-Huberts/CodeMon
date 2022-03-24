@@ -38,8 +38,8 @@
                     <li class="mr-5 mt-5 tabs" role="presentation">
                         <button
                             class="transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none m-5 hover:underline hover:text-[#F59E0B] text-lg"
-                            id="kaarten-tab" data-tabs-target="#kaarten" type="button" role="tab"
-                            aria-controls="kaarten" aria-selected="false">Kaarten</button>
+                            id="kaarten-tab" data-tabs-target="#kaarten" type="button" role="tab" 
+                            aria-controls="kaarten" aria-selected="false" onclick="refreshPage()">Kaarten</button>
                     </li>
                     <li class="mr-5 mt-5 tabs" role="presentation">
                         <button
@@ -89,5 +89,11 @@
     </div>
     @include('footer')
 </body>
+
+{{-- <script>
+    function refreshPage() {
+        $( "#dashboard_card" ).load(window.location.href + " #dashboard_card" );
+    }   
+</script> --}}
 
 </html>
