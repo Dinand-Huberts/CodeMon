@@ -55,7 +55,4 @@
             </div>
         </div>
     @endforeach
-    <div id="new_card">
-        
-    </div>
 @endif

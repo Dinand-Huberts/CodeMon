@@ -40,7 +40,7 @@
                         <button
                             class="transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none m-5 hover:underline hover:text-[#F59E0B] text-lg"
                             id="kaarten-tab" data-tabs-target="#kaarten" type="button" role="tab"
-                            aria-controls="kaarten" aria-selected="false" onclick="refreshPage()">Kaarten</button>
+                            aria-controls="kaarten" aria-selected="false">Kaarten</button>
                     </li>
                     <li class="mr-5 mt-5 tabs" role="presentation">
                         <button
@@ -82,7 +82,7 @@
 
                 <div class="hidden h-screen" id="quiz" role="tabpanel" aria-labelledby="quiz-tab">
                     <div id="quiz_select"
-                        class="home_content backdrop-blur-sm rounded-2xl m-10 flex min-h-[75vh] min-w-[45vw] flex items-center justify-around overflow-hidden"
+                        class="home_content backdrop-blur-sm rounded-2xl m-10 flex min-w-[45vw] flex items-center justify-around overflow-hidden"
                         style="background-color: rgba(125, 125, 125, 0.2)">
                         <x-quizselector></x-quizselector>
                     </div>
@@ -93,10 +93,6 @@
     @include('footer')
 </body>
 
-{{-- <script>
-    function refreshPage() {
-        $( "#dashboard_card" ).load(window.location.href + " #dashboard_card" );
-    }   
-</script> --}}
+
 
 </html>

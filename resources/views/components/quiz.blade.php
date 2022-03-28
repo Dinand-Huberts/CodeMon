@@ -12,9 +12,5 @@
             </form>
         </div>
     </div>
-@else
-    {{-- <script> 
-alert('You may not view a quiz at this time!');
-window.location.reload;
-</script> --}}
+   
 @endif

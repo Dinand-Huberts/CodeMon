@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./css/app.css" rel="stylesheet">
     <link href="./css/sass.css" rel="stylesheet">
-    <script defer src="./js/app.js" type="text/javascript"></script>
+    <script src="./js/app.js" type="text/javascript"></script>
     <script src="https://unpkg.com/flowbite@1.3.3/dist/flowbite.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

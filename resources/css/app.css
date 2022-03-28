@@ -138,19 +138,51 @@
  margin-left: 25vw;
 }
 
-@keyframes slideInLeft {
+@keyframes slideInLeft-box {
   0% {
-    transform: translateY(-2%);
+    transform: translateY(-1%);
+    
   }
 
   100% {
     transform: translateY(0);
+    transform: scale(0.8);
+
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateY(-1%);
+    
+  }
+
+  100% {
+    transform: translateY(0);
+
+  }
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
   }
 }
 
 
-#kaarten {
+#kaarten, #card_box {
   animation: 0.5s ease-out 0s 1 slideInLeft;
+}
+
+#card_box {
+  animation: 1.5s ease-out 0s 1 slideInLeft-box;
+  /* animation-name: spin;
+  animation-duration: 3600s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;  */
 }
 
 
@@ -187,7 +219,6 @@
   #quiz_select {
     left: 40%;
     width: 90vw;
-    top: 35%;
   }
 
   #register {

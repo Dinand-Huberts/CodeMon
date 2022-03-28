@@ -101,11 +101,6 @@ window.updatecounters = function (count, difficulty) {
   $("#box_count").append(count);
   $("#box_difficulty").append(difficulty);
 };
-window.noboxes = function () {
-  $("#wrapper").empty();
-  $("#wrapper").append('You don\'t have any boxes left!');
-};
-
 
 
 // const reloadButton = document.querySelector("#kaarten");
