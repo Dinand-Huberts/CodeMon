@@ -28,6 +28,14 @@ Route::get('/quiz', function () {
     return view('quiz');
 });
 
+Route::get('/privacy-policy', function () {
+    return view('privacy');
+});
+
+Route::get('/licensing', function () {
+    return view('licensing');
+});
+
 Route::get('/generate_card', [BoxController::class, 'generate']);
 
-require __DIR__ . '/auth.php';  
+require __DIR__ . '/auth.php';

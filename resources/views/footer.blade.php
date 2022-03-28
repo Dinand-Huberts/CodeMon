@@ -7,12 +7,12 @@
         </a>
         <ul class="flex flex-wrap items-center mb-6 sm:mb-0 bottom-0">
             <li>
-                <a href="#"
+                <a href="/privacy-policy"
                     class="mr-4 text-sm md:dark:hover:text-zinc-200 md:hover:text-zinc-200 hover:underline md:mr-6 dark:text-black text-black">Privacy
                     Policy</a>
             </li>
             <li>
-                <a href="#"
+                <a href="/licensing"
                     class="mr-4 text-sm md:dark:hover:text-zinc-200 md:hover:text-zinc-200 hover:underline md:mr-6 dark:text-black text-black">Licensing</a>
             </li>
             <li>
@@ -27,6 +27,3 @@
         2022 <a href="./" target="_blank" class="hover:underline">CodéMon™</a>. All Rights Reserved.
     </span>
 </footer>
-
-
-

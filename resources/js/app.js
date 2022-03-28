@@ -60,7 +60,6 @@ $(document).on("click", '#generate_card_button', function (e) {
     $(e.currentTarget).attr('disabled', true);
 
     const boxId = $(e.currentTarget).data('box-id');
-    console.log($('#generate_card_button').data("box-id"));
 
     $.get("/generate_card", {
         id: boxId,
