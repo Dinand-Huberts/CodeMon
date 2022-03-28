@@ -34,11 +34,14 @@ class Quizselector extends Component
         $cooldown_query = DB::table('users')->where('id', '=', $user_id)->get();
         $cooldown_string = $cooldown_query[0]->quiz_cooldown;
         $cooldown = strtotime($cooldown_string);
+        $cooldown_until = $cooldown + 14400;
         $time = time();
         $interval = $time - $cooldown;
         if ($interval >= 14400) {
+            $onload = '';
             $quiz_cooldown_check = true;
         } else {
+            $onload = 'countdown_quiz(' . $cooldown_until  . ')';
             $quiz_cooldown_check = false;
         }
 
@@ -57,6 +60,9 @@ class Quizselector extends Component
                 'seconds' => $seconds,
                 'cooldown' => $cooldown,
                 'interval' => $interval,
+                'onload' => $onload,
+                'cooldown_until' => $cooldown_until,
+
             ];
 
         return view('/components/Quizselector', $data);

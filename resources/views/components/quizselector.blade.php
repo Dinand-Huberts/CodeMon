@@ -13,6 +13,11 @@
     </form>
 @else
 
+
+<script type="text/javascript">
+countdown_quiz({{$cooldown_until}})
+</script>
+
 <div class="text-xl" id="quiz_cooldown_message">
     You already made a quiz! You can make one again after: <br>
 </div>

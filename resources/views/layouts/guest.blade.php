@@ -6,14 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Co') }}</title>
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/sass.css') }}">
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 
     <script src="https://unpkg.com/flowbite@1.3.3/dist/flowbite.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,7 +26,8 @@
 
     <div class="flex flex-col justify-between">
         @include('header')
-        <div style="background-image: url('./img/contact-bg2.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+        <div
+            style="background-image: url('./img/contact-bg2.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
             <div class="  dark:border-gray-700">
                 <ul class="flex flex-wrap" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
                     <li class="mr-5 ml-10 mt-5 tabs" role="presentation">
@@ -38,7 +39,7 @@
                     <li class="mr-5 mt-5 tabs" role="presentation">
                         <button
                             class="transition transform hover:-translate-y-1 motion-reduce:transition-none motion-reduce:hover:transform-none m-5 hover:underline hover:text-[#F59E0B] text-lg"
-                            id="kaarten-tab" data-tabs-target="#kaarten" type="button" role="tab" 
+                            id="kaarten-tab" data-tabs-target="#kaarten" type="button" role="tab"
                             aria-controls="kaarten" aria-selected="false" onclick="refreshPage()">Kaarten</button>
                     </li>
                     <li class="mr-5 mt-5 tabs" role="presentation">
@@ -73,16 +74,18 @@
                         <x-card></x-card>
                     </div>
                 </div>
-            </div>
 
-            <div class="hidden h-screen" id="boxes" role="tabpanel" aria-labelledby="boxes-tab">
-                {{ $slot }}
-            </div>
 
-            <div class="hidden h-screen" id="quiz" role="tabpanel" aria-labelledby="quiz-tab">
-                <div id="quiz_select" class="home_content backdrop-blur-sm rounded-2xl m-10 flex max-h-[75vh] min-w-[45vw] flex items-center justify-around overflow-hidden"
-                    style="background-color: rgba(125, 125, 125, 0.2)">
-                    <x-quizselector></x-quizselector>
+                <div class="hidden h-screen" id="boxes" role="tabpanel" aria-labelledby="boxes-tab">
+                    {{ $slot }}
+                </div>
+
+                <div class="hidden h-screen" id="quiz" role="tabpanel" aria-labelledby="quiz-tab">
+                    <div id="quiz_select"
+                        class="home_content backdrop-blur-sm rounded-2xl m-10 flex min-h-[75vh] min-w-[45vw] flex items-center justify-around overflow-hidden"
+                        style="background-color: rgba(125, 125, 125, 0.2)">
+                        <x-quizselector></x-quizselector>
+                    </div>
                 </div>
             </div>
         </div>
