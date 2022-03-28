@@ -1,6 +1,6 @@
 @if ($quiz_cooldown == true)
     <div id="box" class="backdrop-blur-sm rounded-2xl"
-        style="background-color: rgba(125, 125, 125, 0.2); width: 50vw; height: auto; padding:25px; margin-top:20vh">
+        style="background-color: rgba(125, 125, 125, 0.2); width: 50vw; height: auto; padding:25px; margin-top:20vh; margin-bottom: 40vh">
 
         <div class="flex justify-center">
             <form id="quiz" action="/dashboard" method="GET">

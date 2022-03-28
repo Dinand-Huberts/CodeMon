@@ -8,10 +8,6 @@
         <ul class="flex flex-wrap items-center mb-6 sm:mb-0 bottom-0">
             <li>
                 <a href="#"
-                    class="mr-4 text-sm md:dark:hover:text-zinc-200 md:hover:text-zinc-200 hover:underline md:mr-6 dark:text-black text-black">About</a>
-            </li>
-            <li>
-                <a href="#"
                     class="mr-4 text-sm md:dark:hover:text-zinc-200 md:hover:text-zinc-200 hover:underline md:mr-6 dark:text-black text-black">Privacy
                     Policy</a>
             </li>
@@ -20,7 +16,7 @@
                     class="mr-4 text-sm md:dark:hover:text-zinc-200 md:hover:text-zinc-200 hover:underline md:mr-6 dark:text-black text-black">Licensing</a>
             </li>
             <li>
-                <a href="#"
+                <a href="/contact"
                     class="mr-4 text-sm md:dark:hover:text-zinc-200 md:hover:text-zinc-200 hover:underline md:mr-6 dark:text-black text-black">Contact</a>
             </li>
         </ul>

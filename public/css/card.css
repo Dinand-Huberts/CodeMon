@@ -1,0 +1,89 @@
+/* Shitty fix */
+img.card-img {
+  margin-top: -16px;
+}
+
+/* Standard card styles */
+.card {
+  word-break: break-word;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  width: 180px;
+  height: 244px;
+  font-family: "Josefin Sans";
+  margin: 16px;
+}
+
+/* Common card styles */
+.common.card {
+  background-image: linear-gradient(to bottom right, #ddd, #888);
+  border: 6px solid slategray;
+  border-radius: 8px;
+}
+
+.common.card-name {
+  width: calc(100% - 22px);
+  height: 20px;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.15);
+  padding-left: 2px;
+  line-height: 22px;
+}
+
+.common.card-rarity {
+  width: 20px;
+  position: relative;
+  text-align: center;
+  background-image: linear-gradient(to top right, #aab, #eee);
+  bottom: 20px;
+  height: 20px;
+  float: right;
+  line-height: 22px;
+}
+
+.common.card-logo {
+  border: 2px solid slategray;
+  margin: 2px;
+  height: 96px;
+  border-radius: 4px;
+}
+
+.common.card-desc {
+  margin-left: 2px;
+  margin-right: 2px;
+  height: 108px;
+  font-size: 16px;
+}
+
+.common.card-meta {
+  margin-top: 1px;
+  padding-left: 2px;
+  font-size: 10px;
+  width: calc(100% - 2px);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.common.card-large {
+  background-image: linear-gradient(to bottom right, #ddd, #888);
+  width: 68vmin;
+  height: 92vmin;
+  border-radius: 3vmin;
+  border: 2vmin solid slategray;
+}
+
+.common.card-name-large {
+  width: calc(100% - 8vmin);
+  padding-left: 0.8vmin;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.common.card-rarity-large {
+  width: 7vmin;
+  position: relative;
+  text-align: center;
+  bottom: 6.9vmin;
+  float: right;
+  background-color: rgba(0, 0, 0, 0.25);
+}
