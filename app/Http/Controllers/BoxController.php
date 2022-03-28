@@ -43,22 +43,19 @@ class BoxController extends Controller
                         $quiz = DB::table('quizzes')
                             ->where('id', '=', $_SESSION['quiz_id'])
                             ->get();
+
+                            $users_data = ['quiz_cooldown' => date('Y-m-d, H:i:s', time())];
+                            DB::table('users')
+                            ->where('id', '=', $user_id)
+                            ->update($users_data);
                         $quiz_answer = $quiz[0]->quiz_answer;
                         $quiz_difficulty = $quiz[0]->quiz_difficulty;
                         $user_answer_boolean = $_GET['user_answer'] == $quiz_answer;
                         if ($user_answer_boolean) {
-                            $users_data = ['quiz_cooldown' => date('Y-m-d, H:i:s', time())];
                             $boxes_data = ['user_id' => $user_id, 'box_difficulty' => $quiz_difficulty];
                             DB::table('boxes')->insert($boxes_data);
-                            DB::table('users')
-                                ->where('id', '=', $user_id)
-                                ->update($users_data);
                             echo "<script>alert('Goed antwoord!')</script>";
                         } else {
-                            $users_data = ['quiz_cooldown' => date('Y-m-d, H:i:s', time())];
-                            DB::table('users')
-                                ->where('id', '=', $user_id)
-                                ->update($users_data);
                             echo "<script>alert('Fout antwoord!')</script>";
                         }
                         unset($_SESSION['quiz_id']);
