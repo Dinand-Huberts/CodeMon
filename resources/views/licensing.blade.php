@@ -15,8 +15,6 @@
                 <div class="wrapper-privacy">
                     <h1>End-User License Agreement (&quot;Agreement&quot;)</h1>
                     <p>Last updated: March 28, 2022</p>
-                    <p>Please read this End-User License Agreement carefully before clicking the &quot;I Agree&quot;
-                        button, downloading or using Codemon.</p>
                     <h1>Interpretation and Definitions</h1>
                     <h2>Interpretation</h2>
                     <p>The words of which the initial letter is capitalized have meanings defined under the following

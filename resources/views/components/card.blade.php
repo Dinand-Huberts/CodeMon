@@ -1,5 +1,10 @@
 @if (count($card) == 0)
-    <h1 style="margin: 40vh; font-size:1.5vw">You don't have cards. <br> Go make a quiz!</h1>
+    <div class="backdrop-blur-sm rounded-2xl" id="box"
+        style="background-color: #7d7d7d33; width: 50vw; height: 20vh; padding:25px; margin-left: 5vw;">
+        <div id="wrapper" class="m-10">
+            You don't have cards. Go make a quiz!
+        </div>
+    </div>
 @else
     @foreach ($card as $item)
         <div id="card_wrapper">
