@@ -1,13 +1,5 @@
-@include('includes')
-
-<body>
-    <style>
-        .wrapper-privacy ul {
-            list-style-type: disc;
-        }
-    </style>
+<x-guest-layout>
     <div class="flex flex-col justify-between">
-        @include('header')
         <div class="w-full h-[75vh] -mt-10 z-[1] "
             style="background-image: url('./img/contact-bg2.png'); background-size: cover; background-repeat: no-repeat; background-position: center; margin-top :0rem;">
             <div class="backdrop-blur-sm rounded-2xl flex w-[80vw]"
@@ -196,7 +188,4 @@
             </div>
         </div>
     </div>
-</body>
-@include('footer')
-
-</html>
+</x-guest-layout>

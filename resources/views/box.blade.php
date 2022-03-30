@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-app-layout>
     <div id="box" class="backdrop-blur-sm rounded-2xl"
         style="background-color: rgba(125, 125, 125, 0.2); width: 50vw; height: auto; padding:25px">
 
@@ -17,7 +17,8 @@
 
             @if (count($boxes))
                 <button id="generate_card_button" data-box-id="{{ $boxes[count($boxes) - 1]->id }}"
-                    class="text-black bg-red-600 hover:bg-red-600 focus:ring-amber-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-red-600 dark:hover:bg-red-600 dark:focus:ring-amber-500" onclick="refreshPage()">Open
+                    class="text-black bg-red-600 hover:bg-red-600 focus:ring-amber-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-red-600 dark:hover:bg-red-600 dark:focus:ring-amber-500"
+                    onclick="refreshPage()">Open
                     current box!</button>
             @else
                 <div id="wrapper" class="m-10">
@@ -85,11 +86,11 @@
     </div>
     @endif
     </div>
-<script>
-    function refreshPage() {
-        $( "#dashboard_card" ).load(window.location.href + " #dashboard_card" );
-    }   
-</script>
-    
+    <script>
+        function refreshPage() {
+            $("#dashboard_card").load(window.location.href + " #dashboard_card");
+        }
+    </script>
 
-</x-guest-layout>
+
+</x-app-layout>

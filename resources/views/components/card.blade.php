@@ -1,3 +1,4 @@
+
 @if (count($card) == 0)
     <div class="backdrop-blur-sm rounded-2xl" id="box"
         style="background-color: #7d7d7d33; width: 50vw; height: 20vh; padding:25px; margin-left: 5vw;">

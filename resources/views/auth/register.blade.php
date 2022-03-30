@@ -1,11 +1,8 @@
-@include('includes')
-
+<x-guest-layout>
 
     <div class="flex flex-col  justify-between">
 
-    @include('header')
-
-        <div class="relative w-full h-[90vh] z-[1]" style="background-image: url('./img/register-bg.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
+        <div class="relative w-full h-[90vh] z-[1]" style="background-image: url('./img/register-bg.png'); background-size: cover; background-repeat: no-repeat; background-position: center; margin-top :0rem;">
 
             <div class="px-8 py-6 mx-auto mt-4 left-0 right-0 text-left shadow-lg lg:w-1/2 sm:w-1/2 backdrop-blur-sm border sm:rounded-md border-gray-300" style="background-color: rgba(125,125,125,0.2);" id="register">
                 <div class="flex justify-center">
@@ -66,5 +63,5 @@
 
 
     </div>
-    @include('footer')
-   
+</x-guest-layout>
+

@@ -46,12 +46,41 @@
                         <a href="./dashboard"
                             class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-zinc-50 md:p-0 md:dark:hover:text-zinc-50 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">Dashboard</a>
                     </li>
+                    <ul class="flex flex-wrap" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+                        <li class="" role="presentation">
+                            <button
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-zinc-50 md:p-0 md:dark:hover:text-zinc-50 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700"
+                                id="profiel-tab" data-tabs-target="#profiel" type="button" role="tab"
+                                aria-controls="profiel" aria-selected="true">Profiel</button>
+                        </li>
+                        <li class="mr-5 mt-5 tabs" role="presentation">
+                            <button
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-zinc-50 md:p-0 md:dark:hover:text-zinc-50 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700"
+                                id="kaarten-tab" data-tabs-target="#kaarten" type="button" role="tab"
+                                aria-controls="kaarten" aria-selected="false">Kaarten</button>
+                        </li>
+                        <li class="mr-5 mt-5 tabs" role="presentation">
+                            <button
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-zinc-50 md:p-0 md:dark:hover:text-zinc-50 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700"
+                                id="boxes-tab" data-tabs-target="#boxes" type="button" role="tab" aria-controls="boxes"
+                                aria-selected="false">Boxes</button>
+                        </li>
+                        <li class="mt-5 tabs" role="presentation">
+                            <button
+                                class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-zinc-50 md:p-0 md:dark:hover:text-zinc-50 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700"
+                                id="quiz-tab" data-tabs-target="#quiz" type="button" role="tab" aria-controls="quiz"
+                                aria-selected="false">Quiz</button>
+                        </li>
+                    </ul>
+                    
                 @else
                     <li>
                         <a href="./login"
                             class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-zinc-50 md:p-0 md:dark:hover:text-zinc-50 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">Login</a>
                     </li>
                 @endif
+
+
             </ul>
         </div>
     </div>
