@@ -1,6 +1,10 @@
 <?php
 
 use App\Http\Controllers\BoxController;
+use App\Http\Controllers\CardsController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\QuizController;
+use App\Http\Controllers\QuizSelectorController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -35,21 +39,13 @@ Route::get('/generate_card', [BoxController::class, 'generate']);
 Route::middleware('auth')->group(function () {
     Route::get('/box', [BoxController::class, 'index']);
 
-    Route::get('/quizselector', function () {
-        return view('quizselector');
-    });
+    Route::get('/quizselector', [QuizSelectorController::class, 'index']);
 
-    Route::get('/quiz', function () {
-        return view('quiz');
-    });
+    Route::get('/quiz', [QuizController::class, 'index']);
 
-    Route::get('/profile', function () {
-        return view('profile');
-    });
+    Route::get('/profile', [ProfileController::class, 'index']);
 
-    Route::get('/cards', function () {
-        return view('cards');
-    });
+    Route::get('/cards', [CardsController::class, 'index']);
 });
 
 require __DIR__ . '/auth.php';

@@ -18,6 +18,9 @@ class BoxController extends Controller
                 //Get and set user_id
                 $user_id = Auth::id();
 
+                // Eventuele laravel fix (later bekijken)               | Dinand
+                // $cooldown_string = Auth::user()->quiz_cooldown;
+
                 //Set cooldown variables
                 $cooldown_query = DB::table('users')->where('id', '=', $user_id)->get();
                 $cooldown_string = $cooldown_query[0]->quiz_cooldown;
