@@ -30,6 +30,7 @@ class Quizselector extends Component
         //get and set user_id
         $user_id = Auth::id();
 
+
         //cooldown check
         $cooldown_query = DB::table('users')->where('id', '=', $user_id)->get();
         $cooldown_string = $cooldown_query[0]->quiz_cooldown;
