@@ -23,18 +23,17 @@
 </head>
 
 <body>
-    <div class="">
-        <!-- header -->
-        @include('header')
+    <!-- header -->
+    @include('header')
 
-        <!-- Page Content -->
-        <main>
-            {{ $slot }}
-        </main>
+    <!-- Page Content -->
+    <main>
+        {{ $slot }}
+    </main>
 
-        <!-- footer -->
-        @include('footer')
-    </div>
+    <!-- footer -->
+    @include('footer')
+    
 </body>
 
 </html>

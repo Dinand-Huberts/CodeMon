@@ -22,12 +22,6 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/box', [BoxController::class, 'index']);
-
-Route::get('/quiz', function () {
-    return view('quiz');
-});
-
 Route::get('/privacy-policy', function () {
     return view('privacy');
 });
@@ -37,5 +31,25 @@ Route::get('/licensing', function () {
 });
 
 Route::get('/generate_card', [BoxController::class, 'generate']);
+
+Route::middleware('auth')->group(function () {
+    Route::get('/box', [BoxController::class, 'index']);
+
+    Route::get('/quizselector', function () {
+        return view('quizselector');
+    });
+
+    Route::get('/quiz', function () {
+        return view('quiz');
+    });
+
+    Route::get('/profile', function () {
+        return view('profile');
+    });
+
+    Route::get('/cards', function () {
+        return view('cards');
+    });
+});
 
 require __DIR__ . '/auth.php';

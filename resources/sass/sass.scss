@@ -1,374 +1,412 @@
 @keyframes legendary-effect {
-  from {border: 4px solid #900; box-shadow: 0 0 20px 2px #900;}
-  to {border: 4px solid #f00; box-shadow: 0 0 20px 4px #f00;}
+    from {
+        border: 4px solid #900;
+        box-shadow: 0 0 20px 2px #900;
+    }
+    to {
+        border: 4px solid #f00;
+        box-shadow: 0 0 20px 4px #f00;
+    }
 }
 
 .cards_container {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .card {
+}
+.card {
     display: inline-block;
     width: 130%;
     padding: 1em;
-    border-radius: 15px;  
+    border-radius: 15px;
     margin: 10% auto auto auto;
     background: #ddd;
     text-align: left;
 
-  
     &__caption {
-      background-color: rgba(#ffffff, 0.65);
-      padding: 1em;
-      position: relative;
-      border-radius: 0 0 3px 3px;
+        background-color: rgba(#ffffff, 0.65);
+        padding: 1em;
+        position: relative;
+        border-radius: 0 0 3px 3px;
     }
     &__image-container {
-      background-color: rgba(#000000, 0.7);
-      text-align: center;
-      padding: 1em 1em 0;
-      border-radius: 3px 3px 0 0;
+        background-color: rgba(#000000, 0.7);
+        text-align: center;
+        padding: 1em 1em 0;
+        border-radius: 3px 3px 0 0;
     }
-    
+
     &__type {
-      position: absolute;
-      top: 0;
-      right: 1em;
-      transform: translateY(-50%);
-      color: #ffffff;
-      text-transform: uppercase;
-      font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
-      letter-spacing: 0.1em;
-      padding: 0.25em;
-      line-height: 1;
-      border-radius: 2px;
-      background: #bbbbbb;
-    }
-  
-    &__label {
-      font-size: 10px;
-      text-transform: uppercase;
-      font-weight: 400;
-      display: block;
-      margin-bottom: 3px;
-    }
-    
-    
-    &__name {
-      font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
-      text-align: center;
-      font-size: 1.5em;    
-      font-weight: 700;
-      letter-spacing: 0.02em;
-    }
-    
-    &__stats {
-      margin: 1em 0;
-      th {
+        position: absolute;
+        top: 0;
+        right: 1em;
+        transform: translateY(-50%);
+        color: #ffffff;
+        text-transform: uppercase;
         font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
-        text-align: right;
-        font-weight: 300;
-      }
-      width: 100%;
-      
-      th, td {
-        width: 50%;
-        padding: 0.25em 0.5em 0;
-      }
-      
+        letter-spacing: 0.1em;
+        padding: 0.25em;
+        line-height: 1;
+        border-radius: 2px;
+        background: #bbbbbb;
     }
-    
+
+    &__label {
+        font-size: 10px;
+        text-transform: uppercase;
+        font-weight: 400;
+        display: block;
+        margin-bottom: 3px;
+    }
+
+    &__name {
+        font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+    }
+
+    &__stats {
+        margin: 1em 0;
+        th {
+            font-family: "Open Sans Condensed", "Open Sans", helvetica,
+                sans-serif;
+            text-align: right;
+            font-weight: 300;
+        }
+        width: 100%;
+
+        th,
+        td {
+            width: 50%;
+            padding: 0.25em 0.5em 0;
+        }
+    }
+
     &__abilities {
-      display: flex;
-      justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
     }
     &__ability {
-      margin-top: 1em;
-      flex: 1 0;
+        margin-top: 1em;
+        flex: 1 0;
     }
-    
+
     box-shadow: 0px 5px 20px -10px #111111;
-    
-    
-    &--common, &--5 {
-      background: linear-gradient(125deg, #BCC 0%, #FFF 33%, #BCC 50%);
-      box-shadow: 0px 5px 20px -10px #000;
-      .card__type {
-        background-color: #AAB;
-      }
-    }
-    
-    &--uncommon, &--4 {
-      background: linear-gradient(125deg, #ACF 0%, #48F 10%, #ACF 20%, #48F 30%, #ACF 40%, #48F 50%, #ACF 60%, #48F 70%, #ACF 80%, #48F 90%, #ACF 100%);
-      box-shadow: 0px 5px 20px -10px #000;
-      .card__type {
-        background-color: #48F;
-      }
+
+    &--common,
+    &--5 {
+        background: linear-gradient(125deg, #bcc 0%, #fff 33%, #bcc 50%);
+        box-shadow: 0px 5px 20px -10px #000;
+        .card__type {
+            background-color: #aab;
+        }
     }
 
-    &--rare, &--3 {
-      background: linear-gradient(215deg, #FFF 0%, #FD3 10%, #FA0 20%, #FA0 95%, #C90 100%);
-      box-shadow: 0px 5px 20px -10px #000;
-      .card__type {
-        background-color: #FA0;
-      }
+    &--uncommon,
+    &--4 {
+        background: linear-gradient(
+            125deg,
+            #acf 0%,
+            #48f 10%,
+            #acf 20%,
+            #48f 30%,
+            #acf 40%,
+            #48f 50%,
+            #acf 60%,
+            #48f 70%,
+            #acf 80%,
+            #48f 90%,
+            #acf 100%
+        );
+        box-shadow: 0px 5px 20px -10px #000;
+        .card__type {
+            background-color: #48f;
+        }
     }
 
-    &--epic, &--2 {
-      background: linear-gradient(215deg, #FAF 0%, #FFF 8%, #A4F 20%, #C2F 32%, #FAF 92%, #FDF 100%);
-      box-shadow: 0px 5px 20px -10px #000;
-      .card__type {
-        background-image: linear-gradient(0deg, #C0F, #FAF);
-        border: 2px solid white;
-      }
+    &--rare,
+    &--3 {
+        background: linear-gradient(
+            215deg,
+            #fff 0%,
+            #fd3 10%,
+            #fa0 20%,
+            #fa0 95%,
+            #c90 100%
+        );
+        box-shadow: 0px 5px 20px -10px #000;
+        .card__type {
+            background-color: #fa0;
+        }
     }
 
-    &--legendary, &--1 {
-      background: linear-gradient(125deg, #000 0%, #D00 35%, #000 45%, #F00 90%, #000 100%);
-      border: 4px solid #900;
-      box-shadow: 0px 0px 20px 2px #900;
-      animation: legendary-effect 0.9s infinite ease alternate;
-      .card__type {
-        background-image: linear-gradient(0deg, #700, #c00);
-        border: 2px solid #f00;
-      }
+    &--epic,
+    &--2 {
+        background: linear-gradient(
+            215deg,
+            #faf 0%,
+            #fff 8%,
+            #a4f 20%,
+            #c2f 32%,
+            #faf 92%,
+            #fdf 100%
+        );
+        box-shadow: 0px 5px 20px -10px #000;
+        .card__type {
+            background-image: linear-gradient(0deg, #c0f, #faf);
+            border: 2px solid white;
+        }
     }
 
-    &--  {
-      background: linear-gradient(45deg, rgba(255,230,240,1) 0%, rgba(255,197,224,1) 34%, rgba(255,166,185,1) 71%, rgba(255,138,149,1) 100%);
-      
-      .card__type {
-        background: #ff8a95;
-      }
+    &--legendary,
+    &--1 {
+        background: linear-gradient(
+            125deg,
+            #000 0%,
+            #d00 35%,
+            #000 45%,
+            #f00 90%,
+            #000 100%
+        );
+        border: 4px solid #900;
+        box-shadow: 0px 0px 20px 2px #900;
+        animation: legendary-effect 0.9s infinite ease alternate;
+        .card__type {
+            background-image: linear-gradient(0deg, #700, #c00);
+            border: 2px solid #f00;
+        }
     }
-    
-    position: relative;  
+
+    &-- {
+        background: linear-gradient(
+            45deg,
+            rgba(255, 230, 240, 1) 0%,
+            rgba(255, 197, 224, 1) 34%,
+            rgba(255, 166, 185, 1) 71%,
+            rgba(255, 138, 149, 1) 100%
+        );
+
+        .card__type {
+            background: #ff8a95;
+        }
+    }
+
+    position: relative;
     transition: 0.4s;
-  
+
     &:hover {
-      z-index: 5;
-      box-shadow: 0px 13px 30px -15px #000000;
-      transform:translateY(-15px);
+        z-index: 5;
+        box-shadow: 0px 13px 30px -15px #000000;
+        transform: translateY(-15px);
     }
-    
-  }
-  
-  .wrapper-privacy ul {
+}
+
+.wrapper-privacy ul {
     list-style-type: disc;
 }
 
+* {
+    font-family: "Josefin Sans", sans-serif;
+    -webkit-tap-highlight-color: transparent;
+}
 
-  
-  *{
-      font-family: 'Josefin Sans', sans-serif;
-      -webkit-tap-highlight-color: transparent;
-  }
-  
-  /* Parallax */
-      /* Parallax base styles
+/* Parallax */
+/* Parallax base styles
     --------------------------------------------- */
-  
-    .parallax {
-      height: 100vh;
-      overflow-x: hidden;
-      overflow-y: auto;
-      -webkit-perspective: 300px;
-      perspective: 300px;
-    }
-  
-    .parallax__group {
-      position: relative;
-      height: 100vh;
-      -webkit-transform-style: preserve-3d;
-      transform-style: preserve-3d;
-    }
-  
-    .parallax__layer {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-    }
-  
-    .parallax__layer--fore {
-      -webkit-transform: translateZ(90px) scale(.7);
-      transform: translateZ(90px) scale(.7);
-      z-index: 1;
-    }
-  
-    .parallax__layer--base {
-      -webkit-transform: translateZ(0);
-      transform: translateZ(0);
-      z-index: 4;
-    }
-  
-    .parallax__layer--back {
-      -webkit-transform: translateZ(-300px) scale(2);
-      transform: translateZ(-300px) scale(2);
-      z-index: 3;
-    }
-  
-    .parallax__layer--deep {
-      -webkit-transform: translateZ(-600px) scale(3);
-      transform: translateZ(-600px) scale(3);
-      z-index: 2;
-    }
-  
-  
-  
-  
-  
-    /* demo styles
+
+.parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-perspective: 300px;
+    perspective: 300px;
+}
+
+.parallax__group {
+    position: relative;
+    height: 100vh;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.parallax__layer--fore {
+    -webkit-transform: translateZ(90px) scale(0.7);
+    transform: translateZ(90px) scale(0.7);
+    z-index: 1;
+}
+
+.parallax__layer--base {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    z-index: 4;
+}
+
+.parallax__layer--back {
+    -webkit-transform: translateZ(-300px) scale(2);
+    transform: translateZ(-300px) scale(2);
+    z-index: 3;
+}
+
+.parallax__layer--deep {
+    -webkit-transform: translateZ(-600px) scale(3);
+    transform: translateZ(-600px) scale(3);
+    z-index: 2;
+}
+
+/* demo styles
     --------------------------------------------- */
-  
-    .parallax {
-      font-size: 90%;
-    }
-  
-     /* centre the content in the parallax layers */
-    .home_content {
-      text-align: left;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-      align-items: center;
-    }
-  
-    /* style the group
+
+.parallax {
+    font-size: 90%;
+}
+
+/* centre the content in the parallax layers */
+.home_content {
+    text-align: left;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    align-items: center;
+}
+
+/* style the group
     --------------------------------------------- */
-    #group {
-      z-index: 1;
-    }
-    #group .parallax__layer--back {
-      background: rgb(245 158 11);
-    }
-  
-  .image_home {
+#group {
+    z-index: 1;
+}
+#group .parallax__layer--back {
+    background: rgb(245 158 11);
+}
+
+.image_home {
     display: flex;
     align-items: center;
-  }
-  .round-time-bar {
+}
+.round-time-bar {
     margin: 1rem;
     overflow: hidden;
-  }
-  .round-time-bar div {
+}
+.round-time-bar div {
     height: 5px;
     animation: roundtime calc(var(--duration) * 1s) steps(var(--duration))
-      forwards;
+        forwards;
     transform-origin: left center;
     background: linear-gradient(to bottom, red, #900);
-  }
-  .round-time-bar[data-style="smooth"] div {
+}
+.round-time-bar[data-style="smooth"] div {
     animation: roundtime calc(var(--duration) * 1s) linear forwards;
-  }
-  @keyframes roundtime {
+}
+@keyframes roundtime {
     to {
-      /* More performant than `width` */
-      transform: scaleX(0);
+        /* More performant than `width` */
+        transform: scaleX(0);
     }
-  }
-  
-  /* Animation Box */
-  #dashboard_card {
+}
+
+/* Animation Box */
+#dashboard_card {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     flex-direction: row;
-    width: 95vw;
-    margin-bottom: 10vh;
-  }
-  
-  #card_wrapper {
+    width: 90vw;
+}
+
+#card_wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 2px;
     transform: scale(0.7);
-  }
-  
-  #box {
+}
+
+#box {
     display: flex;
-   justify-content: space-evenly;
-   align-items: center;
-   margin-left: 25vw;
-  }
-  
-  @keyframes slideInLeft-box {
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 25vw;
+}
+
+@keyframes slideInLeft-box {
     0% {
-      transform: translateY(-1%);
-      
+        transform: translateY(-1%);
     }
-  
+
     100% {
-      transform: translateY(0);
-      transform: scale(0.8);
-  
+        transform: translateY(0);
+        transform: scale(0.8);
     }
-  }
-  
-  @keyframes slideInLeft {
+}
+
+@keyframes slideInLeft {
     0% {
-      transform: translateY(-1%);
-      
+        transform: translateY(-1%);
     }
-  
+
     100% {
-      transform: translateY(0);
-  
+        transform: translateY(0);
     }
-  }
-  
-  #kaarten, #card_box {
+}
+
+#kaarten,
+#card_box {
     animation: 0.5s ease-out 0s 1 slideInLeft;
-  }
-  
-  #card_box {
+}
+
+#card_box {
     animation: 1s ease-out 0s 1 slideInLeft-box;
-  }
-  
-  
-  @media only screen and (max-width: 600px) {
-    #image_home{
-      display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    #image_home {
+        display: none;
     }
-  
-    #text-title, #text_home{
-      width: 100%;
+
+    #text-title,
+    #text_home {
+        width: 100%;
     }
-  
+
     .tabs {
-      margin: 0;
+        margin: 0;
     }
-  
+
     #card_wrapper {
-      transform: scale(1);
-      margin: 0;
+        transform: scale(1);
+        margin: 0;
     }
-  
+
     #dashboard_card {
-      width: 80vw;
+        width: 80vw;
     }
-  
+
     #box {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      width: 90vw !important;
-      margin-left: 5vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 90vw !important;
+        margin-left: 5vw;
     }
-  
+
     #quiz_select {
-      left: 40%;
-      width: 90vw;
+        left: 40%;
+        width: 90vw;
     }
-  
+
     #register {
-      width: 80vw;
-      margin-top: 60px;
+        width: 80vw;
+        margin-top: 60px;
     }
-  
-  }
+}

@@ -1,6 +1,6 @@
 <x-app-layout>
     <div id="box" class="backdrop-blur-sm rounded-2xl"
-        style="background-color: rgba(125, 125, 125, 0.2); width: 50vw; height: auto; padding:25px">
+        style="background-color: rgba(125, 125, 125, 0.2); width: 50vw; height: auto; padding:25px; margin-top: 10vh; margin-bottom: 10vh">
 
 
         <div id="wrapper" class="">

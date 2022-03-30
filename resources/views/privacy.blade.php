@@ -1,10 +1,10 @@
 <x-guest-layout>
 
     <div class="flex flex-col justify-between">
-        <div class="w-full h-[75vh] -mt-10 z-[1] "
+        <div
             style="background-image: url('./img/contact-bg2.png'); background-size: cover; background-repeat: no-repeat; background-position: center; margin-top:0rem">
-            <div class="backdrop-blur-sm rounded-2xl flex w-[50vw]"
-                style="background-color: rgba(125, 125, 125, 0.2); padding:50px; margin: 10%">
+            <div class="backdrop-blur-sm rounded-2xl flex w-[60vw]"
+                style="background-color: rgba(125, 125, 125, 0.2); padding:50px; margin: 5vw 0vw 5vw 20vw">
                 <div class="wrapper-privacy" style="overflow: hidden; list-style-type: disc;">
                     <h1>Privacy Policy</h1>
                     <p>Last updated: March 28, 2022</p>
