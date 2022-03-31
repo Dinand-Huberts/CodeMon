@@ -34,8 +34,6 @@ Route::get('/licensing', function () {
     return view('licensing');
 });
 
-Route::get('/generate_card', [BoxController::class, 'generate']);
-
 Route::middleware('auth')->group(function () {
     Route::get('/box', [BoxController::class, 'index']);
 
@@ -46,6 +44,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'index']);
 
     Route::get('/cards', [CardsController::class, 'index']);
+
+    Route::get('/generate_card', [BoxController::class, 'generate']);
 });
 
 require __DIR__ . '/auth.php';
