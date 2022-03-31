@@ -1,11 +1,11 @@
 require("./bootstrap");
 
-import Alpine from "alpinejs";
+
 import $ from "jquery";
 import "jquery-ui/ui/widgets/datepicker.js";
-window.Alpine = Alpine;
+
 window.$ = window.jQuery = $;
-Alpine.start();
+
 
 // function to start the animation
 $(function () {

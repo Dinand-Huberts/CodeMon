@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="{{ asset('css/sass.css') }}">
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="{{ asset('js/app.js') }}"></script>
     <script src="https://unpkg.com/flowbite@1.3.3/dist/flowbite.js"></script>
 </head>
 
