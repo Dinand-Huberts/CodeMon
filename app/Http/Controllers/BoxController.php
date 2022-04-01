@@ -174,8 +174,7 @@ class BoxController extends Controller
         $abilities = array('',);
         $ability = $abilities[array_rand($abilities, 1)];
 
-        $hidden_abilities = array('',);
-        $hidden_ability = $hidden_abilities[array_rand($hidden_abilities, 1)];
+        $hidden_ability = $abilities[array_rand($abilities, 1)];
 
 
         DB::table('cards')->insert([
