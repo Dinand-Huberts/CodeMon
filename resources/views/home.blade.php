@@ -3,9 +3,9 @@
         <div class="w-full h-[90vh] -mt-10 z-[1]"
             style="background-image: url('./img/contact-bg2.png'); background-size: cover; background-repeat: no-repeat; background-position: center; margin-top :0rem;">
             <div class="home_content backdrop-blur-sm rounded-2xl flex w-[80vw]"
-                style="background-color: rgba(125, 125, 125, 0.2); margin-top:5vh">
-                <div id="image_home" class="image_home h-[35%] w-[35%] p-6">
-                    <img src="./img/kaart.png" alt="kaart">
+                style="background-color: rgba(125, 125, 125, 0.2); margin-top:15vh;">
+                <div id="image_home" class="image_home h-[40%] w-[35%] p-6">
+                    <x-random-card></x-random-card>
                 </div>
                 <div id="text_home" class="ml-[3%] w-[80%] p-6 text-center text-xl">
                     <div id="text-title" class="ml-[3%] w-[80%] p-6 text-center text-4xl font-bold">
