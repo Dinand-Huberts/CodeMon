@@ -65,8 +65,7 @@ class BoxController extends Controller
     public function generate(Request $request)
     {
         
-        $boxes = Box
-            ::where('user_id', '=', Auth::id())
+        $boxes = Box::where('user_id', '=', Auth::id())
             ->where('box_activated', '=', 0)
             ->get();
 
@@ -172,6 +171,13 @@ class BoxController extends Controller
         $special_defense = rand($stat_min, $stat_max);
         $speed = rand($stat_min, $stat_max);
 
+        $abilities = array('',);
+        $ability = $abilities[array_rand($abilities, 1)];
+
+        $hidden_abilities = array('',);
+        $hidden_ability = $hidden_abilities[array_rand($hidden_abilities, 1)];
+
+
         DB::table('cards')->insert([
             'user_id' => $user_id,
             'card_rarity' => $rarity_data_int,
@@ -182,6 +188,9 @@ class BoxController extends Controller
             'card_special_attack' => $special_attack,
             'card_special_defense' => $special_defense,
             'card_speed' => $speed,
+            'ability' => $ability,
+            'hidden_ability' => $hidden_ability,
+
         ]);
 
         $box->box_activated = 1;

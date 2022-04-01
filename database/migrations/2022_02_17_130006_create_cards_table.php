@@ -25,6 +25,8 @@ class CreateCardsTable extends Migration
             $table->addColumn('integer', 'card_special_attack', ['length' => 4]);
             $table->addColumn('integer', 'card_special_defense', ['length' => 4]);
             $table->addColumn('integer', 'card_speed', ['length' => 4]);
+            $table->string('ability', 32)->default('Run Away');
+            $table->string('hidden_ability', 32)->default('Anticipation');
             
         });
         
