@@ -31,8 +31,6 @@ class card extends Component
     {
         $cards = User::find(Auth::id())->cards;
 
-
-
         return view('/components/card', ['card' => $cards]);
     }
 }

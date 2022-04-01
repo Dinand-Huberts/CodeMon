@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BoxController;
 use App\Http\Controllers\CardsController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\QuizController;
 use App\Http\Controllers\QuizSelectorController;
