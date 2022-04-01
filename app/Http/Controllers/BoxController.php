@@ -17,25 +17,6 @@ class BoxController extends Controller
                 session_start();
                 //Get and set user_id
                 $user_id = Auth::id();
-
-                // Eventuele laravel fix (later bekijken)               | Dinand
-                // $cooldown_string = Auth::user()->quiz_cooldown;
-
-                //Set cooldown variables
-                $cooldown_query = DB::table('users')->where('id', '=', $user_id)->get();
-                $cooldown_string = $cooldown_query[0]->quiz_cooldown;
-                $cooldown = strtotime($cooldown_string);
-                $cooldown_until = $cooldown + 14400;
-                $time = time();
-                $interval = $time - $cooldown;
-                //Cooldown check
-                if ($interval >= 14400) {
-                    $onload = '';
-                    $quiz_cooldown_check = true;
-                } elseif ($interval < 14400) {
-                    $onload = 'countdown_quiz(' . $cooldown_until  . ')';
-                    $quiz_cooldown_check = false;
-                }
         
                 if ($_GET) {
                     if (isset($_SESSION['quiz_id'])) {
@@ -98,11 +79,11 @@ class BoxController extends Controller
         $box = Box::find($request->get('id'));
 
         if ($box->user_id !== Auth::id()) {
-            return json_encode([NULL, '0', NULL, '0']);
+            return;
         }
 
         if ($box->box_activated !== 0) {
-            return json_encode([NULL, '0', NULL, '0']);
+            return;
         }
 
         //difficulty scaling

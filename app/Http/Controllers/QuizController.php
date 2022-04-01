@@ -85,7 +85,7 @@ class QuizController extends Controller
             $quiz_question_formatted = str_replace($tags_allowed, $tags_converted, $quiz_question_sanitized);
 
             //lastly, quiz_question_finalized has the answer field put into it.
-            $quiz_question_finalized = str_replace("[blank]", '<input name="user_answer">', $quiz_question_formatted);
+            $quiz_question_finalized = str_replace("[blank]", '<input name="user_answer" autocomplete="off">', $quiz_question_formatted);
         }
         
 
