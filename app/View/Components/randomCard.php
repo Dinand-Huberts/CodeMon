@@ -2,6 +2,7 @@
 
 namespace App\View\Components;
 
+use App\Models\Ability;
 use App\Models\Cards;
 use App\Models\Teacher;
 use App\Models\User;
@@ -30,8 +31,8 @@ class randomCard extends Component
         $cards = Cards::inRandomOrder()->first();
         $teacher = Teacher::inRandomOrder()->first();
 
-        // $rarities = array("common", "uncommon");
-        // $rarity = $rarities[array_rand($rarities, 1)];
+
+
 
 
         return view('components.random-card', ['card' => $cards, 'teacher' => $teacher]);

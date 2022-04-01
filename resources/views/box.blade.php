@@ -71,11 +71,11 @@
                                 <div class="card__abilities">
                                     <h4 class="card__ability">
                                         <span class="card__label">Ability</span>
-                                        Run Away
+                                        {{$card->ability}}
                                     </h4>
                                     <h4 class="card__ability">
                                         <span class="card__label">Hidden Ability</span>
-                                        Anticipation
+                                        {{$card->hidden_ability}}
                                     </h4>
                                 </div>
                             </figcaption>
@@ -85,7 +85,7 @@
             </div>
     </div>
     @endif
-    </div>
+
     <script>
         function refreshPage() {
             $("#dashboard_card").load(window.location.href + " #dashboard_card");

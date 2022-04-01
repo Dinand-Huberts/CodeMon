@@ -44,7 +44,7 @@
                         </h4>
                         <h4 class="card__ability">
                             <span class="card__label">Hidden Ability</span>
-                            Anticipation
+                            Speed Boost
                         </h4>
                     </div>
                 </figcaption>
