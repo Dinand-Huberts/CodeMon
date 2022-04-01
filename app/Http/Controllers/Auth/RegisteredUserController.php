@@ -13,6 +13,7 @@ use Illuminate\Validation\Rules;
 
 class RegisteredUserController extends Controller
 {
+    protected $redirectTo = '/profile';
     /**
      * Display the registration view.
      *

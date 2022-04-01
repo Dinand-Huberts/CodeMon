@@ -44,18 +44,6 @@ window.countdown_quiz = function (countdown_date) {
     }, 500);
 };
 
-// var hidden_box_alert = false;
-// var box_alert = document.getElementById("box_alert");
-// window.showalert = function() {
-//     box_alert.classList.remove("hidden");
-//     setTimeout(hidealert, 4100);
-//   }
-
-// window.hidealert = function(){
-//     var hidden_box_alert = true;
-//     box_alert.classList.add("hidden");
-//   }
-
 $(document).on("click", '#generate_card_button', function (e) {
     $(e.currentTarget).attr('disabled', true);
 
@@ -73,21 +61,6 @@ $(document).on("click", '#generate_card_button', function (e) {
     $(e.currentTarget).attr('disabled', false);
 });
 
-//     $.get("/generate_card", {
-//         id: box_id,
-//     }).done(function (data) {
-//         var answer = JSON.parse(data);
-//         if (answer[3] == 0){
-//           noboxes();
-//           showcard(answer[0]);
-//         } else{
-//         showcard(answer[0]);
-//         updatecounters(answer[1], answer[3]);
-//         $('#generate_card_button').attr("onclick", "generate_card(" + answer[2] + ")");
-//         }
-//     });
-// };
-
 window.showcard = function (data) {
   //first empty the div, then append the new generated card
     $("#card_container").empty();
@@ -101,11 +74,19 @@ window.updatecounters = function (count, difficulty) {
   $("#box_difficulty").append(difficulty);
 };
 
+window.orderby = function(){
+const orderby = $("#orderby").val();
+alert(orderby)
+var data = {
+    action:"boats",
+    sort:"desc"
+ }
+ $.post("/orderby", {
+    id: boxId,
+    dataType: 'html'
+}).done(function (data) {
+    $('#box').html((jQuery(data).find('#box').html()));
+    $("#new_card").html((jQuery(data).find('#card_wrapper').html()));
 
-// const reloadButton = document.querySelector("#kaarten");
-// // Reload everything:
-// function reload() {
-//     reload = location.reload();
-// }
-// // Event listeners for reload
-// reloadButton.addEventListener("click", reload, false);
+});
+}

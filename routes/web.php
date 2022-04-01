@@ -46,6 +46,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/cards', [CardsController::class, 'index']);
 
     Route::get('/generate_card', [BoxController::class, 'generate']);
+
+    Route::get('/orderby', [CardsController::class, 'orderby']);
 });
 
 require __DIR__ . '/auth.php';

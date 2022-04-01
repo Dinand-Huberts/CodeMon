@@ -47,7 +47,7 @@ class BoxController extends Controller
                         //reroute user to page with no parameters
                         $host = $_SERVER['HTTP_HOST'];
                         $uri = 'codemon.test/';
-                        header('Location: /dashboard');
+                        header('Location: /');
                         exit();
                     }
                 }
@@ -70,7 +70,7 @@ class BoxController extends Controller
             ->where('box_activated', '=', 0)
             ->get();
 
-        // change to last card, not box
+
         $card = Box::where('user_id', Auth::id())->where('box_activated', 1)->first();
 
 

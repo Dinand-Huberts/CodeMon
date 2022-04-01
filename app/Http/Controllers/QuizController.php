@@ -31,9 +31,9 @@ class QuizController extends Controller
         $user_id = Auth::id();
 
         //cooldown check
-        $cooldown_query = DB::table('users')->where('id', '=', $user_id)->get();
-        $cooldown_string = $cooldown_query[0]->quiz_cooldown;
-        $cooldown = strtotime($cooldown_string);
+
+        
+        $cooldown = strtotime(Auth::user()->quiz_cooldown);
         $time = time();
         $interval = $time - $cooldown;
         if ($interval >= 14400) {
@@ -42,33 +42,8 @@ class QuizController extends Controller
             $quiz_cooldown_check = false;
         }
 
-
-        //set max amount of quizzes available
-
-        //retrieve the questions and answer for the difficulty chosen.
-        switch ($_GET['difficulty']) {
-            case 'easy':
-                $difficulty = 1;
-                break;
-
-            case 'normal':
-                $difficulty = 2;
-                break;
-
-            case 'hard':
-                $difficulty = 3;
-                break;
-
-            case 'extreme':
-                $difficulty = 4;
-                break;
-
-            case 'nightmare':
-                $difficulty = 5;
-                break;
-        }   
         // Fetches everything with the assigned difficulty from the quizzes table
-        $quizzes = DB::table('quizzes')->where('quiz_difficulty', '=', $difficulty)->get();
+        $quizzes = DB::table('quizzes')->where('quiz_difficulty', '=', $_GET['difficulty'])->get();
 
         // Further idiotproofing
         $quizzes_count = count($quizzes);
@@ -94,7 +69,7 @@ class QuizController extends Controller
 
         //Set variables in the view
         $data =
-            [   
+            [
                 'quiz_id' => $quiz_id,  
                 'quizzes_int' => $quizzes_count,
                 'quiz_question' => $quiz_question_finalized,
