@@ -29,8 +29,13 @@ class card extends Component
      */
     public function render()
     {
-        $cards = User::find(Auth::id())->cards;
-
+        //TODO pagination toevoegen.
+        //default order by rarity
+        $page = $_GET['p'];
+        $maxview = $_GET['v'];
+        $offset = $page * $maxview;
+        
+        $cards = Cards::where('user_id', '=', Auth::id())->offset($offset)->orderby('card_rarity')->limit($maxview)->get();
         return view('/components/card', ['card' => $cards]);
     }
 }
