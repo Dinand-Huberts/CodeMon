@@ -19,11 +19,11 @@ class CreateRaritiesTable extends Migration
             $table->addColumn('string', 'rarities', ['length' => 300]);
         });
         $data = [
-            ['id'=>NULL, 'rarities'=> "legendary"],
-            ['id'=>NULL, 'rarities'=> "epic"],
-            ['id'=>NULL, 'rarities'=> "rare"],
-            ['id'=>NULL, 'rarities'=> "uncommon"],
             ['id'=>NULL, 'rarities'=> "common"],
+            ['id'=>NULL, 'rarities'=> "uncommon"],
+            ['id'=>NULL, 'rarities'=> "rare"],
+            ['id'=>NULL, 'rarities'=> "epic"],
+            ['id'=>NULL, 'rarities'=> "legendary"],
         ];
         DB::table('rarities')->insert($data);
     }

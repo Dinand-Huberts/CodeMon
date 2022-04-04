@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Abilities;
 use App\Http\Controllers\Controller;
-use App\Models\Ability;
 use App\Models\Box;
 use App\Models\Cards;
 use App\Models\Teacher;
@@ -120,13 +118,13 @@ class BoxController extends Controller
         switch ($rarity_int) {
             case $rarity_int >= 0 && $rarity_int <= 50:
                 $rarity_name = 'legendary';
-                $rarity_data_int = 1;
+                $rarity_data_int = 5;
                 $stat_max = 140;
                 $stat_min = 70;
                 break;
             case $rarity_int >= 50 && $rarity_int <= 250:
                 $rarity_name = 'epic';
-                $rarity_data_int = 2;
+                $rarity_data_int = 4;
                 $stat_max = 125;
                 $stat_min = 60;
                 break;
@@ -138,13 +136,13 @@ class BoxController extends Controller
                 break;
             case $rarity_int >= 750 && $rarity_int <= 2500:
                 $rarity_name = 'uncommon';
-                $rarity_data_int = 4;
+                $rarity_data_int = 2;
                 $stat_max = 95;
                 $stat_min = 40;
                 break;
             case $rarity_int >= 2500 && $rarity_int <= $max_rand_int:
                 $rarity_name = 'common';
-                $rarity_data_int = 5;
+                $rarity_data_int = 1;
                 $stat_max = 80;
                 $stat_min = 30;
                 break;
@@ -161,19 +159,6 @@ class BoxController extends Controller
         $teachers = Teacher::all();
         $randomTeacher = rand(0, (count($teachers) - 1));
 
-        // Fetches the abilities from abilities table
-      
-
-        // $ability = Ability::select('ability')->inRandomOrder()->limit(1)->get();
-        // $hidden_ability = Ability::select('ability')->inRandomOrder()->limit(1)->get();
-        $abilities = Ability::all();
-
-        $count_ability = $abilities->count();
-
-        $ability = rand(1, $count_ability);
-        $hidden_ability = rand(1, $count_ability);
-
-
         //Check if a result is given
         if (!isset($teachers[$randomTeacher])) {
             return json_encode([NULL, '0', NULL, '0']);
@@ -185,6 +170,11 @@ class BoxController extends Controller
         $special_attack = rand($stat_min, $stat_max);
         $special_defense = rand($stat_min, $stat_max);
         $speed = rand($stat_min, $stat_max);
+
+        $abilities = array('Speed Boost', 'Sturdy', 'Oblivious', 'Immunity', 'Own Tempo', 'Intimidate', 'Synchronize', 'Swift Swim', 'Inner Focus', 'Run Away', 'Keen Eye', 'Guts', 'Vital Spirit', 'Pure Power', 'Rivalry', 'Simple', 'Adaptability', 'Quick Feet', 'Technician', 'Acticipation', 'Scrappy', 'Reckless', 'Sheer Force', 'Unnerve', 'Overcoat', 'Regenerator', 'Analytic', 'Bulletproof', 'Stamina', 'Merciless');
+        $ability = $abilities[array_rand($abilities, 1)];
+
+        $hidden_ability = $abilities[array_rand($abilities, 1)];
 
 
         DB::table('cards')->insert([
