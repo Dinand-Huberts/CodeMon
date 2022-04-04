@@ -30,7 +30,7 @@ class randomCard extends Component
     {
         $teacher = Teacher::inRandomOrder()->first();
 
-        $cards = array(rand(1, 100), rand(1, 100), rand(1, 100), rand(1, 100), rand(1, 100), rand(1, 100));
+        $cards = array(rand(40, 95), rand(40, 95), rand(40, 95), rand(40, 95), rand(40, 95), rand(40, 95));
 
         return view('components.random-card', ['card' => $cards, 'teacher' => $teacher]);
     }
