@@ -172,11 +172,6 @@ class BoxController extends Controller
         $special_defense = rand($stat_min, $stat_max);
         $speed = rand($stat_min, $stat_max);
 
-        // $abilities = array('Speed Boost', 'Sturdy', 'Oblivious', 'Immunity', 'Own Tempo', 'Intimidate', 'Synchronize', 'Swift Swim', 'Inner Focus', 'Run Away', 'Keen Eye', 'Guts', 'Vital Spirit', 'Pure Power', 'Rivalry', 'Simple', 'Adaptability', 'Quick Feet', 'Technician', 'Acticipation', 'Scrappy', 'Reckless', 'Sheer Force', 'Unnerve', 'Overcoat', 'Regenerator', 'Analytic', 'Bulletproof', 'Stamina', 'Merciless');
-        // $ability = $abilities[array_rand($abilities, 1)];
-
-        // $hidden_ability = $abilities[array_rand($abilities, 1)];
-
         $abilities_records = Ability::count();
         $ability = rand(1, $abilities_records);
         $hidden_ability = rand(1, $abilities_records);

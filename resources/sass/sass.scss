@@ -369,6 +369,13 @@
     animation: 1s ease-out 0s 1 slideInLeft-box;
 }
 
+#wrapper_home {
+    display: flex;
+    align-items: center;
+    padding: 1%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
 @media only screen and (max-width: 600px) {
     #image_home {
         display: none;
