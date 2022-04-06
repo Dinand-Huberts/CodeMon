@@ -1,12 +1,13 @@
 <x-app-layout>
     <div class="flex flex-col justify-between">
-        <div class="relative w-full z-[1]"
+        <div class="relative w-full z-[1] h-[80vh]"
             style="background-image: url('./img/contact-bg2.png'); background-size: cover; background-repeat: no-repeat; background-position: center;">
-            @if ($quiz_cooldown == true)
-                <div id="box" class="backdrop-blur-sm rounded-2xl"
-                    style="background-color: rgba(125, 125, 125, 0.2); width: 50vw; height: auto; padding:25px; margin-top:20vh; margin-bottom: 40vh">
-                    <div class="flex justify-center">
-                        <form id="quiz" action="/box" method="GET">
+            <div id="box" class="backdrop-blur-sm rounded-2xl"
+                style="background-color: rgba(125, 125, 125, 0.2); width: 50vw; height: auto; padding:25px; margin-top:20vh; margin-bottom: 40vh">
+                <div class="flex justify-center">
+                    @if ($quiz_cooldown == true)
+                        <form id="quiz" action="/quizcheck" method="POST">
+                            @csrf
                             {!! $quiz_question !!}
                             <div class="flex justify-center">
                                 <button
@@ -14,9 +15,11 @@
                                     style="margin: 25px">Submit</button>
                             </div>
                         </form>
-                    </div>
+                    @else
+                    wat
+                    @endif
                 </div>
-            @endif
+            </div>
         </div>
     </div>
 </x-app-layout>

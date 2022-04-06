@@ -1,4 +1,8 @@
 <x-app-layout>
+    @if(isset($answer)){
+        {{$answer}}
+    }
+    @endif
     <div id="box" class="backdrop-blur-sm rounded-2xl"
         style="background-color: rgba(125, 125, 125, 0.2); width: 50vw; height: auto; padding:25px; margin-top: 10vh; margin-bottom: 10vh">
 

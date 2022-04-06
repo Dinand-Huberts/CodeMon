@@ -15,44 +15,10 @@ class BoxController extends Controller
 {
     public function index($layout = true)
     {
-                session_start();
-                //Get and set user_id
-                $user_id = Auth::id();
-        
-                if ($_GET) {
-                    if (isset($_SESSION['quiz_id'])) {
-                        //get and set user_id
-                        $user_id = Auth::id();
-        
-                        //Get quiz info with corresponding id
-                        $quiz = DB::table('quizzes')
-                            ->where('id', '=', $_SESSION['quiz_id'])
-                            ->get();
+        session_start();
+        //Get and set user_id
+        $user_id = Auth::id();
 
-                            $users_data = ['quiz_cooldown' => date('Y-m-d, H:i:s', time())];
-                            DB::table('users')
-                            ->where('id', '=', $user_id)
-                            ->update($users_data);
-                        $quiz_answer = $quiz[0]->quiz_answer;
-                        $quiz_difficulty = $quiz[0]->quiz_difficulty;
-                        $user_answer_boolean = $_GET['user_answer'] == $quiz_answer;
-                        if ($user_answer_boolean) {
-                            $boxes_data = ['user_id' => $user_id, 'box_difficulty' => $quiz_difficulty];
-                            DB::table('boxes')->insert($boxes_data);
-                            echo "<script>alert('Goed antwoord!')</script>";
-                        } else {
-                            echo "<script>alert('Fout antwoord!')</script>";
-                        }
-                        unset($_SESSION['quiz_id']);
-                    } else {
-                        //reroute user to page with no parameters
-                        $host = $_SERVER['HTTP_HOST'];
-                        $uri = 'codemon.test/';
-                        header('Location: /');
-                        exit();
-                    }
-                }
-        
         $boxes = Box::where('user_id', '=', Auth::id())
             ->where('box_activated', '=', 0)
             ->get();
@@ -65,11 +31,10 @@ class BoxController extends Controller
 
     public function generate(Request $request)
     {
-        
+
         $boxes = Box::where('user_id', '=', Auth::id())
             ->where('box_activated', '=', 0)
             ->get();
-
 
         $card = Box::where('user_id', Auth::id())->where('box_activated', 1)->first();
 
@@ -85,6 +50,7 @@ class BoxController extends Controller
         if ($box->box_activated !== 0) {
             return;
         }
+
 
         //difficulty scaling
         switch ($box->box_difficulty) {

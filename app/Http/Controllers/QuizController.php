@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\QuizSelectorController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -78,5 +79,34 @@ class QuizController extends Controller
                 'quiz_cooldown' => $quiz_cooldown_check
             ];
         return view('quiz', $data);
+    }
+    public function quizcheck(Request $request) {
+        session_start();
+        if (!isset($_SESSION['quiz_id'])) {
+            return redirect()->route('quizselector');
+        } else{
+            //get and set user_id
+            $user_id = Auth::id();
+            //Get quiz info with corresponding id
+            $quiz = DB::table('quizzes')
+                ->where('id', '=', $_SESSION['quiz_id'])
+                ->get();
+                $users_data = ['quiz_cooldown' => date('Y-m-d, H:i:s', time())];
+                DB::table('users')
+                ->where('id', '=', $user_id)
+                ->update($users_data);
+            if ($quiz[0]->quiz_answer == $request->user_anwer) {
+                $boxes_data = ['user_id' => $user_id, 'box_difficulty' => $quiz[0]->quiz_difficulty];
+                DB::table('boxes')->insert($boxes_data);
+                $answer = "<script>alert('Goed antwoord!')</script>";
+            } else {
+                $answer = "<script>alert('Fout antwoord!')</script>";
+            }
+            unset($_SESSION['quiz_id']);
+            $data = [
+                'answer' => $answer
+            ];
+            return redirect()->route('box',  $data);
+        }    
     }
 }

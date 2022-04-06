@@ -36,9 +36,9 @@ Route::get('/licensing', function () {
 });
 
 Route::middleware('auth')->group(function () {
-    Route::get('/box', [BoxController::class, 'index']);
+    Route::get('/box', [BoxController::class, 'index'])->name('box');
 
-    Route::get('/quizselector', [QuizSelectorController::class, 'index']);
+    Route::get('/quizselector', [QuizSelectorController::class, 'index'])->name('quizselector');
 
     Route::get('/quiz', [QuizController::class, 'index']);
 
@@ -49,6 +49,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/generate_card', [BoxController::class, 'generate']);
 
     Route::get('/orderby', [CardsController::class, 'orderby']);
+
+    Route::post('/quizcheck', [QuizController::class, 'quizcheck']);
 });
 
 require __DIR__ . '/auth.php';

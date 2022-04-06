@@ -27,7 +27,7 @@ class QuizSelectorController extends Controller
            $quiz_cooldown_check = true;
        } else {
            $onload = 'countdown_quiz(' . $cooldown_until  . ')';
-           $quiz_cooldown_check = false;
+           $quiz_cooldown_check = false; 
        }
 
        $difference = 14400  - $interval;
@@ -47,9 +47,8 @@ class QuizSelectorController extends Controller
                'interval' => $interval,
                'onload' => $onload,
                'cooldown_until' => $cooldown_until,
-
            ];
 
-       return view('Quizselector', $data);
+       return view('quizselector', $data);
     }
 }
