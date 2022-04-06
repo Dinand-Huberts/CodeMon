@@ -47,12 +47,14 @@ window.countdown_quiz = function (countdown_date) {
 $(document).on("click", "#generate_card_button", function (e) {
     $(e.currentTarget).attr("disabled", true);
 
+    
     const boxId = $(e.currentTarget).data("box-id");
 
     $.get("/generate_card", {
         id: boxId,
         dataType: "html",
     }).done(function (data) {
+        console.log(data);
         $("#box").html(jQuery(data).find("#box").html());
         $("#new_card").html(jQuery(data).find("#card_wrapper").html());
     });

@@ -9,7 +9,4 @@ class Ability extends Model
 {
     use HasFactory;
     
-    public function cards() {
-        return $this->hasMany(Cards::class);
-    }
 }

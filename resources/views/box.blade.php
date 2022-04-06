@@ -71,11 +71,11 @@
                                 <div class="card__abilities">
                                     <h4 class="card__ability">
                                         <span class="card__label">Ability</span>
-                                        {{$card->ability}}
+                                        {{ $card->ability }}
                                     </h4>
                                     <h4 class="card__ability">
                                         <span class="card__label">Hidden Ability</span>
-                                        {{$card->hidden_ability}}
+                                        {{ $card->hidden_ability }}
                                     </h4>
                                 </div>
                             </figcaption>
@@ -83,8 +83,8 @@
                     </div>
                 </div>
             </div>
-    </div>
     @endif
+</div>
 
     <script>
         function refreshPage() {

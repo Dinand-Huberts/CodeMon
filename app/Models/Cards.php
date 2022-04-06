@@ -20,4 +20,8 @@ class Cards extends Model
     public function user() {
         return $this->belongsTo(User::class);
     }
+
+    public function ability() {
+        return $this->hasOne(Ability::class, 'id', 'ability');
+    } 
 }
