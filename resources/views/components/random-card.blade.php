@@ -13,27 +13,27 @@
                         <tbody>
                             <tr>
                                 <th>HP</th>
-                                <td>{{ $card->card_hp }}</td>
+                                <td>{{ $card[0] }}</td>
                             </tr>
                             <tr>
                                 <th>Attack</th>
-                                <td>{{ $card->card_attack }}</td>
+                                <td>{{ $card[1]}}</td>
                             </tr>
                             <tr>
                                 <th>Defense</th>
-                                <td>{{ $card->card_defense }}</td>
+                                <td>{{ $card[2] }}</td>
                             </tr>
                             <tr>
                                 <th>Special Attack</th>
-                                <td>{{ $card->card_special_attack }}</td>
+                                <td>{{ $card[3] }}</td>
                             </tr>
                             <tr>
                                 <th>Special Defense</th>
-                                <td>{{ $card->card_special_defense }}</td>
+                                <td>{{ $card[4] }}</td>
                             </tr>
                             <tr>
                                 <th>Speed</th>
-                                <td>{{ $card->card_speed }}</td>
+                                <td>{{ $card[5] }}</td>
                             </tr>
                         </tbody>
                     </table>

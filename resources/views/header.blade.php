@@ -46,19 +46,19 @@
                     |
                 </li>
                     <li>
-                        <a href="/profile"
+                        <a href="./profile"
                             class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-zinc-50 md:p-0 md:dark:hover:text-zinc-50 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">Profile</a>
                     </li>
                     <li>
-                        <a href="/cards"
+                        <a href="./cards"
                             class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-zinc-50 md:p-0 md:dark:hover:text-zinc-50 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">Cards</a>
                     </li>
                     <li>
-                        <a href="/box"
+                        <a href="./box"
                             class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-zinc-50 md:p-0 md:dark:hover:text-zinc-50 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">Boxes</a>
                     </li>
                     <li>
-                        <a href="/quizselector"
+                        <a href="./quizselector"
                             class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-zinc-50 md:p-0 md:dark:hover:text-zinc-50 dark:text-black dark:hover:bg-gray-700 dark:hover:text-black md:dark:hover:bg-transparent dark:border-gray-700">Quiz</a>
                     </li>
                 @else

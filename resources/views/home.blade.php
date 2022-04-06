@@ -2,12 +2,11 @@
     <div class="flex flex-col justify-between">
         <div class="w-full h-[90vh] -mt-10 z-[1]"
             style="background-image: url('./img/contact-bg2.png'); background-size: cover; background-repeat: no-repeat; background-position: center; margin-top :0rem;">
-            <div class="home_content backdrop-blur-sm rounded-2xl flex w-[80vw]"
-                style="background-color: rgba(125, 125, 125, 0.2); margin-top:15vh;">
+            <div id="wrapper_home">
                 <div id="image_home" class="image_home h-[40%] w-[35%] p-6">
                     <x-random-card></x-random-card>
                 </div>
-                <div id="text_home" class="ml-[3%] w-[80%] p-6 text-center text-xl">
+                <div id="text_home" class="ml-[3%] w-[80%] text-center text-xl">
                     <div id="text-title" class="ml-[3%] w-[80%] p-6 text-center text-4xl font-bold">
                         Play the quiz and win the Codemon cards!
                     </div>
@@ -24,7 +23,6 @@
                             class="text-black bg-red-600 hover:bg-red-700 focus:ring-amber-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-red-600 mt-10">
                             <a href="/login">Login</a></button>
                     @endif
-
                 </div>
             </div>
         </div>

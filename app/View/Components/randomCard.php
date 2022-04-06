@@ -28,12 +28,9 @@ class randomCard extends Component
      */
     public function render()
     {
-        $cards = Cards::inRandomOrder()->first();
         $teacher = Teacher::inRandomOrder()->first();
 
-
-
-
+        $cards = array(rand(40, 95), rand(40, 95), rand(40, 95), rand(40, 95), rand(40, 95), rand(40, 95));
 
         return view('components.random-card', ['card' => $cards, 'teacher' => $teacher]);
     }

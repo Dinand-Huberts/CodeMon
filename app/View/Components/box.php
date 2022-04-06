@@ -32,7 +32,7 @@ class box extends Component
      */
     public function render1(Request $request)
     {
-        return BoxController::generate_card($request);
+        return BoxController::generate($request);
     }
 
 }
