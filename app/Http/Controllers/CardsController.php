@@ -12,13 +12,15 @@ class CardsController extends Controller
 
     public function index(Request $request)
     {
-        $this->URLCheck($request);
+        //TODO pagination toevoegen.
+        $this->URLCheck($request);  
 
         $cards = Cards::where('user_id', '=', Auth::id())->get();
-        $card_amount = count($cards);
-        $maxpages = ceil($card_amount / $_GET['v']);
+        $maxpages = ceil(count($cards) / $_GET['v']);
         $data = [
-            'maxpages' => $maxpages
+            'maxpages' => $maxpages,
+            'v' => $_GET['v'],
+            'p' => $_GET['p']
         ];
         return view('cards', $data);
     }
@@ -56,7 +58,7 @@ class CardsController extends Controller
         $page = $_GET['p'];
         $maxview = $_GET['v'];
         $offset = $page * $maxview;
-        $cards_ordered = Cards::where('user_id', '=', Auth::id())->offset($offset)->limit($maxview)->orderby($orderbyfilter)->get();
+        $cards_ordered = Cards::where('user_id', '=', Auth::id())->offset($offset)->limit($maxview)->orderbydesc($orderbyfilter)->get();
 
         foreach ($cards_ordered as $item) {
             $card_div[] = '<div id="card_wrapper">
@@ -136,7 +138,6 @@ class CardsController extends Controller
             header('Location: /cards?p=' . $_GET["p"] . '&v=25');
             exit();
         }
-
         if (filter_var($_GET['p'], FILTER_VALIDATE_INT) === false || filter_var($_GET['v'], FILTER_VALIDATE_INT) === false) {
             header('Location: /cards');
             exit();

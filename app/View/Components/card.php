@@ -29,7 +29,6 @@ class card extends Component
      */
     public function render()
     {
-        //TODO pagination toevoegen.
         //default order by rarity
         $page = $_GET['p'];
         $maxview = $_GET['v'];
