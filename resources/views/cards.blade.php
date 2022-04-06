@@ -1,8 +1,5 @@
 <x-app-layout>
     <div id="kaarten" role="tabpanel" aria-labelledby="kaarten-tab">
-        <div class="flex flex-col left-20 mt-3 absolute">
-            {{ $maxpages }}
-        </div>
         <div class="absolute right-20 mt-10">
             <select id="orderby" onchange="orderby()">
                 <option value="rarity">Rarity</option>
@@ -32,34 +29,24 @@
         {{-- pagination --}}
         <nav aria-label="Page navigation">
             <ul class="inline-flex -space-x-px relative">
-                <li>
-                    <a href="/cards?p={{ $p-- }}&v={{ $v }}"
-                        class="py-2 px-3 ml-0 leading-tight text-gray-500 bg-white rounded-l-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
-                </li>
-                <li>
-                    <a href="#"
-                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">1</a>
-                </li>
-                <li>
-                    <a href="#"
-                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
-                </li>
-                <li>
-                    <a href="#" aria-current="page"
-                        class="py-2 px-3 text-blue-600 bg-blue-50 border border-gray-300 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">3</a>
-                </li>
-                <li>
-                    <a href="#"
-                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
-                </li>
-                <li>
-                    <a href="#"
-                        class="py-2 px-3 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
-                </li>
-                <li>
-                    <a href="#"
-                        class="py-2 px-3 leading-tight text-gray-500 bg-white rounded-r-lg border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
-                </li>
+
+                @php
+                    $page = 0;
+                    $page_btn = 1;
+                @endphp
+
+                @for ($i = 0; $i < $maxpages; $i++)
+                    <li class="ml-20 mb-10 p-1">
+                        <a href="/cards?p={{ $page }}&v={{ $v }}"
+                            class="text-black bg-red-600 hover:bg-red-700 focus:ring-amber-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-red-600 dark:hover:bg-red-600 dark:focus:ring-amber-500"
+                            style="">{{ $page_btn }}</a>
+                    </li>
+                    @php
+                        $page_btn++;
+                        $page++;
+                    @endphp
+                @endfor
+
             </ul>
         </nav>
     </div>

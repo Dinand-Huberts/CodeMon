@@ -102,11 +102,11 @@ class CardsController extends Controller
                         <div class="card__abilities">
                             <h4 class="card__ability">
                                 <span class="card__label">Ability</span>
-                                Run Away
+                                ' . $item->Ability->abilities . ' 
                             </h4>
                             <h4 class="card__ability">
                                 <span class="card__label">Hidden Ability</span>
-                                Anticipation
+                                ' . $item->hidden_Ability->abilities . ' 
                             </h4>
                         </div>
                     </figcaption>
