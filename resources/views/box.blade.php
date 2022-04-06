@@ -28,7 +28,7 @@
 
         </div>
         @if (isset($card))
-            <div class="card_container" id="card_box" style="transform: scale(0.8)">
+            <div id="card_container" id="card_box" style="transform: scale(0.8)">
                 <div class="cards_container">
                     <div id="cards">
                         <figure class="card card--{{ $card->card_rarity }}">
@@ -71,11 +71,11 @@
                                 <div class="card__abilities">
                                     <h4 class="card__ability">
                                         <span class="card__label">Ability</span>
-                                        {{ $card->ability }}
+                                        {{ $card->Ability->abilities }}
                                     </h4>
                                     <h4 class="card__ability">
                                         <span class="card__label">Hidden Ability</span>
-                                        {{ $card->hidden_ability }}
+                                        {{ $card->hidden_Ability->abilities }}
                                     </h4>
                                 </div>
                             </figcaption>
@@ -83,8 +83,8 @@
                     </div>
                 </div>
             </div>
-    @endif
-</div>
+        @endif
+    </div>
 
     <script>
         function refreshPage() {

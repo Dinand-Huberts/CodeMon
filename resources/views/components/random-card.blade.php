@@ -40,11 +40,11 @@
                     <div class="card__abilities">
                         <h4 class="card__ability">
                             <span class="card__label">Ability</span>
-                            Run Away
+                            {{ $ability->abilities }}
                         </h4>
                         <h4 class="card__ability">
                             <span class="card__label">Hidden Ability</span>
-                            Speed Boost
+                            {{ $hidden_ability->abilities }}
                         </h4>
                     </div>
                 </figcaption>
