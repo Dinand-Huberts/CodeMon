@@ -24,4 +24,8 @@ class Cards extends Model
     public function ability() {
         return $this->hasOne(Ability::class, 'id', 'ability');
     } 
+
+    public function hidden_ability() {
+        return $this->hasOne(Ability::class, 'id', 'hidden_ability');
+    } 
 }

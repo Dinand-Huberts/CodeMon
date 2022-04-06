@@ -48,11 +48,11 @@
                         <div class="card__abilities">
                             <h4 class="card__ability">
                                 <span class="card__label">Ability</span>
-                                {{$item->ability}}
+                                {{$item->Ability->abilities}}
                             </h4>
                             <h4 class="card__ability">
                                 <span class="card__label">Hidden Ability</span>
-                                {{$item->hidden_ability}}
+                                {{$item->hidden_Ability->abilities}}
                             </h4>
                         </div>
                     </figcaption>

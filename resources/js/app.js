@@ -54,7 +54,6 @@ $(document).on("click", "#generate_card_button", function (e) {
         id: boxId,
         dataType: "html",
     }).done(function (data) {
-        console.log(data);
         $("#box").html(jQuery(data).find("#box").html());
         $("#new_card").html(jQuery(data).find("#card_wrapper").html());
     });
@@ -73,6 +72,7 @@ window.updatecounters = function (count, difficulty) {
     $("#box_count").append(count);
     $("#box_difficulty").append(difficulty);
 };
+
 
 window.orderby = function () {
     const orderby = $("#orderby").val();
