@@ -125,21 +125,21 @@ class CardsController extends Controller
 
         //check if P is NOT set and V is NOT set
         if (!isset($_GET['p']) && !isset($_GET['v'])) {
-            header('Location: /cards?p=0&v=25');
+            header('Location: ./cards?p=0&v=25');
             exit();
         }
         //check if P is NOT set and V IS set
         if (!isset($_GET['p']) && isset($_GET['v'])) {
-            header('Location: /cards?p=0&v=' . $_GET["v"]);
+            header('Location: ./cards?p=0&v=' . $_GET["v"]);
             exit();
         }
         //check if P IS set and V is NOT set
         if (isset($_GET['p']) && !isset($_GET['v'])) {
-            header('Location: /cards?p=' . $_GET["p"] . '&v=25');
+            header('Location: ./cards?p=' . $_GET["p"] . '&v=25');
             exit();
         }
         if (filter_var($_GET['p'], FILTER_VALIDATE_INT) === false || filter_var($_GET['v'], FILTER_VALIDATE_INT) === false) {
-            header('Location: /cards');
+            header('Location: ./cards');
             exit();
         }
     }
