@@ -37,7 +37,7 @@
 
                 @for ($i = 0; $i < $maxpages; $i++)
                     <li class="ml-20 mb-10 p-1">
-                        <a href="/cards?p={{ $page }}&v={{ $v }}"
+                        <a href="./cards?p={{ $page }}&v={{ $v }}"
                             class="text-black bg-red-600 hover:bg-red-700 focus:ring-amber-500 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-3 md:mr-0 dark:bg-red-600 dark:hover:bg-red-600 dark:focus:ring-amber-500"
                             style="">{{ $page_btn }}</a>
                     </li>
