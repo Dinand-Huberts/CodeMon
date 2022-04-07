@@ -16,7 +16,7 @@
             <x-card></x-card>
         </div>
         <div class="flex flex-col ml-20">
-            <form action="/cards" method="GET">
+            <form action="./cards" method="GET">
                 <select id="v" name="v">
                     <option id="25" value="25">25</option>
                     <option id="50" value="50">50</option>

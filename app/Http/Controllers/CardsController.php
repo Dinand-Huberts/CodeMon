@@ -118,7 +118,7 @@ class CardsController extends Controller
     }
     public function URLCheck($request)
     {
-        // If user sets get parameters to an
+        // If user sets get parameters to a
         // string, the user will be redirected
         // to cards without parameters.
 
