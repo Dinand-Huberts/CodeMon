@@ -12,7 +12,6 @@
             @if (count($boxes))
                 <p id="box_count_top_text"> Aantal boxes: </p>
                 <p id="box_count">{{ count($boxes) }}</p><br>
-
                 <p id="box_difficulty_top text">Current box difficulty: </p>
                 <p id="box_difficulty">{{ $boxes[0]->box_difficulty }}</p>
             @endif
