@@ -31,6 +31,7 @@ class CreateTeachersTable extends Migration
             ['id'=>NULL, 'name'=> "Ton", 'img'=> "./img/card-images/6.png"],
             ['id'=>NULL, 'name'=> "Pim", 'img'=> "./img/card-images/7.png"],
             ['id'=>NULL, 'name'=> "Stefan", 'img'=> "./img/card-images/8.png"],
+            ['id'=>NULL, 'name'=> "Christian", 'img'=> "./img/card-images/9.png"]
 
           
         ];
