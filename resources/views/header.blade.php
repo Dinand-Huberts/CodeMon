@@ -2,7 +2,7 @@
     <div class="container flex flex-wrap justify-between items-center mx-auto">
         <a class="flex cursor-pointer" href="./">
             <img class="mr-3 h-10"
-                src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg"></img>
+                src="{{asset('img/logo.png')}}"></img>
             <span class="self-center text-lg font-semibold whitespace-nowrap dark:text-black">CodeMon</span>
         </a>
         <div class="flex md:order-2">

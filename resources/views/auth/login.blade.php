@@ -9,7 +9,7 @@
                     style="background-color: rgba(125,125,125,0.1);">
                     <div class="flex justify-center">
                         <img class="w-20 h-20"
-                            src="https://upload.wikimedia.org/wikipedia/commons/9/98/International_Pok%C3%A9mon_logo.svg"></img>
+                            src="{{asset('img/logo.png')}}"></img>
                     </div>
 
                     <!-- Session Status -->
