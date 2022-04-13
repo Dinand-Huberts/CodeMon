@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\GameController;
 use App\Http\Controllers\BoxController;
 use App\Http\Controllers\CardsController;
 use App\Http\Controllers\HomeController;
@@ -34,6 +35,7 @@ Route::get('/privacy-policy', function () {
 Route::get('/licensing', function () {
     return view('licensing');
 });
+Route::post('/api/unitylogin', [GameController::class, 'unityLogin']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/box', [BoxController::class, 'index'])->name('box');
