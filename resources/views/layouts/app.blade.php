@@ -30,6 +30,7 @@
     <main>
         <div class="flex flex-col justify-between">
             <div
+            class="min-h-[80vh]"
                 style="background-image: url('./img/contact-bg2.png'); background-size: cover; background-repeat: no-repeat; background-position: center;" >
                 {{ $slot }}
             </div>

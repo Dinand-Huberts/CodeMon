@@ -15,16 +15,14 @@ class GameController extends Controller
         //first get the card with the corresponding id
         foreach (Cards::where('id', $id)->get() as $card) {
             //then get the user's data
-            foreach (Auth::user()->where('id', $user_id)->get() as $user) {
-                //then return the card's data
-                return response()->json([
-                    'id' => $card->id,
-                    'user_id' => $card->user_id,
-                    'name' => $card->name,
-                    'description' => $card->description,
-                    'image' => $card->image,
-                ]);
-            }
+            //then return the card's data
+            return response()->json([
+                'id' => $card->id,
+                'user_id' => $card->user_id,
+                'name' => $card->name,
+                'description' => $card->description,
+                'image' => $card->image,
+            ]);
         }
         $card = Cards::where('id', '=', $id)->where('user_id', '=', $user_id)->first();
         //then return the card
@@ -54,7 +52,13 @@ class GameController extends Controller
         //return the match info
         return $data;
     }
-
+    
+    public function unityLogin(Request $request) {
+        if (Auth::attempt(['email' => $request->mail, 'password' => $request->password])) {
+            return(true);
+        } else {
+            return(false);
+        }
         
-
+    }
 }
