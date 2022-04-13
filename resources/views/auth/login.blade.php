@@ -8,7 +8,7 @@
                 <div class="p-6 border border-gray-300 sm:rounded-md backdrop-blur-sm"
                     style="background-color: rgba(125,125,125,0.1);">
                     <div class="flex justify-center">
-                        <img class="w-20 h-20"
+                        <img class="w-50 h-20"
                             src="{{asset('img/logo.png')}}"></img>
                     </div>
 

@@ -6,7 +6,7 @@
 
             <div class="px-8 py-6 mx-auto mt-4 left-0 right-0 text-left shadow-lg lg:w-1/2 sm:w-1/2 backdrop-blur-sm border sm:rounded-md border-gray-300" style="background-color: rgba(125,125,125,0.2);" id="register">
                 <div class="flex justify-center">
-                    <img class="w-20 h-20" src="{{asset('img/logo.png')}}"></img>
+                    <img class="w-50 h-20" src="{{asset('img/logo.png')}}"></img>
                 </div>
                 <h3 class="text-2xl font-bold text-center">Join us</h3>
 
